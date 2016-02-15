@@ -1,5 +1,7 @@
 # Flat Admin V.2 Bootstrap Templates
 
+### *No maintenance
+
 #### Change log (v2.1.2)
 
 * Fix some bugs
