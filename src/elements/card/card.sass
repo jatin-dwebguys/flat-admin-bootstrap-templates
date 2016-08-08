@@ -1,0 +1,163 @@
+@mixin banner($name, $color, $font-color)
+  &.card-#{$name}
+    background-color: $color;
+    .card-body
+      .icon
+        color: $font-color;
+
+      .content
+        .title, .value
+          color: $font-color;
+    &-light
+      background-color: $white;
+      .card-body
+        border-bottom: 5px solid $color;
+        .icon
+          color: $color;
+        .content
+          .title, .value
+            color: $color;
+    &.card-chart
+      .card-header
+        background-color: $color;
+        color: $color;
+
+.card
+  width: 100%;
+  background-color: $white;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px $grey-darker;
+
+  .card-header
+    padding: 30px;
+    font-size: 1.1em;
+    font-weight: 400;
+    border-bottom: 1px solid $grey;
+    border-left: 0px solid transparent;
+    color: $black-lighter
+    position: relative
+    @include flex;
+
+    .card-title
+      flex: 1;
+    .card-action
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      & > li
+        & > a
+          color: $grey;
+        & > .dropdown-menu
+          right: 0;
+          left: auto;
+          border-radius: 2px;
+
+  .card-body
+    padding: 30px;
+  
+  &.card-mini
+    .card-header
+      padding: 20px 30px;
+    .card-body
+      padding: 20px 30px;
+
+  &.card-tab
+    .card-header
+      list-style: none
+      padding: 30px;
+      padding-bottom: 0;
+      padding-top: 0;
+      margin-bottom: 0;
+      @include flex;
+
+      & > li
+        display: block;
+        margin-right: 30px;
+        margin-bottom: -2px;
+        a
+          padding-top: 30px;
+          padding-bottom: 30px;
+          display: block;
+          text-decoration: none;
+          color: $grey-darkest;
+        &.active
+          a
+            border-bottom: 3px solid $green;
+            color: $green;
+
+  &.card-tab.card-mini
+    .card-header
+      & > li
+        a
+          padding-top: 20px;
+          padding-bottom: 20px;
+  &.card-banner
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    .card-header
+      background-color: $white;
+
+    .card-body
+      padding: 0px;
+      border-bottom: 5px solid transparent;
+
+      .icon
+        position: absolute;
+        font-size: 9em;
+        opacity: 0.1;
+        color: $black;
+        z-index: 0;
+
+      .content
+        @include flex
+        position: relative
+        width: 100%;
+        padding: 2rem;
+        z-index: 100;
+
+        .value
+          font-size: 5em;
+          line-height: 3rem;
+          font-weight: 300;
+          padding-top: 3rem;
+          flex: 1
+          text-align: right;
+          color: $black
+          .sign
+            font-size: 0.4em;
+            font-weight: 200;
+            margin-right: 5px;
+            opacity: 0.75;
+
+        .title 
+          font-size: 1.25em;
+          font-weight: 200;
+          flex: 1
+          color: $black
+    
+      &::after
+        content: '';
+        position: relative;
+        display: block;
+        clear: both;
+
+  &.card-chart
+    .card-header
+      border-bottom: 0;
+
+      .card-title
+        .title
+          background-color: $white;
+          padding: 6px 12px;
+          border-radius: 2px;
+          font-weight: 400;
+          width: auto;
+          display: inline;
+          text-transform: uppercase;
+
+  @include banner("green", $green, $white)
+  @include banner("blue", $blue-sky, $white)
+  @include banner("orange", $orange, $white)
+  @include banner("yellow", $yellow, $white)

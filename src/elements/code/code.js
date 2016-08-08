@@ -1,0 +1,3 @@
+
+/* Highlight.js */
+hljs.initHighlightingOnLoad();

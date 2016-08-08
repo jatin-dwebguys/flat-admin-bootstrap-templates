@@ -1,0 +1,49 @@
+.app-landing
+  .app-heading
+    padding-top: $landing-navbar-height;
+    background-color: $green;
+    color: $white;
+    text-align: center;
+
+    .title
+      @include flex($align: center, $justify: center)
+      font-size: 3em;
+      font-weight: 300;
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1rem;
+      .highlight
+        padding: 2px 5px;
+        font-weight: 200
+        color: $green;
+        border-radius: 2px;
+        background-color: $white
+        margin-right: 5px;
+
+    .description
+      font-size: 1em;
+      font-weight: 400;
+      text-transform: uppercase;
+
+  .app-content-c
+    padding: 4rem;
+    background-color: $white;
+
+  .content-heading
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    text-align: center;
+
+    .title
+      font-size: 2em;
+      color: $black-lighter;
+      font-weight: 200;
+      margin-bottom: 1rem;
+      .highlight
+        color: $green-darker
+        font-weight: 400;
+
+    .description
+      color: $black-lighter;

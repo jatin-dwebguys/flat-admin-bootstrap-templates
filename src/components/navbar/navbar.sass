@@ -1,0 +1,292 @@
+@mixin navbar-theme($color, $bg, $extend: '')
+  .navbar#{$extend}
+    background-color: $bg
+    .navbar-header
+      .navbar-brand
+        @if $extend == ".--inverse"
+          color: $white
+        .highlight
+          background-color: $color
+
+.navbar
+  height: $navbar-height
+  z-index: $z-navbar
+  background-color: $white;
+  box-shadow: 0 1px 2px rgba($black,0.1);
+  border-bottom: 0px solid transparent;
+  border-top: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+
+  .navbar-header
+    height: $navbar-height
+    padding: 0px;
+    width: $sidebar-width
+    margin-left: -15px;
+    position: relative;
+    text-align: center;
+    // box-shadow:  1px 0px 1px 0px rgba(68, 68, 68, 0.1);
+    @include flex;
+
+    .navbar-toggle
+      position: relative;
+      display: none;
+      height: 100%;
+      border: 0;
+      border-right: 1px solid $grey;
+      padding: 2rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 0;
+      border-radius: 0
+      z-index: 1;
+
+    .navbar-brand
+      @include flex($align: center, $justify: center)
+      height: $navbar-height
+      font-size: 1.2em;
+      font-weight: 300;
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+      color: $black
+
+      .highlight
+        padding: 2px 5px;
+        font-weight: 200
+        color: $white;
+        border-radius: 2px;
+        margin-right: 5px;
+
+  .navbar-collapse
+    padding-left: $sidebar-width
+
+    .navbar-nav
+      height: $navbar-height - 1px
+      border-bottom: 1px solid transparent;
+      @include flex($align: center)
+
+      & > li
+        @include flex($align: center)
+        height: 100%
+
+        .navbar-title
+          @include flex($align: center)
+          font-weight: 300
+          font-size: 1.3em
+          height: 50%;
+          padding: 0 6rem;
+          padding-left: 45px;
+          border-right: 1px solid $grey
+          span 
+            padding: 0.5rem 0;
+          .highlight
+            font-weight: 400;
+
+        &.search
+          input
+            border: none
+            height: 100%
+            padding: 0 30px
+            font-weight: 200
+            background-color: transparent;
+
+        &.dropdown
+          &.notification
+            a.dropdown-toggle
+              text-align: center;
+              display: block;
+
+              .icon
+                font-size: 1.5em;
+                margin-bottom: 8px;
+                color: $grey-darker;
+                transition: all 0.2s ease;
+
+              .count
+                font-size: 0.8em;
+                font-weight: 600
+                color: $white;
+                background-color: $grey-darker;
+                padding: 0 5px;
+                min-width: 30px;
+                border-radius: 2px;
+                line-height: 16px;
+
+              &:hover
+                .icon
+                  transform: scale(1.1) rotate(7deg);
+
+            & > .dropdown-menu
+              margin-top: -15px;
+              animation: fadeOutDown 0.5s infinite;
+              padding: 0;
+              border-radius: 3px;
+              box-shadow: 0 1px 1px $grey-darker;
+              border: 0;
+              min-width: 200px;
+
+              & > li
+                border: 0
+                border-radius: 0;
+                padding: 0;
+                border-bottom: 1px solid $grey;
+                margin-bottom: 0;
+                font-weight: 300;
+                font-size: 0.9em;
+
+                a
+                  display: block;
+                  text-decoration: none;
+                  color: $black
+                  padding: 1.2rem;
+
+                  .message
+                    @include flex($align: center)
+                    padding-right: 40px;
+                    .content
+                      flex: 1
+                      .title
+                      .description
+                        font-size: 0.8em;
+                        opacity: 0.4;
+                    .profile
+                      width: 30px;
+                      height: 30px;
+                      border-radius: 50%;
+                      margin-right: 8px;
+
+                span.badge
+                  border-radius: 3px;
+                  font-weight: 400;
+                  font-weight: 0.8em;
+
+                &:hover 
+                  a
+                    background-color: transparent;
+                    color: $black-darker;
+                    cursor: pointer;
+                &.empty
+                  color: $grey-darkest;
+                  font-weight: 200;
+
+                &.dropdown-header
+                  background: transparent
+                  padding: 1.2rem;
+                  color: $white;
+                  font-weight: 400;
+                  background-color: $grey-darkest;
+                  border-bottom: 0px solid $grey-darkest;
+
+                &.dropdown-footer
+                  background-color: transparent
+                  border-top: 0;
+                  font-weight: 300;
+                  font-size: 0.9em;
+                  text-align: right;
+
+                  a
+                    color: $grey-darkest;
+                    padding: 1.2rem;
+
+                &:last-child
+                  border-bottom: 0;
+
+                &.dropdown-empty
+                  padding: 2rem;
+                  text-align: center;
+                  color: $grey-darkest;
+
+            &.danger
+              a.dropdown-toggle
+                .icon 
+                  color: $red;
+                .count
+                  background-color: $red;
+
+              & > .dropdown-menu
+                & > li.dropdown-header
+                  background-color: $red
+                  border-bottom: 0px solid $red;
+            &.warning
+              a.dropdown-toggle
+                .icon 
+                  color: $orange;
+                .count
+                  background-color: $orange;
+              & > .dropdown-menu
+                & > li.dropdown-header
+                  background-color: $orange
+                  border-bottom: 2px solid $orange;
+          &.profile
+            & > a
+              @include flex($align: center)
+              .profile-img 
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+
+            .dropdown-menu
+              min-width: 250px;
+              padding: 0;
+              .profile-info
+                background-color: $green
+                color: $white;
+                padding: 2rem;
+
+                h4
+                  margin-top: 0;
+                  margin-bottom: 0
+
+                hr 
+                  margin-top: 1rem;
+                  margin-bottom: 1rem;
+                  opacity: 0.2;
+
+                p
+                  margin-bottom: 0;
+              .action
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                border-radius: 3px;
+                border: 0;
+                min-width: 200px;
+
+                & > li
+                  border: 0
+                  border-radius: 0;
+                  padding: 0;
+                  border-bottom: 1px solid $grey;
+                  margin-bottom: 0;
+                  font-weight: 300;
+                  font-size: 0.9em;
+
+                  a
+                    display: block;
+                    text-decoration: none;
+                    color: $black
+                    padding: 1.2rem;
+          &.open
+            & > a 
+              & , &:hover, a:focus
+                background-color: transparent;
+            & > .dropdown-menu
+              animation: fadeInUp 0.5s 1;
+              display: block;
+
+@include breakpoint($sm)
+  .navbar
+    height: $navbar-height-min
+    .navbar-header
+      height: $navbar-height-min
+      width: auto;
+      .navbar-brand
+        height: $navbar-height-min
+      .navbar-toggle
+        display: block;
+
+@include navbar-theme($green, $white)
+@include navbar-theme($green, $dark-green, ".--inverse" )

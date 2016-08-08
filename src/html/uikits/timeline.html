@@ -1,0 +1,28 @@
+@@include('../include/header.html',{
+  "path": ".."
+})
+
+@@include('../../components/sidebar/sidebar.html',{
+  "menu": {
+    "dashboard": "",
+    "uikits": "active"
+  }
+})
+@@include('../../components/navbar/navbar.html',
+  { "title": "<span class='highlight'>Timeline</span>&nbsp;<span>Kits</span>" })
+
+<div class="app-container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="content-heading --center">
+        <div class="title">Vertical</div>
+        <div class="description">Responsive Vertical Timeline</div>
+      </div>
+      @@include('../../elements/timeline/timeline.html')
+    </div>
+  </div>
+</div>
+
+@@include('../include/footer.html',{
+  "path": ".."
+})

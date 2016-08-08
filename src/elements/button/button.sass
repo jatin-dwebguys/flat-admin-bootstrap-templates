@@ -1,0 +1,63 @@
+$fb-color: #3D62B3;
+$fb-color-dark: #335795;
+$tw-color: #03ABEA;
+$tw-color-dark: #029ad3;
+
+@mixin btn-color($name, $bg-color, $border-bottom-color)
+  &.btn-#{$name}
+    border-color: $bg-color;
+    border-bottom-color: $border-bottom-color;
+    background-color: $bg-color;
+
+@mixin social-color($name, $bg-color, $border-bottom-color)
+  &.--#{$name}
+    border-color: $bg-color;
+    border-bottom-color: $border-bottom-color;
+    background-color: $bg-color;
+
+.btn
+  padding: 15px 30px;
+  border-radius: 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $grey;
+  border-radius: 3px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  margin-bottom: 5px;
+
+  &.btn-xs
+    padding: 5px 10px;
+    border-bottom-width: 2px;
+
+  &.btn-sm
+    padding: 10px 20px;
+    border-bottom-width: 2px;
+
+  &.btn-lg
+    font-size: 1.5em;
+
+  &.btn-default
+    border-color: $grey-darker;
+    background-color: $white
+
+  &.btn-link
+    border-color: transparent;
+    border-bottom-width: 0px;
+
+  @include btn-color("primary", $blue, $blue-darker)
+  @include btn-color("success", $green, $green-darker)
+  @include btn-color("warning", $orange, $orange-darker)
+  @include btn-color("danger", $red, $red-darker)
+  @include btn-color("info", $blue-sky, $blue-sky-darker)
+
+  &.btn-social
+    color: $white;
+    .info 
+      @include flex($align: center)
+    .icon
+      font-size: 2em;
+      margin-right: 15px;
+
+    @include social-color("facebook", $fb-color, $fb-color-dark)
+    @include social-color("twitter", $tw-color, $tw-color-dark)

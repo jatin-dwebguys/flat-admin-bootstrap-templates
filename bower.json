@@ -1,0 +1,7 @@
+{
+  "name": "flat-admin-bs3",
+  "private": true,
+  "dependencies": {
+    "chartist-plugin-pointlabels": "^0.0.4"
+  }
+}
