@@ -25,7 +25,9 @@ function build(file, watch, dest) {
   function rebundle() {
     var stream = bundler.bundle();
     return stream
-      .on('error', function() {})
+      .on('error', function(e) {
+        console.log(e)
+      })
       .pipe(source('app.js'))
       .pipe(gulp.dest(dest))
       .on('end', function(){ 

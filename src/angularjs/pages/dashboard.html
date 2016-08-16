@@ -1,0 +1,166 @@
+
+<div class="row full-width no-border-radius no-margin-top">
+  <div class="col-xs-12">
+    <div class="card card-banner card-chart card-green no-br">
+      <div class="card-header">
+        <div class="card-title">
+          <div class="title">Top Sale Today</div>
+        </div>
+        <ul class="card-action">
+          <li>
+            <a href="/">
+              <i class="fa fa-refresh"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body no-padding">
+        <div class="ct-chart-sale"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+    <a href="#">
+      @@include('../../elements/card/banner.html',{ 
+        "value": "{{main.sales.today.value}}",
+        "sign": "$",
+        "title": "{{main.sales.today.title}}", 
+        "icon": "fa fa-shopping-basket",
+        "classname": "card-green-light"
+      })
+    </a>
+  </div>
+  <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+    <a href="#">
+      @@include('../../elements/card/banner.html',{ 
+        "value": "{{main.sales.like.value}}",
+        "sign": "",
+        "title": "{{main.sales.like.title}}", 
+        "icon": "fa fa-thumbs-o-up",
+        "classname": "card-blue-light"
+      })
+    </a>
+  </div>
+  <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+    <a href="#">
+      @@include('../../elements/card/banner.html',{ 
+        "value": "{{main.sales.registration.value}}",
+        "sign": "",
+        "title": "{{main.sales.registration.title}}", 
+        "icon": "fa fa-user-plus",
+        "classname": "card-yellow-light"
+      })
+    </a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <div class="card card-mini">
+      <div class="card-header">
+        <div class="card-title">Last Statuses</div>
+        <ul class="card-action">
+          <li>
+            <a href="/">
+              <i class="fa fa-refresh"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body no-padding">
+        <table class="table card-table">
+          <thead>
+            <tr>
+              <th>Products</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MicroSD 64Gb</td>
+              <td>2</td>
+              <td><span class="label label-success">Shipped</span></td>
+            </tr>
+            <tr>
+              <td>MiniPC i5</td>
+              <td>5</td>
+              <td><span class="label label-warning">Pending</span></td>
+            </tr>
+            <tr>
+              <td>Mountain Bike</td>
+              <td>1</td>
+              <td><span class="label label-info">Confirm Payment</span></td>
+            </tr>
+            <tr>
+              <td>Notebook</td>
+              <td>1</td>
+              <td><span class="label label-danger">Cancelled</span></td>
+            </tr>
+            <tr>
+              <td>Raspberry Pi2</td>
+              <td>6</td>
+              <td><span class="label label-success">Shipped</span></td>
+            </tr>
+            <tr>
+              <td>Flashdrive 128Mb</td>
+              <td>4</td>
+              <td><span class="label">Complete</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <div class="card card-tab card-mini">
+      <ul class="card-header tab-stats">
+        <li role="tab1" class="active">
+          <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Browsers</a>
+        </li>
+        <li role="tab2">
+          <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Operating System</a>
+        </li>
+      </ul>
+      <div class="card-body tab-content">
+          <div role="tabpanel" class="tab-pane active" id="tab1">
+            <div class="row">
+              <div class="col-sm-8">
+                <div class="chart ct-chart-browser ct-perfect-fourth"></div>
+              </div>
+              <div class="col-sm-4">
+                <ul class="chart-label">
+                  <li class="ct-label ct-series-a">Google Chrome</li>
+                  <li class="ct-label ct-series-b">Firefox</li>
+                  <li class="ct-label ct-series-c">Safari</li>
+                  <li class="ct-label ct-series-d">IE</li>
+                  <li class="ct-label ct-series-e">Opera</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="tab2">
+            <div class="row">
+              <div class="col-sm-8">
+                <div class="chart ct-chart-os ct-perfect-fourth"></div>
+              </div>
+              <div class="col-sm-4">
+                <ul class="chart-label">
+                  <li class="ct-label ct-series-a">iOS</li>
+                  <li class="ct-label ct-series-b">Android</li>
+                  <li class="ct-label ct-series-c">Windows</li>
+                  <li class="ct-label ct-series-d">OSX</li>
+                  <li class="ct-label ct-series-e">Linux</li>
+                  <li class="ct-label ct-series-f">Chrome OS</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

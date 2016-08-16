@@ -1,18 +1,14 @@
-import CONFIG from './config' 
+import {
+  DashboardController
+} from './controllers'
 
-angular.module(CONFIG["APP"])
-  .config(($stateProvider, $urlRouterProvider, $locationProvider) => {
-    $locationProvider.html5Mode({
-      enabled: true
-    });
-
-    $stateProvider.state("dashboard", {
-      url: "/",
-      controller: "DashboardController",
-      controllerAs: "main",
-      templateProvider: ($templateCache) => {
-        return $templateCache.get('pages/dashboard.html');
-      }
-    })
-    return $urlRouterProvider.otherwise('/');
-  });
+export default function($stateProvider, $urlRouterProvider, $locationProvider) {
+  
+  $stateProvider.state("dashboard", {
+    url: "/",
+    controller: DashboardController,
+    controllerAs: "main",
+    templateUrl: 'pages/dashboard.html'
+  })
+  return $urlRouterProvider.otherwise('/');
+}
