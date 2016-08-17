@@ -28,6 +28,8 @@
     "watchify": "^3.7.0"
   },
   "dependencies": {
+    "angular-chartist.js": "^4.2.1",
+    "angular-ui-bootstrap": "^2.0.2",
     "bootstrap": "^3.3.6",
     "bootstrap-sass": "^3.3.6",
     "chartist": "^0.9.8",

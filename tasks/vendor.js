@@ -4,27 +4,32 @@ import gulp from "gulp";
 import concat from "gulp-concat";
 
 const jsLibs = [
-  'bower_components/jquery/dist/jquery.min.js',
-  'bower_components/bootstrap/dist/js/bootstrap.min.js',
-  'bower_components/select2/dist/js/select2.full.min.js',
-  'bower_components/datatables.net/js/jquery.dataTables.min.js',
-  'bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js',
-  'bower_components/chartist/dist/chartist.min.js',
-  'bower_components/chartist-plugin-pointlabels/dist/chartist-plugin-pointlabels.min.js',
-  'bower_components/highlightjs/highlight.pack.min.js'
+  'bower_components/jquery/dist/jquery.js',
+  'bower_components/bootstrap/dist/js/bootstrap.js',
+  'bower_components/select2/dist/js/select2.full.js',
+  'bower_components/datatables.net/js/jquery.dataTables.js',
+  'bower_components/datatables.net-bs/js/dataTables.bootstrap.js',
+  'bower_components/chartist/dist/chartist.js',
+  'bower_components/chartist-plugin-pointlabels/dist/chartist-plugin-pointlabels.js',
+  'bower_components/highlightjs/highlight.pack.js'
 ]
 
 const cssLibs = [
-  'bower_components/bootstrap/dist/css/bootstrap.min.css',
-  'bower_components/font-awesome/css/font-awesome.min.css',
-  'bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css',
-  'bower_components/chartist/dist/chartist.min.css',
+  'bower_components/bootstrap/dist/css/bootstrap.css',
+  'bower_components/font-awesome/css/font-awesome.css',
+  'bower_components/datatables.net-bs/css/dataTables.bootstrap.css',
+  'bower_components/chartist/dist/chartist.css',
   'bower_components/highlightjs/styles/androidstudio.css'
 ]
 
 const ngLibs = [
-  'bower_components/angular/angular.min.js',
-  'bower_components/angular-ui-router/release/angular-ui-router.min.js'
+  'bower_components/chartist/dist/chartist.js',
+  'bower_components/chartist-plugin-pointlabels/dist/chartist-plugin-pointlabels.js',
+  'bower_components/angular/angular.js',
+  'bower_components/angular-ui-router/release/angular-ui-router.js',
+  'node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js',
+  'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',
+  'node_modules/angular-chartist.js/dist/angular-chartist.js'
 ]
 
 gulp.task('vendor', ['vendor:js', 'vendor:css', 'vendor:angularjs']);

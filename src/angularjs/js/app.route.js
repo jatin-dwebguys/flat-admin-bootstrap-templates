@@ -26,5 +26,22 @@ export default function($stateProvider, $urlRouterProvider, $locationProvider) {
       controllerAs: "vm",
       templateUrl: 'pages/message.html'
     })
+    .state("main.uikits", {
+      url: "uikits",
+      abstract: true,
+      templateUrl: 'pages/uikits/main.html'
+    })
+    .state("main.uikits.customize", {
+      url: "/customize",
+      templateUrl: 'pages/uikits/customize.html'
+    })
+    .state("main.uikits.components", {
+      url: "/components",
+      templateUrl: 'pages/uikits/components.html'
+    })
+    .state("main.uikits.card", {
+      url: "/card",
+      templateUrl: 'pages/uikits/card.html'
+    })
   return $urlRouterProvider.otherwise('/');
 }
