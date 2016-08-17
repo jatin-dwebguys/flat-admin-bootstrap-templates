@@ -3,4 +3,6 @@ import route from './app.route'
 
 angular.module(CONFIG["APP"], [
   'ui.router'
-  ]).config(route)
+  ])
+  .config(route)
+  

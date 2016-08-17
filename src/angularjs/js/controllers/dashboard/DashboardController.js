@@ -1,7 +1,5 @@
 class DashboardController {
   constructor() {
-    this.appTitle = "Admin Dashboard";
-
     this.sales = {
       today: {
         title: "Sale Today",

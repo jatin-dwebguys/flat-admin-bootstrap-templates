@@ -24,9 +24,9 @@
   <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
     <a href="#">
       @@include('../../elements/card/banner.html',{ 
-        "value": "{{main.sales.today.value}}",
+        "value": "{{vm.sales.today.value}}",
         "sign": "$",
-        "title": "{{main.sales.today.title}}", 
+        "title": "{{vm.sales.today.title}}", 
         "icon": "fa fa-shopping-basket",
         "classname": "card-green-light"
       })
@@ -35,9 +35,9 @@
   <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
     <a href="#">
       @@include('../../elements/card/banner.html',{ 
-        "value": "{{main.sales.like.value}}",
+        "value": "{{vm.sales.like.value}}",
         "sign": "",
-        "title": "{{main.sales.like.title}}", 
+        "title": "{{vm.sales.like.title}}", 
         "icon": "fa fa-thumbs-o-up",
         "classname": "card-blue-light"
       })
@@ -46,9 +46,9 @@
   <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
     <a href="#">
       @@include('../../elements/card/banner.html',{ 
-        "value": "{{main.sales.registration.value}}",
+        "value": "{{vm.sales.registration.value}}",
         "sign": "",
-        "title": "{{main.sales.registration.title}}", 
+        "title": "{{vm.sales.registration.title}}", 
         "icon": "fa fa-user-plus",
         "classname": "card-yellow-light"
       })

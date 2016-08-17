@@ -2,16 +2,16 @@
   <div class="sidebar-header">
   </div>
   <ul class="sidebar-menu">
-    <li class="@@menu.dashboard">
-      <a href="/">
+    <li ng-class="{active: main.page.menu == 'dashboard'}">
+      <a ui-sref="main.dashboard">
         <div class="icon">
           <i class="fa fa-tasks" aria-hidden="true"></i>
         </div>
         <div class="title">Dashboard</div>
       </a>
     </li>
-    <li class="@@menu.messaging">
-      <a href="/html/messaging.html">
+    <li ng-class="{active: main.page.menu == 'messaging'}">
+      <a ui-sref="main.messaging">
         <div class="icon">
           <i class="fa fa-comments" aria-hidden="true"></i>
         </div>
