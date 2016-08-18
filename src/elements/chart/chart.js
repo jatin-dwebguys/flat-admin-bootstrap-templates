@@ -29,7 +29,6 @@ if($('.ct-chart-bar').length) {
   });
 }
 
-
 if($('.ct-chart-pie').length) { 
   let data = {
     series: [5, 3, 4]

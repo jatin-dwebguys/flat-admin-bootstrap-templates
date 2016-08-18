@@ -62,19 +62,23 @@
       padding: 20px 30px;
 
   &.card-tab
-    .card-header
+    .card-header, ul.nav-tabs
       list-style: none
       padding: 30px;
       padding-bottom: 0;
       padding-top: 0;
       margin-bottom: 0;
       @include flex;
+      font-size: 1.1em;
+      font-weight: 400;
+      border-bottom: 1px solid $grey;
 
       & > li
         display: block;
         margin-right: 30px;
         margin-bottom: -2px;
         a
+          padding: 0;
           padding-top: 30px;
           padding-bottom: 30px;
           display: block;
@@ -84,9 +88,12 @@
           a
             border-bottom: 3px solid $green;
             color: $green;
+    .tab-content
+      padding: 30px;
+
 
   &.card-tab.card-mini
-    .card-header
+    .card-header, ul.nav-tabs
       & > li
         a
           padding-top: 20px;

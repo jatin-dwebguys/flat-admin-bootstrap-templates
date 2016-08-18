@@ -29,28 +29,28 @@
         <li><a ui-sref="main.uikits.customize">Customize</a></li>
         <li><a ui-sref="main.uikits.components">Components</a></li>
         <li><a ui-sref="main.uikits.card">Card</a></li>
-        <li><a href="/html/uikits/form.html">Form</a></li>
-        <li><a href="/html/uikits/table.html">Table</a></li>
-        <li><a href="/html/uikits/pricing-table.html">Pricing Table</a></li>
-        <li><a href="/html/uikits/timeline.html">Timeline</a></li>
-        <li><a href="/html/uikits/chart.html">Chart</a></li>
-        <li><a href="/html/uikits/icons.html">Icons</a></li>
+        <li><a ui-sref="main.uikits.form">Form</a></li>
+        <li><a ui-sref="main.uikits.table">Table</a></li>
+        <li><a ui-sref="main.uikits.pricing">Pricing Table</a></li>
+        <li><a ui-sref="main.uikits.timeline">Timeline</a></li>
+        <li><a ui-sref="main.uikits.chart">Chart</a></li>
+        <li><a ui-sref="main.uikits.icons">Icons</a></li>
       </ul>
     </li>
-    <li class="dropdown" data-placement="body">
-      <a href="#" class="dropdown-toggle sidebar-dropdown" data-toggle="dropdown" role="button" aria-expanded="false">
+    <li class="dropdown" ng-class="{active: main.page.menu == 'pages'}" uib-dropdown dropdown-append-to-body>
+      <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
         <div class="icon">
           <i class="fa fa-file-o" aria-hidden="true"></i>
         </div>
         <div class="title">Pages</div>
       </a>
-      <ul class="dropdown-menu --sidebar">
-        <li><a href="/html/pages/inbox.html">Inbox</a></li>
-        <li><a href="/html/pages/landing.html">Landing</a></li>
-        <li><a href="/html/pages/login.html">Login</a></li>
-        <li><a href="/html/pages/register.html">Register</a></li>
-        <li><a href="/html/pages/search.html">Search</a></li>
-        <li><a href="/html/pages/404.html">404</a></li>
+      <ul class="dropdown-menu --sidebar" uib-dropdown-menu>
+        <li><a ui-sref="main.pages.inbox">Inbox</a></li>
+        <li><a ui-sref="landing">Landing</a></li>
+        <li><a ui-sref="login">Login</a></li>
+        <li><a ui-sref="register">Register</a></li>
+        <li><a ui-sref="main.pages.search">Search</a></li>
+        <li><a ui-sref="404">404</a></li>
       </ul>
     </li>
   </ul>

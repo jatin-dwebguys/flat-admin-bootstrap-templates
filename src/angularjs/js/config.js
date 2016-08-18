@@ -26,6 +26,26 @@ export default {
       menu: "uikits",
       title: "<span class='highlight'>Card</span>&nbsp;<span>Kits</span>",
       class: ""
+    },
+    "main.uikits.chart": {
+      menu: "uikits",
+      title: "<span class='highlight'>Chart</span>&nbsp;<span>Kits</span>",
+      class: ""
+    },
+    "main.uikits.pricing": {
+      menu: "uikits",
+      title: "<span class='highlight'>Pricing</span>&nbsp;<span>Table</span>",
+      class: ""
+    },
+    "main.uikits.timeline": {
+      menu: "uikits",
+      title: "<span class='highlight'>Timeline</span>",
+      class: ""
+    },
+    "main.uikits.icons": {
+      menu: "uikits",
+      title: "<span class='highlight'>Icons</span>",
+      class: ""
     }
   }
 }
