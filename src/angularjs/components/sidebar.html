@@ -18,7 +18,7 @@
         <div class="title">Messaging</div>
       </a>
     </li>
-    <li class="dropdown" ng-class="{active: main.page.menu == 'uikits', open: isUikitMenuOpen}"  uib-dropdown dropdown-append-to-body is-open="isUikitMenuOpen">
+    <li class="dropdown" ng-class="{active: main.page.menu == 'uikits', open: isUikitMenuOpen}" uib-dropdown  dropdown-append-to="main.appendToApp" is-open="isUikitMenuOpen">
       <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
         <div class="icon">
           <i class="fa fa-cube" aria-hidden="true"></i>
@@ -37,7 +37,7 @@
         <li><a ui-sref="main.uikits.icons">Icons</a></li>
       </ul>
     </li>
-    <li class="dropdown" ng-class="{active: main.page.menu == 'pages', open: isPageMenuOpen}" uib-dropdown dropdown-append-to-body is-open="isPageMenuOpen">
+    <li class="dropdown" ng-class="{active: main.page.menu == 'pages', open: isPageMenuOpen}" uib-dropdown  dropdown-append-to="main.appendToApp" is-open="isPageMenuOpen">
       <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
         <div class="icon">
           <i class="fa fa-file-o" aria-hidden="true"></i>

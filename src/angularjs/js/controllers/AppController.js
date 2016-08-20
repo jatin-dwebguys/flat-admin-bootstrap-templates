@@ -4,8 +4,8 @@ class AppController {
   constructor($rootScope, $sce, $state) {
 
     this.app = addAppConfig($sce, CONFIG)
+    this.appendToApp = angular.element(document.querySelector('.app'));
     this.page = getPageConfig($sce, $state)
-
     this.theme = {
       current: "app-default"
     }

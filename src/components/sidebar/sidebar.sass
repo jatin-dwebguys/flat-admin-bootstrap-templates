@@ -52,7 +52,7 @@
       border-left-color: $color;
 
 aside.app-sidebar
-  @include fixed($width: $sidebar-width, $left: 0)
+  @include fixed($width: auto, $left: 0)
   @include flex($direction: column)
   z-index: $z-sidebar
   height: 100% !important;
@@ -63,6 +63,7 @@ aside.app-sidebar
 
   .sidebar-header
     height: $navbar-height
+    width: $sidebar-width
     padding: 0 10px
 
     .sidebar-brand
@@ -85,7 +86,7 @@ aside.app-sidebar
     list-style: none;
     margin: 0;
     flex: 1
-    width: 100%;
+    width: $sidebar-width
     overflow: auto;
     padding: 4rem 0;
 
@@ -174,7 +175,7 @@ aside.app-sidebar
 
   .sidebar-footer
     border-top: 1px solid $grey;
-    width: 100%;
+    width: $sidebar-width
     padding: 0;
     position: relative;
     ul.menu

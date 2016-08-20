@@ -20,7 +20,7 @@
         padding-right: 0;
         border-radius: 0;
 
-      & > a
+      & > a , uib-tab-heading
         @include flex($align: center);
         border: 0;
         padding: 2rem;
@@ -58,7 +58,7 @@
           background-color: transparent;
 
       &.active
-        & > a, & > a:focus, & > a:hover
+        & > a, & > a:focus, & > a:hover, uib-tab-heading
           background-color: transparent;
           border: 0;
           color: $green-darker;
@@ -69,13 +69,13 @@
           position: relative;
           overflow: hidden;
 
-          & > a, & > a:focus, & > a:hover
+          & > a, & > a:focus, & > a:hover, uib-tab-heading
             color: $grey-darkest
             .icon
               background-color: $grey-darker
               color: $white;
 
-          & > a  , & > a:focus , & > a:hover
+          & > a  , & > a:focus , & > a:hover, uib-tab-heading
             color: $grey-darkest
 
           &:after
