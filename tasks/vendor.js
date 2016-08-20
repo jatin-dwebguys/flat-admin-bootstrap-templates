@@ -23,6 +23,7 @@ const cssLibs = [
 ]
 
 const ngLibs = [
+  'bower_components/jquery/dist/jquery.js',
   'bower_components/chartist/dist/chartist.js',
   'bower_components/chartist-plugin-pointlabels/dist/chartist-plugin-pointlabels.js',
   'bower_components/angular/angular.js',

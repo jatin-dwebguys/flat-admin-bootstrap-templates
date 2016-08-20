@@ -12,6 +12,10 @@ body
   height: 100%;
   background-color: $grey-lighter;
 
+  .app
+    min-height: 100%;
+    height: 100%;
+
   .app-container
     padding: 0px;
     height: 100%;
@@ -85,8 +89,8 @@ body
               border-bottom: 3px solid $green;
               color: $green;
               
-    &.app-full
-      & > *:first-child
+    &.app-full, &.app-login
+      & > div:first-child, & > ui-view > div:first-child
         margin-top: 0;
 
 

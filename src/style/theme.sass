@@ -3,7 +3,7 @@
   */
 
 @mixin theme($class, $color, $dark-color, $bg)
-  body.app-#{$class}
+  .app.app-#{$class}
     @include sidebar-theme($color, $bg)
     @include sidebar-theme($color, $dark-color, ".--inverse")
     @include navbar-theme($color, $bg)

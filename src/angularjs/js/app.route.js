@@ -1,7 +1,8 @@
 import {
   AppController,
   DashboardController,
-  MessageController
+  MessageController,
+  ChartController
 } from './controllers'
 
 export default function($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -39,6 +40,10 @@ export default function($stateProvider, $urlRouterProvider, $locationProvider) {
       url: "/components",
       templateUrl: 'pages/uikits/components.html'
     })
+    .state("main.uikits.form", {
+      url: "/form",
+      templateUrl: 'pages/uikits/form.html'
+    })
     .state("main.uikits.card", {
       url: "/card",
       templateUrl: 'pages/uikits/card.html'
@@ -57,11 +62,25 @@ export default function($stateProvider, $urlRouterProvider, $locationProvider) {
     })
     .state("main.uikits.chart", {
       url: "/chart",
+      controller: ChartController,
+      controllerAs: 'vm',
       templateUrl: 'pages/uikits/chart.html'
     })
     .state("main.uikits.icons", {
       url: "/icons",
       templateUrl: 'pages/uikits/icons.html'
+    })
+    .state("login", {
+      url: "/login",
+      templateUrl: 'pages/pages/login.html'
+    })
+    .state("register", {
+      url: "/register",
+      templateUrl: 'pages/pages/register.html'
+    })
+    .state("landing", {
+      url: "/landing",
+      templateUrl: 'pages/pages/landing.html'
     })
   return $urlRouterProvider.otherwise('/');
 }

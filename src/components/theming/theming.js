@@ -1,5 +1,5 @@
 $('input[name=theming]').on('change', function() {
-  $("body").removeClass("app-blue-sky")
+  $(".app").removeClass("app-blue-sky")
           .removeClass("app-yellow")
           .removeClass("app-red")
           .removeClass("app-green")

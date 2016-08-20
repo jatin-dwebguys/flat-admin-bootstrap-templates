@@ -22,6 +22,16 @@ export default {
       title: "<span class='highlight'>Component</span>&nbsp;<span>Kits</span>",
       class: ""
     },
+    "main.uikits.form": {
+      menu: "uikits",
+      title: "<span class='highlight'>Form</span>&nbsp;<span>Kits</span>",
+      class: ""
+    },
+    "main.uikits.table": {
+      menu: "uikits",
+      title: "<span class='highlight'>Table</span>&nbsp;<span>Kits</span>",
+      class: ""
+    },
     "main.uikits.card": {
       menu: "uikits",
       title: "<span class='highlight'>Card</span>&nbsp;<span>Kits</span>",
@@ -46,6 +56,9 @@ export default {
       menu: "uikits",
       title: "<span class='highlight'>Icons</span>",
       class: ""
+    },
+    "login": {
+      class: "app-login"
     }
   }
 }

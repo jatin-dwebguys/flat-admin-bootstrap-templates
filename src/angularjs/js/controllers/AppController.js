@@ -2,11 +2,15 @@ import CONFIG from '../config'
 
 class AppController {
   constructor($rootScope, $sce, $state) {
-    this.app = {
-      title: $sce.trustAsHtml(CONFIG["TITLE"])
-    }
+
+    this.app = addAppConfig($sce, CONFIG)
     this.page = getPageConfig($sce, $state)
 
+    this.theme = {
+      current: "app-default"
+    }
+
+    /* url change event */
     $rootScope.$on('$stateChangeSuccess', (event, toState, toParams, fromState, fromParams) => {
       this.page = getPageConfig($sce, $state)
     })
@@ -20,5 +24,11 @@ function getPageConfig($sce, $state) {
   return {
     ...config,
     title: $sce.trustAsHtml(config.title)
+  }
+}
+
+function addAppConfig($sce, CONFIG) {
+  return {
+    title: $sce.trustAsHtml(CONFIG["TITLE"])
   }
 }
