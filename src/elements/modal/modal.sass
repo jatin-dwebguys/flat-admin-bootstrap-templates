@@ -1,5 +1,5 @@
 .modal
-  z-index: $z-modal
+  z-index: $z-modal !important
   .modal-dialog
     border-radius: 3px;
     .modal-content
@@ -22,7 +22,7 @@
           margin-bottom: 0;
 
 .modal-backdrop
-  z-index: $z-modal - 1;
+  z-index: $z-modal - 1 !important;
 
 .simplio-example.--modal
   display: block;
@@ -32,4 +32,4 @@
     left: auto;
     right: auto;
     top: auto;
-    z-index: 1;
+    z-index: 1 !important;

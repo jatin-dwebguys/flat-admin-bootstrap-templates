@@ -4,7 +4,7 @@ import route from './app.route'
 angular.module(CONFIG["APP"], [
   'ui.router',
   'ui.bootstrap',
-  'angular-chartist'
+  'angular-chartist',
+  'hljs'
   ])
   .config(route)
-  

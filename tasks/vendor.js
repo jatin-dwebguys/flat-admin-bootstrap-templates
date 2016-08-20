@@ -25,12 +25,14 @@ const cssLibs = [
 const ngLibs = [
   'bower_components/jquery/dist/jquery.js',
   'bower_components/chartist/dist/chartist.js',
+  'bower_components/highlightjs/highlight.pack.js',
   'bower_components/chartist-plugin-pointlabels/dist/chartist-plugin-pointlabels.js',
   'bower_components/angular/angular.js',
   'bower_components/angular-ui-router/release/angular-ui-router.js',
   'node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js',
   'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',
-  'node_modules/angular-chartist.js/dist/angular-chartist.js'
+  'node_modules/angular-chartist.js/dist/angular-chartist.js',
+  'bower_components/angular-highlightjs/angular-highlightjs.js'
 ]
 
 gulp.task('vendor', ['vendor:js', 'vendor:css', 'vendor:angularjs']);

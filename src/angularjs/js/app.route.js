@@ -2,7 +2,8 @@ import {
   AppController,
   DashboardController,
   MessageController,
-  ChartController
+  ChartController,
+  ComponentController
 } from './controllers'
 
 export default function($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -38,6 +39,8 @@ export default function($stateProvider, $urlRouterProvider, $locationProvider) {
     })
     .state("main.uikits.components", {
       url: "/components",
+      controller: ComponentController,
+      controllerAs: "vm",
       templateUrl: 'pages/uikits/components.html'
     })
     .state("main.uikits.form", {
