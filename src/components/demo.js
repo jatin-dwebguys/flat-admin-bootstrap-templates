@@ -42,9 +42,9 @@ $(".tab-stats a[data-toggle='tab']").on("shown.bs.tab", (e) => {
 
 if($('.ct-chart-sale').length) {
   new Chartist.Line('.ct-chart-sale', {
-    labels: ["","MicroSD 64Gb","Mountain Bike", "Flashdrive 128Mb", "Notebook", "MiniPC i5", "Raspberry Pi2",""],
+    labels: ["","MicroSD 64Gb","Mountain Bike", "Flashdrive 128Mb", "Notebook", "Gamepad", "MiniPC i5", "Raspberry Pi2",""],
     series: [
-      [103560,103560,91008,75008,69808, 45000, 29601,29601],
+      [103560,103560,91008,75008,69808,62000, 45000, 29601,29601],
     ]
   }, {
     axisX: {

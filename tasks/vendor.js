@@ -19,7 +19,8 @@ const cssLibs = [
   'bower_components/font-awesome/css/font-awesome.css',
   'bower_components/datatables.net-bs/css/dataTables.bootstrap.css',
   'bower_components/chartist/dist/chartist.css',
-  'bower_components/highlightjs/styles/androidstudio.css'
+  'bower_components/highlightjs/styles/androidstudio.css',
+  'bower_components/angular-ui-select/dist/select.css'
 ]
 
 const ngLibs = [
@@ -31,6 +32,7 @@ const ngLibs = [
   'bower_components/angular-ui-router/release/angular-ui-router.js',
   'node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js',
   'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',
+  'bower_components/angular-ui-select/dist/select.js',
   'node_modules/angular-chartist.js/dist/angular-chartist.js',
   'bower_components/angular-highlightjs/angular-highlightjs.js'
 ]

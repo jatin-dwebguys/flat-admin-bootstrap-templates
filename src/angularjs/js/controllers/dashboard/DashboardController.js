@@ -19,9 +19,9 @@ class DashboardController {
 
     this.saleChart = {
       data: {
-        labels: ["","MicroSD 64Gb","Mountain Bike", "Flashdrive 128Mb", "Notebook", "MiniPC i5", "Raspberry Pi2",""],
+        labels: ["","MicroSD 64Gb","Mountain Bike", "Flashdrive 128Mb", "Notebook", "Gamepad", "MiniPC i5", "Raspberry Pi2",""],
         series: [
-          [103560,103560,91008,75008,69808, 45000, 29601,29601],
+          [103560,103560,91008,75008,69808,62000, 45000, 29601,29601],
         ]
       },
       config: {

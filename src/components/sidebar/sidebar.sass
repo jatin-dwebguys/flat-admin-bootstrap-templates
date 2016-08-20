@@ -43,10 +43,6 @@
           &.dropdown
             .dropdown-menu
               border-bottom-color: $color;
-          &.open
-            & > a
-              &:after
-                border-top-color: $color;
   .dropdown-menu
     &.--sidebar
       border-left-color: $color;
@@ -116,7 +112,7 @@ aside.app-sidebar
 
         .title
           font-weight: 400;
-          font-size: 0.95em;
+          font-size: 1em;
           color: $grey-darkest
 
         &:hover
@@ -187,15 +183,17 @@ aside.app-sidebar
       & > li
         & > a
           padding: 15px 8px;
-          font-size: 0.9em;
+          font-size: 1em;
           display: block;
-          color: $grey-darkest;
+          color: rgba($white, 0.8);
 
           .flag-icon
-            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+            border-radius: 50%;
+            height: 15px;
+            width: 15px;
+            box-shadow: none;
         &.dropdown
           position: static !important;
-
           & > a
             position: relative;
           .dropdown-menu
@@ -205,11 +203,9 @@ aside.app-sidebar
             top: auto;
             bottom: 100%;
             z-index: $z-sidebar + 5;
-            border-radius: 0;
+            border-radius: 2px;
             border: 0;
-            background-color: $white;
-            border-bottom: 4px solid $green;
-            box-shadow: 0 -1px 1px $grey-darker;
+            box-shadow: none;
 
             & > li
               border: 0
@@ -219,10 +215,11 @@ aside.app-sidebar
               font-weight: 300;
               border-bottom: 1px solid rgba($grey-darker,0.2);
               font-size: 0.9em;
+              background-color: $white;
               a
                 display: block;
                 text-decoration: none;
-                color: $grey-darkest
+                color: $black-lighter
                 padding: 0.9rem 1.5rem;
                 &:hover
                   background-color: $white;
@@ -239,7 +236,7 @@ aside.app-sidebar
                 height: 0; 
                 border-left: 8px solid transparent;
                 border-right: 8px solid transparent; 
-                border-top: 8px solid $green;
+                border-top: 8px solid $white;
                 top: 0;
                 left: 50%;
                 transform: translate(-50%, 0)
