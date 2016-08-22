@@ -3,7 +3,12 @@
     padding-top: $landing-navbar-height;
     background-color: $green;
     color: $white;
+    margin-bottom: 0;
     text-align: center;
+
+    .jumbo-image
+      margin: 0 auto;
+      max-width: 800px;
 
     .title
       @include flex($align: center, $justify: center)
@@ -27,9 +32,12 @@
       font-weight: 400;
       text-transform: uppercase;
 
-  .app-content-c
+  .app-content-a
     padding: 4rem;
     background-color: $white;
+
+  .app-content-c
+    padding: 4rem;
 
   .content-heading
     margin-top: 2rem;
@@ -47,3 +55,7 @@
 
     .description
       color: $black-lighter;
+
+  .contact-us
+    padding: 4rem;
+    background-color: $white;

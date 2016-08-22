@@ -1,16 +1,57 @@
 .app-landing
   .navbar
+    height: $landing-navbar-height;
     background-color: transparent;
     box-shadow: none;
     .navbar-header
+      height: $landing-navbar-height;
       box-shadow: none;
       .navbar-brand
+        height: $landing-navbar-height;
+        transition: height .2s ease;
+        font-size: 1.25em;
         color: $white;
         .highlight
           color: $green-darker;
           background-color: $white
     .navbar-collapse
       .navbar-nav
+        height: $landing-navbar-height;
+        transition: height .2s ease;
+        border-bottom: 0;
         & > li
-          .navbar-title
+          a
+            color: $white;
+            font-size: 1.1em;
+            font-weight: 200;
+            text-transform: uppercase;
             border-right: 0;
+            .icon
+              @include absolute($left: 50%, $top: 0, $width: auto, $height: auto)
+              transform: translate(-50%, -50%)
+              font-size: 2em;
+              opacity: 0;
+              transition: all 0.2s ease;
+            span
+              opacity: 1;
+              transition: all 0.2s ease;
+            &:hover
+              .icon
+                top: 50%;
+                opacity: 1;
+              span
+                opacity: 0;
+    &.affix
+      background-color: rgba($green,.9);
+      height: $landing-navbar-affix-height;
+      min-height: $landing-navbar-affix-height;
+      .navbar-header
+        height: $landing-navbar-affix-height;
+        .navbar-brand
+          height: $landing-navbar-affix-height;
+      .navbar-collapse
+        ul.navbar-nav
+          height: $landing-navbar-affix-height;
+          border-bottom: 0;
+          & > li
+            & > a
