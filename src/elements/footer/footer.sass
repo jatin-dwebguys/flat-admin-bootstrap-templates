@@ -1,167 +1,74 @@
-// .footer {
-//   background-color: $white;
-//   .footer-box {
-//   }
-//     padding: 30px 0;
+.footer
+  background-color: $white;
+  .footer-box
+    padding: 30px 0;
+    & > .footer-nav
+      border-left: 1px solid rgba(0,0,0,0.05);
+      padding: 15px 30px;
 
-//     & > .footer-nav {
-//       border-left: 1px solid rgba(0,0,0,0.05);
-//       padding: 15px 30px;
+      & > .heading
+        font-size: 16px;
+        color: $green;
+        margin-bottom: 10px;
 
-//       & > .heading {
-//         font-size: 16px;
-//         color: #18aa4a;
-//         margin-bottom: 10px;
-//       }
-//     }
+      &:first-child
+        border-left: 0px;
 
-//     & > .footer-nav:first-child {
-//       border-left: 0px;
-//     }
+    .author
+      img.profile
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
 
-//     .author {
-//       img.profile {
-//         width: 80px;
-//         height: 80px;
-//         border-radius: 40px;
-//       }
+      .name 
+        margin-top: 10px;
+        .title
+          font-size: 1.1em;
+          line-height: 1em;
+          color: #555;
+        .subtitle
+          font-size: 14px;
+          color: #AAA;
 
-//       .name {
-//         margin-top: 10px;
+    ul.social
+      & > li
+        & > a
+          color: #666
+        & > a:hover
+          color: #29c75f;
 
-//         .title {
-//           font-size: 1.1em;
-//           line-height: 1em;
-//           color: #555;
-//         }
+    // ul.tags
+    //   & > li
+    //     & > a
+    //       color: #EEE;
+    //       border: 1px solid #EEE;
+    //     & > a:hover
+    //       color: #FFF;
+    //       border: 1px solid #29c75f;
+    //       background-color: #29c75f;
 
-//         .subtitle {
-//           font-size: 14px;
-//           color: #AAA;
-//         }
-//       }
-//     }
+    .footer-logo
+      .icon, .name
+        display: inline-block;
+      .name 
+        color: #555;
+        .icon 
+          font-size: 2em;
+          color: #18aa4a;
+          margin-left: 10px;
+          margin-right: 10px;
+        
+        .title 
+          font-size: 1.5em;
+        .subtitle 
+          color: #888;
+          margin-top: -8px;
+          font-size: 12px;
 
-//     ul.social {
-//       & > li {
-//         & > a {
-//           color: #666;
-//         }
+  .footer-copyright
+    color: #555;
+    padding: 30px 15px;
+    position: relative;
 
-//         & > a:hover {
-//           color: #29c75f;
-//         }
-//       }
-//     }
-
-//     .footer-logo {
-//       .icon, .name {
-//         display: inline-block;
-//       }
-
-//       .name {
-//         color: #555;
-//         .icon {
-//           font-size: 2em;
-//           color: #18aa4a;
-//           margin-left: 10px;
-//           margin-right: 10px;
-//         }
-//         .title {
-//           font-size: 1.5em;
-//         }
-
-//         .subtitle {
-//           color: #888;
-//           margin-top: -8px;
-//           font-size: 12px;
-//         }
-//       }
-//     }
-//   }
-
-//   .footer-copyright {
-//     color: #555;
-//     padding: 30px 15px;
-//     position: relative;
-//   }
-
-//   .footer-box + .footer-copyright {
-//     padding-top: 0;
-//   }
-// }
-
-// .footer.footer-inverse {
-//   background-color: #222;
-
-//   .footer-box {
-//     & > .footer-nav {
-//       border-left: 1px solid rgba(255,255,255,0.05);
-//       color: #CCC;
-//       & > .heading {
-//         color: #29c75f;
-//       }
-//     }
-
-//     & > .footer-nav:first-child {
-//       border-left: 0px;
-//     }
-
-//     .author {
-//       .name {
-//         .title {
-//           color: #FFF;
-//         }
-//         .subtitle {
-//           color: #AAA;
-//         }
-//       }
-//     }
-
-//     ul.social {
-//       & > li {
-//         & > a {
-//           color: #CCC;
-//         }
-
-//         & > a:hover {
-//           color: #29c75f;
-//         }
-//       }
-//     }
-
-//     .footer-logo {
-//       .name {
-//         color: #EEE;
-//         .icon {
-//           color: #18aa4a;
-//         }
-//         .subtitle {
-//           color: #AAA;
-//         }
-//       }
-//     }
-
-//     ul.tags {
-//       & > li {
-
-//         & > a {
-//           color: #EEE;
-//           // font-size: 
-//           border: 1px solid #EEE;
-//         }
-
-//         & > a:hover {
-//           color: #FFF;
-//           border: 1px solid #29c75f;
-//           background-color: #29c75f;
-//         }
-//       }
-//     }
-//   }
-
-
-//   .footer-copyright {
-//     color: #DDD;
-//   }
-// }
+  .footer-box + .footer-copyright 
+    padding-top: 0;
