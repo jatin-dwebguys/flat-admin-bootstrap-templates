@@ -12,13 +12,13 @@
 @@include('../components/navbar/navbar.html',
   { "title": "Messaging" })
 
-<div class="app-container app-full app-messaging">
+<div class="app-container app-full app-messaging collapse in" id="collapseMessaging">
   <div class="chat-group">
     <div class="heading">Converstion</div>
     <ul class="group full-height">
       <li class="section">unread</li>
       <li class="message">
-        <a href="#">
+        <a data-toggle="collapse" href="#collapseMessaging" aria-expanded="false" aria-controls="collapseMessaging">
           <span class="badge badge-warning pull-right">10</span>
           <div class="message">
             <img class="profile" src="https://placehold.it/100x100">
@@ -30,7 +30,7 @@
         </a>
       </li>
       <li class="message">
-        <a href="#">
+        <a data-toggle="collapse" href="#collapseMessaging" aria-expanded="false" aria-controls="collapseMessaging">
           <span class="badge badge-warning pull-right">10</span>
           <div class="message">
             <img class="profile" src="https://placehold.it/100x100">
@@ -43,7 +43,7 @@
       </li>
       <li class="section">readed</li>
       <li class="message">
-        <a href="#">
+        <a data-toggle="collapse" href="#collapseMessaging" aria-expanded="false" aria-controls="collapseMessaging">
           <div class="message">
             <img class="profile" src="https://placehold.it/100x100">
             <div class="content">
@@ -54,7 +54,7 @@
         </a>
       </li>
       <li class="message">
-        <a href="#">
+        <a data-toggle="collapse" href="#collapseMessaging" aria-expanded="false" aria-controls="collapseMessaging">
           <div class="message">
             <img class="profile" src="https://placehold.it/100x100">
             <div class="content">
@@ -65,7 +65,7 @@
         </a>
       </li>
       <li class="message">
-        <a href="#">
+        <a data-toggle="collapse" href="#collapseMessaging" aria-expanded="false" aria-controls="collapseMessaging">
           <div class="message">
             <img class="profile" src="https://placehold.it/100x100">
             <div class="content">
@@ -76,7 +76,7 @@
         </a>
       </li>
       <li class="message">
-        <a href="#">
+        <a data-toggle="collapse" href="#collapseMessaging" aria-expanded="false" aria-controls="collapseMessaging">
           <div class="message">
             <img class="profile" src="https://placehold.it/100x100">
             <div class="content">
@@ -87,7 +87,7 @@
         </a>
       </li>
       <li class="message">
-        <a href="#">
+        <a data-toggle="collapse" href="#collapseMessaging" aria-expanded="false" aria-controls="collapseMessaging">
           <div class="message">
             <img class="profile" src="https://placehold.it/100x100">
             <div class="content">
@@ -98,7 +98,7 @@
         </a>
       </li>
       <li class="message">
-        <a href="#">
+        <a data-toggle="collapse" href="#collapseMessaging" aria-expanded="false" aria-controls="collapseMessaging">
           <div class="message">
             <img class="profile" src="https://placehold.it/100x100">
             <div class="content">
@@ -109,7 +109,7 @@
         </a>
       </li>
       <li class="message">
-        <a href="#">
+        <a data-toggle="collapse" href="#collapseMessaging" aria-expanded="false" aria-controls="collapseMessaging">
           <div class="message">
             <img class="profile" src="https://placehold.it/100x100">
             <div class="content">
@@ -120,7 +120,7 @@
         </a>
       </li>
       <li class="message">
-        <a href="#">
+        <a data-toggle="collapse" href="#collapseMessaging" aria-expanded="false" aria-controls="collapseMessaging">
           <div class="message">
             <img class="profile" src="https://placehold.it/100x100">
             <div class="content">
@@ -131,7 +131,7 @@
         </a>
       </li>
       <li class="message">
-        <a href="#">
+        <a data-toggle="collapse" href="#collapseMessaging" aria-expanded="false" aria-controls="collapseMessaging">
           <div class="message">
             <img class="profile" src="https://placehold.it/100x100">
             <div class="content">
@@ -145,7 +145,12 @@
   </div>
   <div class="messaging">
     <div class="heading">
-      <div class="title">Lucia  Marshall <span class="badge badge-success">Online</span></div>
+      <div class="title">
+        <a class="btn-back" data-toggle="collapse" href="#collapseMessaging" aria-expanded="false" aria-controls="collapseMessaging">
+          <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </a>
+          Lucia  Marshall <span class="badge badge-success">Online</span>
+      </div>
       <div class="action"></div>
     </div>
     <ul class="chat">

@@ -4,7 +4,7 @@
     .sidebar-header
       .sidebar-brand
         .highlight
-          background-color: $color;
+          background-color: $color
     .sidebar-menu
       & > li
         & > a
@@ -17,24 +17,24 @@
           & > a
             .icon
               @if $extend == ".--inverse"
-                background-color: transparent;
+                background-color: transparent
                 border: 0px solid $white
                 color: $color
               @else
-                background-color: transparent;
+                background-color: transparent
                 color: $color
             .title
               @if $extend == ".--inverse"
                 color: $color
               @else
-                color: $color;
+                color: $color
         &.dropdown
           & > .dropdown-menu
-            border-left-color: $color;
+            border-left-color: $white
           &.open
             & > a
               &:after
-                border-right-color: $color;
+                border-right-color: $white
     .sidebar-footer
       border-top-color: rgba(0,0,0,0.1)
       background-color: $bg
@@ -42,20 +42,20 @@
         & > li
           &.dropdown
             .dropdown-menu
-              border-bottom-color: $color;
+              border-bottom-color: $color
   .dropdown-menu
     &.--sidebar
-      border-left-color: $color;
+      border-left-color: $white
 
 aside.app-sidebar
   @include fixed($width: auto, $left: 0)
   @include flex($direction: column)
   z-index: $z-sidebar
-  height: 100% !important;
+  height: 100% !important
   background-color: $white
-  overflow-x: scroll;
+  overflow-x: scroll
   box-shadow: 0 2px 2px rgba($black,0.2)
-  transition: all 0.3s ease;
+  transition: all 0.3s ease
 
   .sidebar-header
     height: $navbar-height
@@ -66,218 +66,252 @@ aside.app-sidebar
       @include flex($align: center, $justify: center)
       height: $navbar-height
       border-bottom: 1px solid $grey
-      font-size: 1.2em;
-      font-weight: 300;
+      font-size: 1.2em
+      font-weight: 300
       color: $black
 
       .highlight
-        padding: 2px 5px;
+        padding: 2px 5px
         font-weight: 200
-        color: $white;
-        border-radius: 2px;
-        margin-right: 5px;
+        color: $white
+        border-radius: 2px
+        margin-right: 5px
 
   .sidebar-menu
     @include flex($direction: column, $align: center)
-    list-style: none;
-    margin: 0;
+    list-style: none
+    margin: 0
     flex: 1
     width: $sidebar-width
-    overflow: auto;
-    padding: 4rem 0;
+    overflow: auto
+    padding: 4rem 0
 
     & > li
-      margin-bottom: 2rem;
-      width: 100%;
+      margin-bottom: 2rem
+      width: 100%
       & > a
-        display: block;
-        text-align: center;
-        color: $black;
-        text-decoration: none;
+        display: block
+        text-align: center
+        color: $black
+        text-decoration: none
 
         .icon
           @include flex($align: center, $justify: center)
-          display: block;
-          margin: 0 auto;
-          width: 60px;
-          height: 60px;
-          margin-bottom: 0.5rem;
+          display: block
+          margin: 0 auto
+          width: 60px
+          height: 60px
+          margin-bottom: 0.25rem
 
           i.fa, i.ion
-            width: 100%;
-            height: 100%;
-            font-size: 3em;
+            width: 100%
+            height: 100%
+            font-size: 3em
             @include flex($align: center, $justify: center)
-            transition: transform 0.2s ease;
+            transition: transform 0.2s ease
 
         .title
-          font-weight: 400;
-          font-size: 1em;
+          font-weight: 400
+          font-size: 1.05em
           color: $grey-darkest
 
         &:hover
           .icon
             i.fa, i.ion
-              transform: scale(1.25);
+              transform: scale(1.25)
 
       &.dropdown
-        position: static !important;
+        position: static !important
 
         & > .dropdown-menu
-          top: 0;
-          left: 100%;
-          height: 100%;
-          border-radius: 2px;
-          box-shadow: 0 1px 1px $grey-darker;
-          border: 0;
+          top: 0
+          left: 100%
+          height: 100%
+          border-radius: 2px
+          box-shadow: 0 1px 1px $grey-darker
+          border: 0
           border-left-width: 4px
           border-left-style: solid
-          padding: 0;
-          padding-top: $navbar-height;
-          min-width: 250px;
+          padding: 0
+          padding-top: $navbar-height
+          min-width: 250px
 
           & > li
             border: 0
-            border-radius: 0;
-            padding: 0;
-            margin-bottom: 0;
-            font-weight: 300;
-            border-bottom: 1px solid $grey-lighter;
-            font-size: 0.9em;
+            border-radius: 0
+            padding: 0
+            margin-bottom: 0
+            font-weight: 300
+            border-bottom: 1px solid $grey-lighter
+            font-size: 0.9em
 
             a
-              display: block;
-              text-decoration: none;
-              color: $grey-darkest;
-              padding: 1.8rem 3rem;
+              display: block
+              text-decoration: none
+              color: $grey-darkest
+              padding: 1.8rem 3rem
 
             &:last-child
-              border-bottom: 0;
+              border-bottom: 0
         &.open
           & > a
-            position: relative;
+            position: relative
             &:after
-              animation: fadeInLeft 0.3s 1;
-              content: '';
-              display: block;
-              position: absolute;
-              width: 0; 
-              height: 0; 
-              border-top: 15px solid transparent;
-              border-bottom: 15px solid transparent; 
-              border-right: 15px solid $green;
-              top: 15px;
-              right: 0;
+              animation: fadeInLeft 0.3s 1
+              content: ''
+              display: block
+              position: absolute
+              width: 0 
+              height: 0 
+              border-top: 15px solid transparent
+              border-bottom: 15px solid transparent 
+              border-right: 15px solid $green
+              top: 15px
+              right: 0
 
   .sidebar-footer
-    border-top: 1px solid $grey;
+    border-top: 1px solid $grey
     width: $sidebar-width
-    padding: 0;
-    position: relative;
+    padding: 0
+    position: relative
     ul.menu
-      list-style: none;
+      list-style: none
       margin: 0
-      padding: 0;
-      @include flex($justify: center);
+      padding: 0
+      @include flex($justify: center)
 
       & > li
         & > a
-          padding: 15px 8px;
-          font-size: 1em;
-          display: block;
-          color: rgba($white, 0.8);
+          padding: 15px 8px
+          font-size: 1em
+          display: block
+          color: rgba($white, 0.8)
 
           .flag-icon
-            border-radius: 50%;
-            height: 15px;
-            width: 15px;
-            box-shadow: none;
+            border-radius: 50%
+            height: 15px
+            width: 15px
+            box-shadow: none
         &.dropdown
-          position: static !important;
+          position: static !important
           & > a
-            position: relative;
+            position: relative
           .dropdown-menu
-            width: 100%;
-            left: 0;
-            padding: 0;
-            top: auto;
-            bottom: 100%;
-            z-index: $z-sidebar + 5;
-            border-radius: 2px;
-            border: 0;
-            box-shadow: none;
+            width: 100%
+            left: 0
+            padding: 0
+            top: auto
+            bottom: 100%
+            z-index: $z-sidebar + 5
+            border-radius: 2px
+            border: 0
+            box-shadow: none
 
             & > li
               border: 0
-              border-radius: 0;
-              padding: 0;
-              margin-bottom: 0;
-              font-weight: 300;
-              border-bottom: 1px solid rgba($grey-darker,0.2);
-              font-size: 0.9em;
-              background-color: $white;
+              border-radius: 0
+              padding: 0
+              margin-bottom: 0
+              font-weight: 300
+              border-bottom: 1px solid rgba($grey-darker,0.2)
+              font-size: 0.9em
+              background-color: $white
               a
-                display: block;
-                text-decoration: none;
+                display: block
+                text-decoration: none
                 color: $black-lighter
-                padding: 0.9rem 1.5rem;
+                padding: 0.9rem 1.5rem
                 &:hover
-                  background-color: $white;
-                  color: $green-darker;
+                  background-color: $white
+                  color: $green-darker
 
           &.open
             & > a
               &:after
-                animation: fadeInDown 0.3s 1;
-                content: '';
-                display: block;
-                position: absolute;
-                width: 0; 
-                height: 0; 
-                border-left: 8px solid transparent;
-                border-right: 8px solid transparent; 
-                border-top: 8px solid $white;
-                top: 0;
-                left: 50%;
+                animation: fadeInDown 0.3s 1
+                content: ''
+                display: block
+                position: absolute
+                width: 0 
+                height: 0 
+                border-left: 8px solid transparent
+                border-right: 8px solid transparent 
+                border-top: 8px solid $white
+                top: 0
+                left: 50%
                 transform: translate(-50%, 0)
 
 .dropdown-menu
   &.--sidebar
-    top: 0 !important;
-    left: $sidebar-width !important;
-    height: 100%;
-    border-radius: 2px;
-    box-shadow: 0 1px 1px $grey-darker;
-    border: 0;
-    border-left: 4px solid $green;
-    padding: 0;
-    padding-top: $navbar-height;
-    min-width: 250px;
-    position: fixed;
-    overflow-x: scroll;
+    top: 0 !important
+    left: $sidebar-width !important
+    height: 100%
+    border-radius: 2px
+    box-shadow: 0 2px 3px $grey-darker
+    border: 0
+    border-left: 0px solid $green
+    margin-top: 0
+    padding: 0
+    min-width: 250px
+    position: fixed
+    overflow-x: scroll
 
     & > li
       border: 0
-      border-radius: 0;
-      padding: 0;
-      margin-bottom: 0;
-      font-weight: 300;
-      border-bottom: 1px solid $grey-lighter;
-      font-size: 0.9em;
+      border-radius: 0
+      padding: 0
+      margin-bottom: 0
+      font-weight: 300
+      border-bottom: 1px solid $grey-lighter
+      font-size: 0.9em
+
+      &.heading
+        height: $navbar-height
+        max-height: $navbar-height
+        background-color: $green
+        @include flex($align: center)
+
+        .btn
+          position: relative
+          height: 100%
+          border: 0
+          border-right: 1px solid $green-darker
+          padding: 0 2rem
+          margin: 0
+          border-radius: 0
+          color: $white
+          z-index: 1
+          font-size: 2em
+          background-color: transparent
+
+          &:hover, &:focus
+            cursor: pointer
+            background-color: transparent
+
+        span
+          padding: 0.75rem 2.25rem
+          color: $grey-darkest
+          font-size: 1.5em
+          color: $white
+          flex: 1
+
+      &.section
+        padding: 0.75rem 2.25rem
+        color: $grey-darkest
+        background-color: $grey-lightest
 
       a
-        display: block;
-        text-decoration: none;
-        color: $grey-darkest;
-        padding: 1.8rem 3rem;
+        display: block
+        text-decoration: none
+        color: $grey-darkest
+        padding: 1.5rem 2.25rem
 
       &:last-child
-        border-bottom: 0;
+        border-bottom: 0
 
 @include breakpoint($sm)
   aside.app-sidebar
     transform: translate(-100%,0)
-    width: 100%;
     .sidebar-header
       height: $navbar-height-min
       .sidebar-brand
@@ -285,8 +319,37 @@ aside.app-sidebar
   body.--sidebar
     aside.app-sidebar
       transform: translate(0,0)
+  .dropdown-menu
+    &.--sidebar
+      border-radius: 0
+      & > li
+        &.heading
+          height: $navbar-height-min
+          max-height: $navbar-height-min
 
+@include breakpoint($xs)
+  aside.app-sidebar
+    transform: translate(-100%,0)
+    width: 100%
+    box-shadow: none
+    .sidebar-header, .sidebar-menu, .sidebar-footer
+      width: 100%
+  body.--sidebar
+    aside.app-sidebar
+      transform: translate(0,0)
+  .dropdown-menu
+    &.--sidebar
+      left: 0 !important
+      width: 100%
+      z-index: $z-navbar + 100
+      animation: SidebarIn 0.2s 1
 
 /* Default */
 @include sidebar-theme($green, $white)
 @include sidebar-theme($green, $dark-green, ".--inverse" )
+
+@keyframes SidebarIn
+  0% 
+    left: 100%
+  100%
+    left 0

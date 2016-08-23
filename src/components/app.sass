@@ -1,97 +1,97 @@
 html, body
-  width: 100%;
-  @include font;
-  color: $black;
-  position: relative;
+  width: 100%
+  @include font
+  color: $black
+  position: relative
 
 html
-  height: 100%;
+  height: 100%
 
 body
-  min-height: 100%;
-  height: 100%;
-  background-color: $grey-lighter;
+  min-height: 100%
+  height: 100%
+  background-color: $grey-lighter
 
   .app
-    min-height: 100%;
-    height: 100%;
+    min-height: 100%
+    height: 100%
 
   .app-container
-    padding: 0px;
-    height: 100%;
-    overflow-x: hidden;
+    padding: 0px
+    height: 100%
+    overflow-x: hidden
     padding-top: $navbar-height
     padding-left: $sidebar-width
     
     .content-heading
-      margin-bottom: 30px;
+      margin-bottom: 30px
       .title
-        font-size: 1.75em;
-        font-weight: 200;
+        font-size: 1.75em
+        font-weight: 200
 
     & > div:first-child, & > ui-view > div:first-child
-      margin-top: 30px;
+      margin-top: 30px
 
     & > div.row , & > ui-view > div.row
       padding-left: 30px
-      padding-right: 30px;
+      padding-right: 30px
 
       & > [class*="col-"]
-        margin-bottom: 30px;
+        margin-bottom: 30px
 
     & > div.app-heading-container , & > ui-view > div.app-heading-container
-      margin-top: 0;
-      background-color: $white;
-      box-shadow: 0 1px 1px $grey;
+      margin-top: 0
+      background-color: $white
+      box-shadow: 0 1px 1px $grey
 
       .app-heading
-        padding: 30px 60px;
-        @include flex($align: center);
+        padding: 30px 60px
+        @include flex($align: center)
 
         .profile-img
-          width: 80px;
-          height: 80px;
-          border-radius: 50%;
-          margin-right: 30px;
+          width: 80px
+          height: 80px
+          border-radius: 50%
+          margin-right: 30px
         .app-title
-          flex: 1;
+          flex: 1
           .title
-            font-size: 2em;
-            font-weight: 200;
+            font-size: 2em
+            font-weight: 200
 
             .highlight
               color: $green
 
           .description
-            margin-top: 5px;
-            color: $grey-darkest;
+            margin-top: 5px
+            color: $grey-darkest
 
       ul.app-tab
         list-style: none
-        padding: 30px 60px;
-        padding-bottom: 0;
-        padding-top: 0;
-        margin-bottom: 0;
-        border-top: 1px solid $grey-lighter;
-        margin-bottom: 30px;
-        @include flex;
+        padding: 30px 60px
+        padding-bottom: 0
+        padding-top: 0
+        margin-bottom: 0
+        border-top: 1px solid $grey-lighter
+        margin-bottom: 30px
+        @include flex
 
         & > li
-          display: block;
-          margin-bottom: -2px;
+          display: block
+          margin-bottom: -2px
           a
-            padding: 15px 30px;
-            display: block;
-            text-decoration: none;
-            color: $grey-darkest;
+            padding: 15px 30px
+            display: block
+            text-decoration: none
+            color: $grey-darkest
           &.active
             a
-              border-bottom: 3px solid $green;
-              color: $green;
+              border-bottom: 3px solid $green
+              color: $green
               
     &.app-full, &.app-login
       & > div:first-child, & > ui-view > div:first-child
-        margin-top: 0;
+        margin-top: 0
 
 
 *
@@ -101,34 +101,37 @@ body
   outline: 0
 
 a:hover
-  text-decoration: none;
+  text-decoration: none
 
 .full-height
-  height: 100%;
+  height: 100%
 
 .row
   &.full-height
-    height: 100%;
+    height: 100%
     & > [class*="col-"]
-      height: 100%;
+      height: 100%
   &.no-gap
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0
+    margin-right: 0
     & > [class*="col-"]
-      padding-left: 0;
-      padding-right: 0;
+      padding-left: 0
+      padding-right: 0
   &.full-width
-    padding-left: 0px !important;
-    padding-right: 0px !important;
+    padding-left: 0px !important
+    padding-right: 0px !important
 
 @include breakpoint($sm)
   body
     .app-container
-      padding-left: 0;
+      padding-left: 0
       padding-top: $navbar-height-min
-      & > .row
-        padding-left: 15px;
-        padding-right: 15px;
+      
+      & > div:first-child, & > ui-view > div:first-child
+        margin-top: 15px
+      & > div.row , & > ui-view > div.row
+        padding-left: 15px
+        padding-right: 15px
 
         & > [class*="col-"]
-          margin-bottom: 15px;
+          margin-bottom: 15px
