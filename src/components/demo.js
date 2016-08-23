@@ -80,7 +80,9 @@ if($('.ct-chart-sale').length) {
   }, [
     ['screen and (max-width: 481px)', {
       axisX: {
-        showLabel: false
+        labelInterpolationFnc: function(value) {
+          return value.slice(0, 4);
+        }
       }
     }]
   ])

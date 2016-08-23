@@ -11,7 +11,8 @@ const jsLibs = [
   'bower_components/datatables.net-bs/js/dataTables.bootstrap.js',
   'bower_components/chartist/dist/chartist.js',
   'bower_components/chartist-plugin-pointlabels/dist/chartist-plugin-pointlabels.js',
-  'bower_components/highlightjs/highlight.pack.js'
+  'bower_components/highlightjs/highlight.pack.js',
+  'bower_components/devbridge-autocomplete/dist/jquery.autocomplete.js',
 ]
 
 const cssLibs = [
@@ -20,6 +21,7 @@ const cssLibs = [
   'bower_components/datatables.net-bs/css/dataTables.bootstrap.css',
   'bower_components/chartist/dist/chartist.css',
   'bower_components/highlightjs/styles/androidstudio.css',
+  'bower_components/select2/dist/css/select2.css',
   'bower_components/angular-ui-select/dist/select.css'
 ]
 

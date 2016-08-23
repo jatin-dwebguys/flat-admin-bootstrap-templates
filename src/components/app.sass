@@ -68,9 +68,7 @@ body
 
       ul.app-tab
         list-style: none
-        padding: 30px 60px
-        padding-bottom: 0
-        padding-top: 0
+        padding: 0px 60px
         margin-bottom: 0
         border-top: 1px solid $grey-lighter
         margin-bottom: 30px
@@ -126,6 +124,8 @@ a:hover
 
 @include breakpoint($sm)
   .row
+    margin-left: -7.5px
+    margin-right: -7.5px
     & > [class*="col-"]
       padding-left: 7.5px
       padding-right: 7.5px
@@ -136,9 +136,16 @@ a:hover
       
       & > div:first-child, & > ui-view > div:first-child
         margin-top: 15px
+      & > div.app-heading-container , & > ui-view > div.app-heading-container
+        margin-top: 0
+        .app-heading
+          padding: 30px
+        ul.app-tab
+          margin-bottom: 15px
+          padding: 0px 15px
       & > div.row , & > ui-view > div.row
-        padding-left: 22.5px
-        padding-right: 22.5px
+        padding-left: 15px
+        padding-right: 15px
 
         & > [class*="col-"]
           margin-bottom: 15px
