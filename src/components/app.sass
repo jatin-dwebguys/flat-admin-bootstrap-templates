@@ -107,6 +107,9 @@ a:hover
   height: 100%
 
 .row
+  & > [class*="col-"]
+    padding-left: 15px
+    padding-right: 15px
   &.full-height
     height: 100%
     & > [class*="col-"]
@@ -122,6 +125,10 @@ a:hover
     padding-right: 0px !important
 
 @include breakpoint($sm)
+  .row
+    & > [class*="col-"]
+      padding-left: 7.5px
+      padding-right: 7.5px
   body
     .app-container
       padding-left: 0
@@ -130,8 +137,10 @@ a:hover
       & > div:first-child, & > ui-view > div:first-child
         margin-top: 15px
       & > div.row , & > ui-view > div.row
-        padding-left: 15px
-        padding-right: 15px
+        padding-left: 22.5px
+        padding-right: 22.5px
 
         & > [class*="col-"]
           margin-bottom: 15px
+          padding-left: 7.5px
+          padding-right: 7.5px
