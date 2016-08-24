@@ -38,6 +38,7 @@
     "font-awesome": "^4.6.3",
     "ionicons": "^3.0.0",
     "jquery": "^3.0.0",
-    "spinkit": "^1.2.5"
+    "spinkit": "^1.2.5",
+    "chart.js": "^2.2.1"
   }
 }
