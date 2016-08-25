@@ -1,7 +1,7 @@
-$assets-path: "/assets/images/";
+$assets-path: "/assets/images/"
 
 @function asset($url)
-  @return url($assets-path + $url);
+  @return url($assets-path + $url)
 
 /**!
   * Position
@@ -28,9 +28,9 @@ $assets-path: "/assets/images/";
 
 
 @mixin blur($px: 3px)
-  filter: asset("blur.svg#blur");
-  -webkit-filter: blur($px);
-  filter: blur($px);
+  filter: asset("blur.svg#blur")
+  -webkit-filter: blur($px)
+  filter: blur($px)
 
 /**!
   * Display
@@ -48,22 +48,23 @@ $assets-path: "/assets/images/";
 
 
 @mixin font()
-  // font-family: 'Open Sans', sans-serif;
-  // font-family: 'Kanit', sans-serif;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif
+  // font-family: 'Kanit', sans-serif
+  // font-family: 'Lato', sans-serif
+  
 
 
 @mixin breakpoint($breakpoint)
   @media (max-width: $breakpoint + 1)
-    @content;
+    @content
 
 @mixin ellipsis
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
 
 @mixin clear
-  position: relative;
-  clear: both;
-  display: block;
-  content: '';
+  position: relative
+  clear: both
+  display: block
+  content: ''

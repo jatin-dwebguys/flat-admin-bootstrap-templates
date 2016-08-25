@@ -5,8 +5,5 @@ var countries = [
 ];
 
 $('#search').autocomplete({
-    lookup: countries,
-    onSelect: function (suggestion) {
-      alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
-    }
+  lookup: countries
 });

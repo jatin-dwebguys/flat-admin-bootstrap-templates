@@ -13,3 +13,7 @@ gulp.task('angularjs', () => {
 gulp.task('dev', () => {
   return runSequence('html', 'sass', 'fonts','image', 'assets', 'vendor', 'js:watch','browser-sync','angularjs', 'watch');
 });
+
+gulp.task('docs', () => {
+  return runSequence('docs:dev', 'docs:browser-sync', 'doc:watch');
+});
