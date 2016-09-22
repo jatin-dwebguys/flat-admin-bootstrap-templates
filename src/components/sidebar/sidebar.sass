@@ -8,21 +8,31 @@
     .sidebar-menu
       & > li
         & > a
-          .icon, .title
+          .icon
             @if $extend == ".--inverse"
-              color: $grey-darker
+              background-color: $bg
+              border: 0px solid $white
+              color: $color
+            @else
+              background-color: rgba($grey-darkest, 0.15)
+              color: rgba($grey-darkest, 0.3)
+
+          .title
+            @if $extend == ".--inverse"
+              color: $color
             @else
               color: $grey-darkest
         &.active
           & > a
             .icon
               @if $extend == ".--inverse"
-                background-color: transparent
+                background-color: $bg
                 border: 0px solid $white
                 color: $color
               @else
-                background-color: transparent
-                color: $color
+                background-color: rgba($color, 0.25)
+                color: rgba($color, 0.6)
+
             .title
               @if $extend == ".--inverse"
                 color: $color
@@ -64,7 +74,6 @@ aside.app-sidebar
     .sidebar-brand
       @include flex($align: center, $justify: center)
       height: $navbar-height
-      border-bottom: 1px solid $grey
       font-size: 1.2em
       font-weight: 300
       color: $black
@@ -100,19 +109,23 @@ aside.app-sidebar
           margin: 0 auto
           width: 60px
           height: 60px
-          margin-bottom: 0.25rem
+          border-radius: 50%
+          color: $white
+          background-color: $green
+          margin-bottom: 0.6em
 
           i.fa, i.ion
             width: 100%
             height: 100%
-            font-size: 3em
+            font-size: 2em
             @include flex($align: center, $justify: center)
             transition: transform 0.2s ease
 
         .title
           font-weight: 400
-          font-size: 1.05em
+          font-size: 0.95em
           color: $grey-darkest
+          text-transform: uppercase
 
         &:hover
           .icon
@@ -169,7 +182,6 @@ aside.app-sidebar
               right: 0
 
   .sidebar-footer
-    border-top: 1px solid $grey
     width: $sidebar-width
     padding: 0
     position: relative

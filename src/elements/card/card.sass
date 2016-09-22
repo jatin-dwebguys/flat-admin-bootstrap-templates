@@ -4,24 +4,26 @@
     .card-body
       .icon
         color: $font-color
+        background-color: rgba($font-color, 0.05)
 
       .content
-        .title, .value
+        .value
           color: $font-color
     &-light
       background-color: $white
       .card-body
-        border-bottom: 5px solid $color
         .icon
           color: $color
+          background-color: rgba($color, 0.05)
         .content
-          .title, .value
+          .value
             color: $color
       &:hover
         background-color: $color
         .card-body
           .icon
             color: $white
+            background-color: rgba($white, 0.1)
           .content
             .title, .value
               color: $white
@@ -123,29 +125,31 @@
 
     .card-body
       padding: 0px
-      border-bottom: 5px solid transparent
 
       .icon
         position: absolute
-        font-size: 9em
-        opacity: 0.1
+        top: 50%
+        transform: translate(0, -50%)
+        font-size: 4em
         color: $black
         z-index: 0
+        padding: 10px
+        min-height: 100%
+        min-width: 100px
+        @include flex($align: center, $justify: center)
 
       .content
-        @include flex
+        @include flex($direction: column, $justify: flex-end, $align: flex-end)
         position: relative
         width: 100%
         padding: 2rem
         z-index: 100
 
         .value
-          font-size: 5em
+          font-size: 4em
           line-height: 3rem
           font-weight: 200
-          padding-top: 3rem
-          flex: 1
-          text-align: right
+          padding-top: 2rem
           color: $black
           .sign
             font-size: 0.4em
@@ -154,10 +158,10 @@
             opacity: 0.75
 
         .title 
-          font-size: 1.25em
-          font-weight: 200
-          flex: 1
-          color: $black
+          font-size: 1em
+          font-weight: 400
+          color: $grey-darkest
+          text-transform: uppercase
     
       &::after
         content: ''
