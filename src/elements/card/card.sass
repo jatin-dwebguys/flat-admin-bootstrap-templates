@@ -72,34 +72,77 @@
       padding: 20px 30px
 
   &.card-tab
-    .card-header, ul.nav-tabs
+    .card-header
+      padding: 0
+      background-color: $grey-lightest
+      border-bottom: 0
+      overflow-x: scroll
+      overflow-y: visible
+
+      & > .tab-background
+        @include absolute($width: 160px)
+        content: ''
+        display: block
+        z-index: 9
+        border-bottom: 2px solid $white
+        border-left: 1px solid $grey
+        border-right: 1px solid $grey
+        background-color: $white
+        transition: all 0.3s ease
+
+    .card-header > ul, ul.nav-tabs
       list-style: none
-      padding: 30px
-      padding-bottom: 0
-      padding-top: 0
+      padding: 0
       margin-bottom: 0
       @include flex
-      font-size: 1.1em
+      width: 100%
       font-weight: 400
       border-bottom: 1px solid $grey
 
       & > li
         display: block
-        margin-right: 30px
         margin-bottom: -2px
+        z-index: 10
+        width: 160px
+        min-width: 160px
         a
-          padding: 0
-          padding-top: 30px
-          padding-bottom: 30px
+          padding: 20px 30px
+          width: 100%
+          text-align: center
           display: block
           text-decoration: none
           color: $grey-darkest
+          white-space: nowrap
+          text-overflow: ellipsis
+          overflow: hidden
         &.active
           a
-            border-bottom: 3px solid $green
             color: $green
+        &:first-child
+          &.active
+            a
+              border-left: 0
+              border-top-left-radius: 3px
     .tab-content
-      padding: 30px
+      padding: 0
+      position: relative
+      overflow: hidden
+      transition: all 0.3s ease
+      .tab-pane
+        @include absolute($height: auto)
+        display: block
+        padding: 30px
+        transition: all 0.3s ease
+        &.left
+          transform: translate(-100%, 0)
+          opacity: 0.2
+        &.right
+          transform: translate(100%, 0)
+          opacity: 0.2
+        &.active
+          transform: translate(0, 0)
+          position: relative
+          opacity: 1
 
 
   &.card-tab.card-mini

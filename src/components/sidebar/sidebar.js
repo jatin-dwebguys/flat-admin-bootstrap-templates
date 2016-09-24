@@ -9,6 +9,7 @@ $(".sidebar-menu [data-dropdown]").hover(function(e) {
   const target = $(this).attr("data-dropdown")
   const elm = $(`.sidebar-menu ul.sidebar-nav > li > a[data-dropdown="${target}"]`)
   const offset = elm.offset()
+  const elmRect = elm.get(0).getBoundingClientRect()
   const rootElm = $(`.sidebar-menu .dropdown-root`)
   const targetElm = $(`.sidebar-menu .dropdown-root .dropdown-section[data-dropdown="${target}"]`)
   const targetElmRect = targetElm.get(0).getBoundingClientRect()
@@ -16,7 +17,7 @@ $(".sidebar-menu [data-dropdown]").hover(function(e) {
   switch(e.type) {
     case MOUSE_ENTER:
       if(!targetElm.hasClass("active")) {
-        rootElm.css({ top: offset.top, width: targetElmRect.width, height: targetElmRect.height })
+        rootElm.css({ top: offset.top + (elmRect.height/2), width: targetElmRect.width, height: targetElmRect.height })
         rootElm.addClass("active")
         targetElm.addClass("active")
       }

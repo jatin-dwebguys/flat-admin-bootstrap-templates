@@ -1,16 +1,28 @@
+@mixin bagde-color($name, $color)
+  &.badge-#{$name}
+    color: $color
+    background-color: rgba($color, 0.2)
+    &.badge-icon
+      i
+        background-color: rgba($color, 0.1)
+
 .badge
-  border-radius: 2px;
-  font-weight: 400;
-  background-color: $grey-darkest;
+  border-radius: 2px
+  text-transform: uppercase
+  font-size: 0.75em
+  font-weight: 400
+  padding: 6px
+  background-color: $grey-darkest
 
+  &.badge-icon
+    padding: 0
+    i
+      padding: 6px
+    span
+      padding: 6px
 
-  &.badge-primary
-    background-color: $blue;
-  &.badge-danger
-    background-color: $red;
-  &.badge-warning
-    background-color: $orange;
-  &.badge-info
-    background-color: $blue-sky;
-  &.badge-success
-    background-color: $green;
+  @include bagde-color("primary", $blue)
+  @include bagde-color("danger", $red)
+  @include bagde-color("warning", $orange)
+  @include bagde-color("info", $blue-sky-darker)
+  @include bagde-color("success", $green)

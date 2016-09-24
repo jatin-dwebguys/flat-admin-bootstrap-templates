@@ -12,22 +12,28 @@ table.table
       & > tr
         & > th
           margin-left: 1px
+          font-size: 0.9em
           background-color: $grey-lightest
           border-bottom-color: $grey
+          color: $black-lightest
+          font-weight: 400
+          text-transform: uppercase
+          border-bottom-width: 1px
+    & > tbody
+      & > tr
+        & > td
+          border-top-color: $grey-lightest
           color: $black-lighter
-          font-weight: 200
 
 .card-mini
   table.table
     &.card-table
       & > tbody, & > thead
         & > tr
-          td, th
-            font-size: $font-size
           td
             padding: 15px 30px
           th
-            padding: 10px 30px
+            padding: 15px 30px
 
 .table-responsive
   border: 0
