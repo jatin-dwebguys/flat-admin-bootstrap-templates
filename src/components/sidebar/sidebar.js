@@ -17,7 +17,7 @@ $(".sidebar-menu [data-dropdown]").hover(function(e) {
   switch(e.type) {
     case MOUSE_ENTER:
       if(!targetElm.hasClass("active")) {
-        rootElm.css({ top: offset.top + (elmRect.height/2), width: targetElmRect.width, height: targetElmRect.height })
+        rootElm.css({ top: offset.top + (elmRect.height/2) - (targetElmRect.height/2), width: targetElmRect.width, height: targetElmRect.height })
         rootElm.addClass("active")
         targetElm.addClass("active")
       }
