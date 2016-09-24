@@ -68,4 +68,8 @@ $(document).ready(function() {
       }
     });
   })
+
+  $(".card-header").perfectScrollbar({
+    suppressScrollY: true
+  });
 })

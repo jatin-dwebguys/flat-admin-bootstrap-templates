@@ -36,11 +36,10 @@ body
 
     & > div.app-heading-container , & > ui-view > div.app-heading-container
       margin-top: 0
-      background-color: $white
-      box-shadow: 0 1px 1px $grey
+      margin-bottom: 30px
 
       .app-heading
-        padding: 30px 60px
+        padding: 0px 60px
         @include flex($align: center)
 
         .profile-img
@@ -83,8 +82,10 @@ body
               color: $green
               
     &.app-full, &.app-login
+      min-height: 100vh !important
       & > div:first-child, & > ui-view > div:first-child
         margin-top: 0
+        min-height: 100vh !important
 
 
 *

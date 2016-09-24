@@ -23,6 +23,7 @@ $(".sidebar-menu [data-dropdown]").hover(function(e) {
       }
       break;
     case MOUSE_LEAVE:
+      rootElm.css({ height: 0 })
       rootElm.removeClass("active")
       targetElm.removeClass("active")
       break;

@@ -8,15 +8,12 @@
     "uikits": "active"
   }
 })
+<div class="app-container">
 @@include('../../components/navbar/navbar.html',
   { "title": "<span class='highlight'>Pricing Table</span>" })
 
-<div class="app-container">
   <div class="row">
     <div class="col-xs-12">
-      <div class="content-heading --center">
-        <div class="title">Pricing Table</div>
-      </div>
       @@include('../../elements/pricing/pricing.html')
     </div>
   </div>
