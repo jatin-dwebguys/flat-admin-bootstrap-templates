@@ -9,6 +9,7 @@ import Code from './elements/code/code'
 import Navbar from './components/navbar/navbar'
 import Tab from './elements/tab/tab'
 import Messaging from './components/messaging/messaging'
+import Toggle from './elements/toggle/toggle'
 
 import Theming from './components/theming/theming'
 import Demo from './components/demo'
