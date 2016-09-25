@@ -13,109 +13,69 @@
   @@include('../../components/navbar/navbar.html',
     { "title": "Profile" })
 
-  <div class="app-heading-container">
-    <div class="app-heading">
-      <img class="profile-img" src="/images/profile.png">
-      <div class="app-title">
-        <div class="title"><span class="highlight">Scott White</span></div>
-        <div class="description">Frontend Developer</div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body app-heading">
+          <img class="profile-img" src="/images/profile.png">
+          <div class="app-title">
+            <div class="title"><span class="highlight">Scott White</span></div>
+            <div class="description">Frontend Developer</div>
+          </div>
+        </div>
       </div>
     </div>
-    <ul class="app-tab">
-      <li role="tab1" class="active">
-        <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Profile</a>
-      </li>
-      <li role="tab2">
-        <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Activity</a>
-      </li>
-      <li role="tab3">
-        <a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Timeline</a>
-      </li>
-      <li role="tab4">
-        <a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">Setting</a>
-      </li>
-    </ul>
   </div>
   <div class="row">
-    <div class="col-lg-12 tab-content">
-      <div class="row tab-pane active" role="tabpanel" id="tab1">
-        <div class="col-lg-4">
-          <div class="card">
-            <div class="card-body">
-              <div class="section">
-                <div class="section-title"><strong><i class="fa fa-user" aria-hidden="true"></i> Bio</strong></div>
-                <div class="section-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</div>
+    <div class="col-lg-12">
+      <div class="card card-tab">
+        <div class="card-header">
+          <ul class="nav nav-tabs">
+            <li role="tab1" class="active">
+              <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Profile</a>
+            </li>
+            <li role="tab2">
+              <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Activity</a>
+            </li>
+            <li role="tab3">
+              <a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Timeline</a>
+            </li>
+            <li role="tab4">
+              <a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">Setting</a>
+            </li>
+          </ul>
+          <div class="tab-background"></div>
+        </div>
+        <div class="card-body no-padding tab-content">
+          <div role="tabpanel" class="tab-pane active" id="tab1">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="section">
+                  <div class="section-title"><strong><i class="fa fa-user" aria-hidden="true"></i> Bio</strong></div>
+                  <div class="section-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</div>
+                </div>
+                <hr />
+                <div class="section">
+                  <div class="section-title"><strong><i class="fa fa-book" aria-hidden="true"></i> Education</strong></div>
+                  <div class="section-body">Computer Engineering, Khon Kaen University</div>
+                </div>
               </div>
-              <hr />
-              <div class="section">
-                <div class="section-title"><strong><i class="fa fa-book" aria-hidden="true"></i> Education</strong></div>
-                <div class="section-body">Computer Engineering, Khon Kaen University</div>
+              <div class="col-sm-9">
               </div>
+            </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tab2">
+              ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullaip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullaip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tab3">
+              ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullaip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullaip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tab4">
+              ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullaip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullaip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             </div>
           </div>
         </div>
       </div>
-      <div class="row tab-pane" role="tabpanel" id="tab2">
-        <div class="col-lg-8">
-          <div class="card card-mini">
-            <div class="card-header">
-              <div class="card-title">Last Orders</div>
-              <ul class="card-action">
-                <li>
-                  <a href="/">
-                    <i class="fa fa-refresh"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="card-body no-padding">
-              <table class="table table-responsive card-table">
-                <thead>
-                  <tr>
-                    <th>Products</th>
-                    <th>Amount</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>MicroSD 64Gb</td>
-                    <td>2</td>
-                    <td><span class="badge badge-success">Shipped</span></td>
-                  </tr>
-                  <tr>
-                    <td>MiniPC i5</td>
-                    <td>5</td>
-                    <td><span class="badge badge-warning">Pending</span></td>
-                  </tr>
-                  <tr>
-                    <td>Mountain Bike</td>
-                    <td>1</td>
-                    <td><span class="badge badge-info">Confirm Payment</span></td>
-                  </tr>
-                  <tr>
-                    <td>Notebook</td>
-                    <td>1</td>
-                    <td><span class="badge badge-danger">Cancelled</span></td>
-                  </tr>
-                  <tr>
-                    <td>Raspberry Pi2</td>
-                    <td>6</td>
-                    <td><span class="badge badge-success">Shipped</span></td>
-                  </tr>
-                  <tr>
-                    <td>Flashdrive 128Mb</td>
-                    <td>4</td>
-                    <td><span class="badge">Complete</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row tab-pane" role="tabpanel" id="tab3"></div>
-      <div class="row tab-pane" role="tabpanel" id="tab4"></div>
     </div>
   </div>
 </div>

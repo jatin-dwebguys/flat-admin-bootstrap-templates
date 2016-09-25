@@ -1,9 +1,16 @@
+.app-messaging-container
+  @include flex($direction: column)
+  padding: 0 30px
+  margin-bottom: 30px
+  flex: 1
+
 .app-messaging
-  @include flex
-  &.collapse, &.collapsing
-    height: 100vh !important
-    &.in
-      display: flex
+  @include flex($direction: row)
+  flex: 1
+  width: 100%
+  background-color: $white
+  border-radius: 3px
+  box-shadow: 0 1px 2px $grey-darker
 
   .messaging
     @include flex($direction: column)
@@ -13,7 +20,6 @@
     & > .heading
       padding: 20px
       width: 100%
-      background-color: $white
       color: $grey-darkest
       border-bottom: 1px solid $grey
 
@@ -148,7 +154,6 @@
     .heading
       width: 100%
       padding: 20px
-      background-color: $white
       color: $grey-darkest
       border-right: 1px solid $grey
       border-bottom: 1px solid $grey
@@ -156,7 +161,6 @@
       background-color: $white
       flex: 1
       width: 100%
-      box-shadow: 0 2px 2px rgba(68, 68, 68, 0.2)
       padding: 0
       list-style: none
       margin-bottom: 0
