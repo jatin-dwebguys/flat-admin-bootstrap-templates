@@ -1,10 +1,6 @@
 const MOUSE_ENTER = "mouseenter"
 const MOUSE_LEAVE = "mouseleave"
 
-// $(".app-sidebar .sidebar-menu, .app-container, .app-messaging ul.group, .app-messaging ul.chat").perfectScrollbar({
-//   suppressScrollX: true
-// });
-
 $(".sidebar-menu [data-dropdown]").hover(function(e) {
   const target = $(this).attr("data-dropdown")
   const elm = $(`.sidebar-menu ul.sidebar-nav > li > a[data-dropdown="${target}"]`)

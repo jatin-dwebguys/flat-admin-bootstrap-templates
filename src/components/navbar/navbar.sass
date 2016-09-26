@@ -107,21 +107,31 @@
             a.dropdown-toggle
               text-align: center
               display: block
+              padding: 0 8px
 
               .icon
-                font-size: 1.8em
-                color: $grey-darker
+                font-size: 1.6em
+                width: 45px
+                height: 45px
+                background-color: rgba($grey-darkest, 0.15)
+                color: rgba($grey-darkest, 0.3)
                 transition: all 0.2s ease
+                border-radius: 50%
+                @include flex($align: center, $justify: center)
 
               .count
-                @include absolute($right: 10px, $top: 10px, $width: auto, $height: auto)
-                font-size: 0.75em
+                @include absolute($right: 0, $top: 0)
+                @include flex($align: center, $justify: center)
+                font-size: 0.70em
                 font-weight: 400
                 color: $white
                 background-color: rgba($grey-darkest, 0.6)
+                box-shadow: 0 1px 2px rgba($grey-darkest, 0.1)
                 padding: 3px
+                border-radius: 50%
+                width: 20px
+                height: 20px
                 line-height: 1em
-                border-radius: 2px
 
               &:hover
                 .icon
@@ -210,24 +220,19 @@
             &.danger
               a.dropdown-toggle
                 .icon 
-                  color: $red
+                  background-color: rgba($red, 0.15)
+                  color: rgba($red, 0.3)
                 .count
-                  background-color: $red
-
-              & > .dropdown-menu
-                & > li.dropdown-header
-                  background-color: $red
-                  border-bottom: 0px solid $red
+                  background-color: rgba($red, 0.7)
+                  box-shadow: 0 1px 2px rgba($red, 0.1)
             &.warning
               a.dropdown-toggle
                 .icon 
-                  color: $orange
+                  background-color: rgba($orange, 0.15)
+                  color: rgba($orange, 0.3)
                 .count
-                  background-color: $orange
-              & > .dropdown-menu
-                & > li.dropdown-header
-                  background-color: $orange
-                  border-bottom: 2px solid $orange
+                  background-color: rgba($orange, 0.7)
+                  box-shadow: 0 1px 2px rgba($orange, 0.1)
           &.profile
             & > a
               @include flex($align: center)
@@ -235,56 +240,165 @@
                 width: 60px
                 height: 60px
                 border-radius: 50%
-
-            .dropdown-menu
-              min-width: 250px
-              padding: 0
-              .profile-info
-                background-color: $green
-                color: $white
-                padding: 2rem
-
-                h4
-                  margin-top: 0
-                  margin-bottom: 0
-
-                hr 
-                  margin-top: 1rem
-                  margin-bottom: 1rem
-                  opacity: 0.2
-
-                p
-                  margin-bottom: 0
-              .action
-                list-style: none
-                margin: 0
-                padding: 0
-                border-radius: 3px
-                border: 0
-                min-width: 200px
-
-                & > li
-                  border: 0
-                  border-radius: 0
-                  padding: 0
-                  border-bottom: 1px solid $grey
-                  margin-bottom: 0
-                  font-weight: 300
-                  font-size: 0.9em
-
-                  a
-                    display: block
-                    text-decoration: none
-                    color: $black
-                    padding: 1.2rem
           &.open
             & > a 
               & , &:hover, a:focus
                 background-color: transparent
-            & > .dropdown-menu
-              animation: fadeInUp 0.5s 1
-              display: block
 
+  .dropdown-root
+    position: absolute
+    right: 0
+    top: 100%
+    min-width: 300px
+    height: 0
+    transition: all 0.3s ease
+    transform: translate(0, -24px)
+
+    & > .dropdown-background
+      @include absolute($top: 0, $left: 0)
+      z-index: $z-sidebar
+      border-radius: 3px
+      padding-top: 16px
+      display: none
+
+      .bg
+        position: relative
+        width: 100%
+        height: 100%
+        background-color: $white
+        box-shadow: 0 0 1px rgba($black,0.2)
+        border: 1px solid $grey
+        transition: all 0.3s ease
+        border-radius: 3px
+
+      .arrow
+        @include absolute($right: 0, $top: 0)
+        &:after
+          @include absolute($left: 50%, $top: 0)
+          content: ''
+          display: block
+          width: 0
+          height: 0
+          border-left: 16px solid transparent
+          border-right: 16px solid transparent
+          border-bottom: 16px solid $grey
+          transform: translate(-50%, 0)
+
+    &.active
+      & > .dropdown-background
+        display: block
+
+    & > .dropdown-container
+      position: relative
+      height: auto
+      overflow: hidden
+      z-index: $z-sidebar + 2
+
+      .dropdown-section
+        padding: 0
+        transition: all 0.3s ease
+        opacity: 0
+        position: absolute
+        padding-top: 16px
+        &.active
+          position: relative
+          opacity: 1
+
+
+        .profile-info
+          .username 
+            margin-top: 0
+            margin-bottom: 0
+            background-color: rgba($grey-darkest, 0.1)
+            color: $black-darker
+            border-radius: 3px
+            padding: 1.2rem
+            font-size: 1.6em
+            width: 100%
+            @include ellipsis
+            margin: 0 auto
+            font-weight: 200
+
+      .dropdown-section
+        & > ul
+          list-style: none
+          padding: 0
+          margin: 0
+
+          & > li
+            border: 0
+            border-radius: 0
+            padding: 0
+            border-bottom: 1px solid rgba($grey-darkest, 0.1)
+            margin-bottom: 0
+            font-weight: 300
+            font-size: 0.9em
+
+            a
+              display: block
+              text-decoration: none
+              color: $black
+              padding: 1.2rem
+              font-weight: 400
+
+              .message
+                @include flex($align: center)
+                padding-right: 40px
+                .content
+                  flex: 1
+                  .title
+                    font-weight: 400
+                    font-size: 1em
+                  .description
+                    font-weight: 400
+                    font-size: 0.85em
+                    opacity: 0.4
+                .profile
+                  width: 30px
+                  height: 30px
+                  border-radius: 50%
+                  margin-right: 8px
+
+            span.badge
+              border-radius: 3px
+              font-weight: 400
+              font-weight: 1.4em
+
+            &:hover 
+              a
+                background-color: rgba($grey-darkest, 0.1)
+                color: $black-darker
+                cursor: pointer
+            &.empty
+              color: $grey-darkest
+              font-weight: 200
+
+            &.dropdown-header
+              background: transparent
+              padding: 1.2rem
+              color: $black-darker
+              font-weight: 400
+              background-color: rgba($grey-darkest, 0.1)
+              border-bottom: none
+
+            &.dropdown-footer
+              background-color: transparent
+              border-top: 0
+              font-weight: 300
+              font-size: 0.9em
+              text-align: right
+
+              a
+                color: $grey-darkest
+                padding: 1.2rem
+
+            &:last-child
+              border-bottom: 0
+
+            &.dropdown-empty
+              padding: 2rem
+              text-align: center
+              color: $grey-darkest
 .app-landing 
   .navbar
     .navbar-collapse

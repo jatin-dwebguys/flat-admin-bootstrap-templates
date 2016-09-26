@@ -149,7 +149,6 @@ aside.app-sidebar
             height: 60px
             border-radius: 50%
             color: $white
-            background-color: $green
             margin-bottom: 0.6em
 
             i.fa, i.ion
@@ -242,25 +241,31 @@ aside.app-sidebar
 
       & > .dropdown-background
         @include absolute($top: 0, $left: 0)
-        background-color: $white
         z-index: $z-sidebar
         border-radius: 3px
-        box-shadow: 0 0 1px rgba($black,0.2)
-        border: 1px solid $grey
-        transition: all 0.3s ease
-        margin-left: 20px
+        padding-left: 16px
         display: none
 
-        &:after
-          @include absolute($top: 50%)
-          content: ''
-          display: block
-          width: 0
-          height: 0
-          transform: translate(-100%, -100%)
-          border-top: 15px solid transparent
-          border-bottom: 15px solid transparent
-          border-right: 15px solid $grey
+        .bg
+          position: relative
+          width: 100%
+          height: 100%
+          background-color: $white
+          box-shadow: 0 0 1px rgba($black,0.2)
+          border: 1px solid $grey
+          transition: all 0.3s ease
+          border-radius: 3px
+
+          &:after
+            @include absolute($top: 50%)
+            content: ''
+            display: block
+            width: 0
+            height: 0
+            transform: translate(-100%, -100%)
+            border-top: 15px solid transparent
+            border-bottom: 15px solid transparent
+            border-right: 15px solid $grey
 
       &.active
         & > .dropdown-background
