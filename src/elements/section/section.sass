@@ -1,17 +1,28 @@
 div.section
-  margin-bottom: 30px;
+  margin-bottom: 30px
   .section-title
-    font-size: 1.1em;
-    font-weight: 200;
-    margin-bottom: 15px;
+    @include flex($align: center)
+    font-size: 1em
+    font-weight: 400
+    margin-bottom: 15px
+    color: $black
 
-    i 
-      margin-right: 5px;
+    .icon
+      @include flex($align: center, $justify: center)
+      background-color: rgba($grey-darkest, 0.1)
+      width: 30px
+      height: 30px
+      border-radius: 50%
+      color: rgba($grey-darkest, 0.75)
+      margin-right: 10px
+
   .section-body
+    padding-left: 40px
+    color: $black-lighter
   
 .page-heading
-  padding: 15px;
-  padding-left: 30px;
-  margin-bottom: 30px;
+  padding: 15px
+  padding-left: 26px
+  margin-bottom: 26px
   .title
-    font-size: 1.3em;
+    font-size: 1.3em
