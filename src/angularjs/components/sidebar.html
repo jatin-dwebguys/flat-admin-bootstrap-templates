@@ -1,75 +1,95 @@
-<aside class="app-sidebar --inverse">
+<aside class="app-sidebar" id="sidebar">
   <div class="sidebar-header">
+    <a class="sidebar-brand" href="#" ng-bind-html="main.app.title"></a>
   </div>
-  <ul class="sidebar-menu">
-    <li ng-class="{active: main.page.menu == 'dashboard'}">
-      <a ui-sref="main.dashboard">
-        <div class="icon">
-          <i class="fa fa-tasks" aria-hidden="true"></i>
+  <div class="sidebar-menu">
+    <ul class="sidebar-nav">
+      <li class="@@menu.dashboard">
+        <a href="/">
+          <div class="icon">
+            <i class="fa fa-tasks" aria-hidden="true"></i>
+          </div>
+          <div class="title">Dashboard</div>
+        </a>
+      </li>
+      <li class="@@menu.messaging">
+        <a href="/html/messaging.html">
+          <div class="icon">
+            <i class="fa fa-comments" aria-hidden="true"></i>
+          </div>
+          <div class="title">Messaging</div>
+        </a>
+      </li>
+      <li class="dropdown @@menu.uikits">
+        <a href="/" class="dropdown-toggle" data-dropdown="ui-kits">
+          <div class="icon">
+            <i class="fa fa-cube" aria-hidden="true"></i>
+          </div>
+          <div class="title">UI Kits</div>
+        </a>
+      </li>
+      <li class="dropdown">
+        <a href="/" class="dropdown-toggle sidebar-dropdown" data-dropdown="pages">
+          <div class="icon">
+            <i class="fa fa-file-o" aria-hidden="true"></i>
+          </div>
+          <div class="title">Pages</div>
+        </a>
+      </li>
+    </ul>
+    <div class="dropdown-root">
+      <div class="dropdown-background">
+        <div class="bg"></div>
+      </div>
+      <div class="dropdown-container">
+        <div class="dropdown-section" data-dropdown="ui-kits">
+          <ul>
+            <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> UI Kits</li>
+            <li><a href="/html/uikits/customize.html">Customize</a></li>
+            <li><a href="/html/uikits/components.html">Components</a></li>
+            <li><a href="/html/uikits/card.html">Card</a></li>
+            <li><a href="/html/uikits/form.html">Form</a></li>
+            <li><a href="/html/uikits/table.html">Table</a></li>
+            <li><a href="/html/uikits/icons.html">Icons</a></li>
+            <li class="line"></li>
+            <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> Advanced Components</li>
+            <li><a href="/html/uikits/pricing-table.html">Pricing Table</a></li>
+            <li><a href="/html/uikits/timeline.html">Timeline</a></li>
+            <li><a href="/html/uikits/chart.html">Chart</a></li>
+          </ul>
         </div>
-        <div class="title">Dashboard</div>
-      </a>
-    </li>
-    <li ng-class="{active: main.page.menu == 'messaging'}">
-      <a ui-sref="main.messaging">
-        <div class="icon">
-          <i class="fa fa-comments" aria-hidden="true"></i>
+        <div class="dropdown-section" data-dropdown="pages">
+          <ul>
+            <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> Admin</li>
+            <li><a href="/html/pages/form.html">Information</a></li>
+            <li><a href="/html/pages/profile.html">Profile</a></li>
+            <li><a href="/html/pages/search.html">Search</a></li>
+            <li class="line"></li>
+            <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> Landing</li>
+            <li><a href="/html/pages/landing.html">Landing</a></li>
+            <li><a href="/html/pages/login.html">Login</a></li>
+            <li><a href="/html/pages/register.html">Register</a></li>
+            <li><a href="/html/pages/404.html">404</a></li>
+          </ul>
         </div>
-        <div class="title">Messaging</div>
-      </a>
-    </li>
-    <li class="dropdown" ng-class="{active: main.page.menu == 'uikits', open: isUikitMenuOpen}" uib-dropdown  dropdown-append-to="main.appendToApp" is-open="isUikitMenuOpen">
-      <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
-        <div class="icon">
-          <i class="fa fa-cube" aria-hidden="true"></i>
-        </div>
-        <div class="title">UI Kits</div>
-      </a>
-      <ul class="dropdown-menu --sidebar" uib-dropdown-menu>
-        <li><a ui-sref="main.uikits.customize">Customize</a></li>
-        <li><a ui-sref="main.uikits.components">Components</a></li>
-        <li><a ui-sref="main.uikits.card">Card</a></li>
-        <li><a ui-sref="main.uikits.form">Form</a></li>
-        <li><a ui-sref="main.uikits.table">Table</a></li>
-        <li><a ui-sref="main.uikits.pricing">Pricing Table</a></li>
-        <li><a ui-sref="main.uikits.timeline">Timeline</a></li>
-        <li><a ui-sref="main.uikits.chart">Chart</a></li>
-        <li><a ui-sref="main.uikits.icons">Icons</a></li>
-      </ul>
-    </li>
-    <li class="dropdown" ng-class="{active: main.page.menu == 'pages', open: isPageMenuOpen}" uib-dropdown  dropdown-append-to="main.appendToApp" is-open="isPageMenuOpen">
-      <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
-        <div class="icon">
-          <i class="fa fa-file-o" aria-hidden="true"></i>
-        </div>
-        <div class="title">Pages</div>
-      </a>
-      <ul class="dropdown-menu --sidebar" uib-dropdown-menu>
-        <li><a ui-sref="main.pages.form">Details & Form</a></li>
-        <li><a ui-sref="main.pages.not_found">Profile</a></li>
-        <li><a ui-sref="landing">Landing</a></li>
-        <li><a ui-sref="login">Login</a></li>
-        <li><a ui-sref="register">Register</a></li>
-        <li><a ui-sref="main.pages.search">Search</a></li>
-        <li><a ui-sref="404">404</a></li>
-      </ul>
-    </li>
-  </ul>
+      </div>
+    </div>
+  </div>
   <div class="sidebar-footer">
     <ul class="menu">
-      <li class="dropdown" uib-dropdown>
-        <a href="/" class="dropdown-toggle" data-toggle="dropdown" uib-dropdown-toggle>
+      <li class="dropdown">
+        <a href="/" class="dropdown-toggle" data-toggle="dropdown">
           <i class="fa fa-cogs" aria-hidden="true"></i>
         </a>
-        <ul class="dropdown-menu"  uib-dropdown-menu>
+        <ul class="dropdown-menu">
           <li><a href="#">Setting</a></li>
           <li><a href="#">AboutUs</a></li>
           <li><a href="#">Term of Service</a></li>
           <li><a href="#">Support</a></li>
         </ul>
       </li>
-      <li >
-        <a href="/">
+      <li>
+        <a href="/" class="dropdown-toggle" data-toggle="dropdown">
           <i class="fa fa-bullhorn" aria-hidden="true"></i>
         </a>
       </li>

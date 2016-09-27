@@ -1,33 +1,33 @@
 .loader-container
-  display: none;
+  display: none
 
-.--loading
-  position: relative;
-  overflow: hidden;
+.__loading
+  position: relative
+  overflow: hidden
 
   .loader-container
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1003; 
-    color: $grey-darkest;
+    display: block
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 1003 
+    color: $grey-darkest
 
     .icon
-      margin-bottom: 4px;
+      margin-bottom: 4px
 
     .sk-wave
-      margin-top: 0;
-      margin-bottom: 1rem;
+      margin-top: 0
+      margin-bottom: 1rem
 
       .sk-rect
-        background-color: $grey-darkest;
+        background-color: $grey-darkest
 
   &:after
     @include absolute($top: 0, $left: 0)
-    content: "";
-    display: block;
-    background-color: rgba(255,255,255, 0.9);
-    z-index: 1;
-    border-radius: 1px;
+    content: ""
+    display: block
+    background-color: rgba(255,255,255, 0.9)
+    z-index: 1
+    border-radius: 1px

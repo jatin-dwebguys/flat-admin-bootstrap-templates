@@ -2,8 +2,9 @@
 @@include('./components/sidebar.html',{
   "path": ".."
 })
-@@include('./components/navbar.html',{
-  "path": ".."
-})
-
-<div class="app-container" ui-view ng-class="main.page.class"></div>
+<div class="app-container" ng-class="main.page.class">
+  @@include('./components/navbar.html',{
+    "path": ".."
+  })
+  <ui-view></ui-view>
+</div>

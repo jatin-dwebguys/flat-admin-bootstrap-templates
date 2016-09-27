@@ -5,9 +5,9 @@
 @mixin theme($class, $color, $dark-color, $bg)
   .app.app-#{$class}
     @include sidebar-theme($color, $bg)
-    @include sidebar-theme($color, $dark-color, ".--inverse")
+    @include sidebar-theme($color, $dark-color, ".__inverse")
     @include navbar-theme($color, $bg)
-    @include navbar-theme($color, $dark-color, ".--inverse")
+    @include navbar-theme($color, $dark-color, ".__inverse")
 
 // @include theme("default-inverse", $green, $dark-green)
 @include theme("blue", $blue, $dark-blue, $white)

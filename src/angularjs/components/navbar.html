@@ -1,156 +1,160 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default">
   <div class="container-fluid">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#" ng-bind-html="main.app.title"></a>
-  </div>
-  <div class="navbar-collapse collapse">
-    <ul class="nav navbar-nav hidden-sm">
-      <li class="active">
-        <div class="navbar-title" ng-bind-html="main.page.title"></div>
-      </li>
-      <li class="search hidden-md">
-        <input type="text" placeholder="Search..">
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown notification" uib-dropdown>
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" uib-dropdown-toggle>
-          <div class="icon"><i class="fa fa-shopping-basket" aria-hidden="true"></i></div>
-          <div class="count">0</div>
-        </a>
-        <ul class="dropdown-menu" uib-dropdown-menu>
-          <li class="dropdown-header">Ordering</li>
-          <li class="dropdown-empty">No New Ordered</li>
-          <li class="dropdown-footer">
-            <a href="#">View All <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-          </li>
-        </ul>
-      </li>
-      <li class="dropdown notification warning" uib-dropdown>
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" uib-dropdown-toggle>
-          <div class="icon"><i class="fa fa-comments" aria-hidden="true"></i></div>
-          <div class="count">99+</div>
-        </a>
-        <ul class="dropdown-menu" uib-dropdown-menu>
-          <li class="dropdown-header">Message</li>
-          <li>
-            <a href="#">
-              <span class="badge badge-warning pull-right">10</span>
-              <div class="message">
-                <img class="profile" src="https://placehold.it/100x100">
-                <div class="content">
-                  <div class="title">"Payment Confirmation.."</div>
-                  <div class="description">Alan Anderson</div>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="badge badge-warning pull-right">5</span>
-              <div class="message">
-                <img class="profile" src="https://placehold.it/100x100">
-                <div class="content">
-                  <div class="title">"Hello World"</div>
-                  <div class="description">Marco  Harmon</div>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="badge badge-warning pull-right">2</span>
-              <div class="message">
-                <img class="profile" src="https://placehold.it/100x100">
-                <div class="content">
-                  <div class="title">"Order Confirmation.."</div>
-                  <div class="description">Brenda Lawson</div>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="dropdown-footer">
-            <a href="#">View All <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-          </li>
-        </ul>
-      </li>
-      <li class="dropdown notification danger" uib-dropdown>
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" uib-dropdown-toggle>
-          <div class="icon"><i class="fa fa-bell" aria-hidden="true"></i></div>
-          <div class="count">10</div>
-        </a>
-        <ul class="dropdown-menu" uib-dropdown-menu>
-          <li class="dropdown-header">Notification</li>
-          <li>
-            <a href="#">
-              <span class="badge badge-danger pull-right">8</span>
-              <div class="message">
-                <div class="content">
-                  <div class="title">New Order</div>
-                  <div class="description">$400 total</div>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="badge badge-danger  pull-right">14</span>
-              Inbox
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="badge badge-danger pull-right">5</span>
-              Bugs Report
-            </a>
-          </li>
-          <li class="dropdown-footer">
-            <a href="#">View All <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-          </li>
-        </ul>
-      </li>
-      <li class="dropdown profile" uib-dropdown>
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" uib-dropdown-toggle>
-          <img class="profile-img" src="/images/profile.png">
-        </a>
-        <div class="dropdown-menu" uib-dropdown-menu>
-          <div class="profile-info">
-            <h4 class="username">Scott  White</h4>
-            <hr>
-            <p>emily_hart@email.com</p>
-          </div>
-          <ul class="action">
-            <li>
-              <a href="#">
-                Profile
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="badge badge-danger pull-right">5</span>
-                My Inbox
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Setting
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Logout
-              </a>
-            </li>
-          </ul>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav hidden-sm">
+        <li class="active">
+          <div class="navbar-title" ng-bind-html="main.page.title"></div>
+        </li>
+        <li class="search hidden-md">
+          <input id="search" type="text" placeholder="Search..">
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown notification">
+          <a href="#" class="dropdown-toggle" data-dropdown="navbar-menu1">
+            <div class="icon"><i class="fa fa-shopping-basket" aria-hidden="true"></i></div>
+            <div class="count">0</div>
+          </a>
+        </li>
+        <li class="dropdown notification warning">
+          <a href="#" class="dropdown-toggle" data-dropdown="navbar-menu2">
+            <div class="icon"><i class="fa fa-comments" aria-hidden="true"></i></div>
+            <div class="count">99</div>
+          </a>
+        </li>
+        <li class="dropdown notification danger">
+          <a href="#" class="dropdown-toggle" data-dropdown="navbar-menu3">
+            <div class="icon"><i class="fa fa-bell" aria-hidden="true"></i></div>
+            <div class="count">10</div>
+          </a>
+        </li>
+        <li class="dropdown profile">
+          <a href="#" class="dropdown-toggle" data-dropdown="navbar-profile">
+            <img class="profile-img" src="/images/profile.png">
+          </a>
+        </li>
+      </ul>
+
+      <div class="dropdown-root">
+        <div class="dropdown-background">
+          <div class="arrow"></div>
+          <div class="bg"></div>
         </div>
-      </li>
-    </ul>
-  </div>
+        <div class="dropdown-container">
+          <div class="dropdown-section" data-dropdown="navbar-menu1">
+            <ul>
+              <li class="dropdown-header">Ordering</li>
+              <li class="dropdown-empty">No New Ordered</li>
+              <li class="dropdown-footer">
+                <a href="#">View All <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown-section" data-dropdown="navbar-menu2">
+            <ul>
+              <li class="dropdown-header">Message</li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-warning pull-right">10</span>
+                  <div class="message">
+                    <img class="profile" src="https://placehold.it/100x100">
+                    <div class="content">
+                      <div class="title">"Payment Confirmation.."</div>
+                      <div class="description">Alan Anderson</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-warning pull-right">5</span>
+                  <div class="message">
+                    <img class="profile" src="https://placehold.it/100x100">
+                    <div class="content">
+                      <div class="title">"Hello World"</div>
+                      <div class="description">Marco  Harmon</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-warning pull-right">2</span>
+                  <div class="message">
+                    <img class="profile" src="https://placehold.it/100x100">
+                    <div class="content">
+                      <div class="title">"Order Confirmation.."</div>
+                      <div class="description">Brenda Lawson</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="dropdown-footer">
+                <a href="#">View All <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown-section" data-dropdown="navbar-menu3">
+            <ul>
+              <li class="dropdown-header">Notification</li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-danger pull-right">8</span>
+                  <div class="message">
+                    <div class="content">
+                      <div class="title">New Order</div>
+                      <div class="description">$400 total</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-danger pull-right">14</span>
+                  Inbox
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-danger pull-right">5</span>
+                  Issues Report
+                </a>
+              </li>
+              <li class="dropdown-footer">
+                <a href="#">View All <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown-section" data-dropdown="navbar-profile">
+            <div class="profile-info">
+              <h4 class="username">Scott White</h4>
+            </div>
+            <ul class="action">
+              <li>
+                <a href="#">
+                  Profile
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-danger pull-right">5</span>
+                  My Inbox
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Setting
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </nav>

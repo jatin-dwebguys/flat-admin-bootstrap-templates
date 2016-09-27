@@ -2,7 +2,7 @@
   .navbar#{$extend}
     .navbar-header
       .navbar-brand
-        @if $extend == ".--inverse"
+        @if $extend == ".__inverse"
           color: $white
         .highlight
           background-color: $color
@@ -434,4 +434,4 @@
 
 
 @include navbar-theme($green, $white)
-@include navbar-theme($green, $dark-green, ".--inverse" )
+@include navbar-theme($green, $dark-green, ".__inverse" )

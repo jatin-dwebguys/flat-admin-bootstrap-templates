@@ -10,5 +10,5 @@ $('.dropdown[data-placement="body"]').on('hide.bs.dropdown', (e) => {
 });         
 
 $(".navbar-toggle").on('click', (e) => { 
-  $("body").toggleClass("--sidebar")
+  $("body").toggleClass("__sidebar")
 });

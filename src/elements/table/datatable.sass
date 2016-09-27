@@ -1,87 +1,87 @@
 .dataTables_wrapper
-  border-radius: 2px;
-  overflow: hidden;
+  border-radius: 2px
+  overflow: hidden
   .top
-    @include flex;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 20px;
-    padding-right: 45px;
+    @include flex
+    position: absolute
+    right: 0
+    top: 0
+    padding: 20px
+    padding-right: 45px
     .dataTables_filter
-      width: 100%;
-      flex: 1;
+      width: 100%
+      flex: 1
 
       label
-        width: 100%;
-        display: block;
-        font-weight: normal;
-        margin-bottom: 0;
+        width: 100%
+        display: block
+        font-weight: normal
+        margin-bottom: 0
       .form-control
-        width: 100%;
-        min-width: 200px;
-        margin-left: 0;
-        color: $grey-darkest;
-        margin-bottom: 0;
-        padding: 10px 15px;
-        border-right: 0;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-        background-color: transparent;
+        width: 100%
+        min-width: 200px
+        margin-left: 0
+        color: $grey-darkest
+        margin-bottom: 0
+        padding: 10px 15px
+        border-right: 0
+        border-top-right-radius: 0
+        border-bottom-right-radius: 0
+        background-color: transparent
     .dataTables_length
 
       label
-        width: 100px;
-        display: block;
-        font-weight: normal;
-        margin-bottom: 0;
+        width: 100px
+        display: block
+        font-weight: normal
+        margin-bottom: 0
       .select2
-        width: 100px !important;
+        width: 100px !important
         span.select2-selection
-          border: 1px solid $grey-darker;
-          border-radius: 0;
-          border-top-right-radius: 2px;
-          border-bottom-right-radius: 2px;
-          height: 43px;
-          background-color: transparent;
+          border: 1px solid $grey-darker
+          border-radius: 0
+          border-top-right-radius: 2px
+          border-bottom-right-radius: 2px
+          height: 43px
+          background-color: transparent
 
         .select2-selection__rendered
-          color: #888;
-          line-height: 43px;
-          padding-left: 15px;
+          color: #888
+          line-height: 43px
+          padding-left: 15px
         .select2-selection__arrow
-          height: 46px;
-          right: 5px;
+          height: 46px
+          right: 5px
 
-        .select2-selection--single
+        .select2-selection__single
           .select2-selection__arrow
             b
-              margin-top: 0;
+              margin-top: 0
               transform: translate(0, -50%)
 
   .top::after ,.bottom::after
-    content: '';
-    position: relative;
-    clear: both;
-    display: block;
+    content: ''
+    position: relative
+    clear: both
+    display: block
 
   .bottom
-    border-top: 2px solid $grey;
-    padding: 20px 30px;
-    font-size: 14px;
+    border-top: 2px solid $grey
+    padding: 20px 30px
+    font-size: 14px
     .dataTables_info
-      float: left;
-      color: $grey-darkest;
+      float: left
+      color: $grey-darkest
     .dataTables_paginate
-      float: right;
+      float: right
       .pagination
-        display: block;
+        display: block
 
   table.dataTable
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+    margin-top: 0 !important
+    margin-bottom: 0 !important
 
     & > thead
       & >tr
         & > th
-          background-color: $white;
+          background-color: $white
