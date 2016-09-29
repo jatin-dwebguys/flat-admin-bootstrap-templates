@@ -1,12 +1,14 @@
 import CONFIG from './config'
 
 import {
-  ngSidebarDirective
+  ngSidebarDropdown,
+  ngSidebarDropdownItem
 } from './components'
 
 export function RegisterDirective() {
   
   angular.module(CONFIG["APP"])
-    .directive("ngSidebar", () => new ngSidebarDirective)
+    .directive("ngSidebarDropdown", () => new ngSidebarDropdown())
+    .directive("ngSidebarDropdownItem", () => new ngSidebarDropdownItem())
 
 }

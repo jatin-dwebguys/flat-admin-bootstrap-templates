@@ -1,4 +1,4 @@
-<aside class="app-sidebar" id="sidebar" ng-sidebar>
+<aside class="app-sidebar" id="sidebar">
   <div class="sidebar-header">
     <a class="sidebar-brand" href="#" ng-bind-html="main.app.title"></a>
   </div>
@@ -21,7 +21,7 @@
         </a>
       </li>
       <li ng-class="{active: main.page.menu == 'uikits'}">
-        <a href="/" class="dropdown-toggle" ng-dropdown-toggle name="ui-kits">
+        <a href="/" class="dropdown-toggle" ng-sidebar-dropdown-item="ui-kits">
           <div class="icon">
             <i class="fa fa-cube" aria-hidden="true"></i>
           </div>
@@ -29,7 +29,7 @@
         </a>
       </li>
       <li ng-class="{active: main.page.menu == 'pages'}">
-        <a href="/" class="dropdown-toggle sidebar-dropdown" data-dropdown="pages">
+        <a href="/" class="dropdown-toggle" ng-sidebar-dropdown-item="pages">
           <div class="icon">
             <i class="fa fa-file-o" aria-hidden="true"></i>
           </div>
@@ -37,36 +37,41 @@
         </a>
       </li>
     </ul>
-    <div ng-dropdown-root>
-      <div ng-dropdown name="ui-kits">
-        <ul>
-          <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> UI Kits</li>
-          <li><a href="/html/uikits/customize.html">Customize</a></li>
-          <li><a href="/html/uikits/components.html">Components</a></li>
-          <li><a href="/html/uikits/card.html">Card</a></li>
-          <li><a href="/html/uikits/form.html">Form</a></li>
-          <li><a href="/html/uikits/table.html">Table</a></li>
-          <li><a href="/html/uikits/icons.html">Icons</a></li>
-          <li class="line"></li>
-          <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> Advanced Components</li>
-          <li><a href="/html/uikits/pricing-table.html">Pricing Table</a></li>
-          <li><a href="/html/uikits/timeline.html">Timeline</a></li>
-          <li><a href="/html/uikits/chart.html">Chart</a></li>
-        </ul>
+    <div class="dropdown-root">
+      <div class="dropdown-background">
+        <div class="bg"></div>
       </div>
-      <div data-dropdown="pages">
-        <ul>
-          <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> Admin</li>
-          <li><a href="/html/pages/form.html">Information</a></li>
-          <li><a href="/html/pages/profile.html">Profile</a></li>
-          <li><a href="/html/pages/search.html">Search</a></li>
-          <li class="line"></li>
-          <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> Landing</li>
-          <li><a href="/html/pages/landing.html">Landing</a></li>
-          <li><a href="/html/pages/login.html">Login</a></li>
-          <li><a href="/html/pages/register.html">Register</a></li>
-          <li><a href="/html/pages/404.html">404</a></li>
-        </ul>
+      <div class="dropdown-container">
+        <div class="dropdown-section" ng-sidebar-dropdown="ui-kits">
+          <ul>
+            <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> UI Kits</li>
+            <li><a href="/html/uikits/customize.html">Customize</a></li>
+            <li><a href="/html/uikits/components.html">Components</a></li>
+            <li><a href="/html/uikits/card.html">Card</a></li>
+            <li><a href="/html/uikits/form.html">Form</a></li>
+            <li><a href="/html/uikits/table.html">Table</a></li>
+            <li><a href="/html/uikits/icons.html">Icons</a></li>
+            <li class="line"></li>
+            <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> Advanced Components</li>
+            <li><a href="/html/uikits/pricing-table.html">Pricing Table</a></li>
+            <li><a href="/html/uikits/timeline.html">Timeline</a></li>
+            <li><a href="/html/uikits/chart.html">Chart</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-section" ng-sidebar-dropdown="pages">
+          <ul>
+            <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> Admin</li>
+            <li><a href="/html/pages/form.html">Information</a></li>
+            <li><a href="/html/pages/profile.html">Profile</a></li>
+            <li><a href="/html/pages/search.html">Search</a></li>
+            <li class="line"></li>
+            <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> Landing</li>
+            <li><a href="/html/pages/landing.html">Landing</a></li>
+            <li><a href="/html/pages/login.html">Login</a></li>
+            <li><a href="/html/pages/register.html">Register</a></li>
+            <li><a href="/html/pages/404.html">404</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

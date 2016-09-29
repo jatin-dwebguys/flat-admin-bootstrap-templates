@@ -1,1 +1,2 @@
-export ngSidebarDirective from './SidebarDirective';
+export ngSidebarDropdown from './ngSidebarDropdown';
+export ngSidebarDropdownItem from './ngSidebarDropdownItem';
