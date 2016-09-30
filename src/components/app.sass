@@ -24,10 +24,10 @@ body
         font-size: 1.75em
         font-weight: 200
 
-    & > div:first-child, & > ui-view > div:first-child
+    & > div:first-child, & > ui-view > div:first-child , & > ui-view > ui-view > div:first-child, , & > ui-view > ui-view > ui-view > div:first-child
       margin-top: 30px
 
-    & > div.row , & > ui-view > div.row
+    & > div.row , & > ui-view > div.row, & > ui-view > ui-view > div.row, , & > ui-view > ui-view > ui-view > div.row
       padding-left: 30px
       padding-right: 30px
 
@@ -58,7 +58,7 @@ body
               
     &.app-login
       min-height: 100vh !important
-      & > div:first-child, & > ui-view > div:first-child
+      & > div:first-child, & > ui-view > div:first-child, & > ui-view > ui-view > div:first-child, & > ui-view > ui-view > ui-view > div:first-child
         margin-top: 0
         min-height: 100vh !important
 
@@ -66,7 +66,7 @@ body
     &.app-full
       height: 100vh !important
       @include flex($direction: column)
-      & > div:first-child, & > ui-view > div:first-child
+      & > div:first-child, & > ui-view > div:first-child, & > ui-view > ui-view > div:first-child, & > ui-view > ui-view > ui-view > div:first-child
         margin-top: 0
       & > *
         width: 100%
@@ -114,16 +114,16 @@ a:hover
       padding-left: 0
       padding-top: $navbar-height-min
       
-      & > div:first-child, & > ui-view > div:first-child
+      & > div:first-child, & > ui-view > div:first-child, & > ui-view > ui-view > div:first-child, & > ui-view > ui-view > ui-view > div:first-child
         margin-top: 15px
-      & > div.app-heading-container , & > ui-view > div.app-heading-container
+      & > div.app-heading-container , & > ui-view > div.app-heading-container , & > ui-view > ui-view > div.app-heading-container , & > ui-view > ui-view > ui-view > div.app-heading-container
         margin-top: 0
         .app-heading
           padding: 30px
         ul.app-tab
           margin-bottom: 15px
           padding: 0px 15px
-      & > div.row , & > ui-view > div.row
+      & > div.row , & > ui-view > div.row, & > ui-view > ui-view > div.row, & > ui-view > ui-view > ui-view > div.row
         padding-left: 15px
         padding-right: 15px
 
