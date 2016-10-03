@@ -245,6 +245,10 @@
               & , &:hover, a:focus
                 background-color: transparent
 
+      &.navbar-mobile
+        @include flex()
+        display: none
+
   .dropdown-root
     position: absolute
     right: 0
@@ -407,7 +411,11 @@
       box-shadow: none
 @include breakpoint($sm)
   .navbar
+    @include fixed($left: 0, $top: 0)
     height: $navbar-height-min
+    padding: 0 10.75px
+    .container-fluid
+      // padding: 0
     .navbar-header
       height: $navbar-height-min
       width: auto
@@ -418,6 +426,7 @@
     .navbar-collapse
       .navbar-nav
         height: $navbar-height-min - 1
+        display: none
         & > li
           &.dropdown
             &.profile
@@ -425,6 +434,8 @@
                 .profile-img 
                   width: 40px
                   height: 40px
+        &.navbar-mobile
+          display: flex
 
 @include breakpoint($xs)
   .navbar

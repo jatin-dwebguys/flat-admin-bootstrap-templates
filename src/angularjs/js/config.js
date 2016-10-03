@@ -10,7 +10,7 @@ export default {
     "main.messaging": {
       menu: "messaging",
       title: "Messaging",
-      class: "app-full app-messaging"
+      class: "app-full"
     },
     "main.uikits.customize": {
       menu: "uikits",

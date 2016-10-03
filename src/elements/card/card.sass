@@ -80,7 +80,7 @@
       overflow-y: visible
 
       & > .tab-background
-        @include absolute($width: 200px)
+        @include absolute($width: 140px)
         content: ''
         display: block
         z-index: 9
@@ -103,8 +103,8 @@
         display: block
         margin-bottom: -2px
         z-index: 10
-        width: 200px
-        min-width: 200px
+        width: 140px
+        min-width: 140px
         a
           padding: 20px 30px
           width: 100%
@@ -144,6 +144,23 @@
           position: relative
           opacity: 1
 
+    // Angular UI Tabs
+    & > .ng-isolate-scope
+      & > .nav-tabs
+        background-color: $grey-lightest
+        & > li
+          &.active
+            border-bottom: 2px solid $white
+            border-left: 1px solid $grey
+            border-right: 1px solid $grey
+            background-color: $white
+            a
+              color: $green
+      .tab-content
+        .tab-pane
+          opacity: 0
+          &.active
+            opacity: 1
 
   &.card-tab.card-mini
     .card-header, ul.nav-tabs
