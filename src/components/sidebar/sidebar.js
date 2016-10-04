@@ -1,7 +1,7 @@
 const MOUSE_ENTER = "mouseenter"
 const MOUSE_LEAVE = "mouseleave"
 
-$(".sidebar-menu [data-dropdown]").hover(function(e) {
+$(".sidebar-menu [data-dropdown]").bind("mouseenter mouseleave click", function(e) {
   const target = $(this).attr("data-dropdown")
   const elm = $(`.sidebar-menu ul.sidebar-nav > li > a[data-dropdown="${target}"]`)
   const offset = elm.offset()

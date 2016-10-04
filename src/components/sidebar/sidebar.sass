@@ -86,9 +86,6 @@
           &.dropdown
             .dropdown-menu
               border-bottom-color: $color
-  .dropdown-menu
-    &.__sidebar
-      border-left-color: $white
 
 aside.app-sidebar
   @include absolute($width: auto, $left: 0)
@@ -104,6 +101,7 @@ aside.app-sidebar
     height: $navbar-height
     width: $sidebar-width
     padding: 0 10px
+    position: relative
 
     .sidebar-brand
       @include flex($align: center, $justify: center)
@@ -118,6 +116,15 @@ aside.app-sidebar
         color: $white
         border-radius: 2px
         margin-right: 5px
+    .sidebar-toggle
+      display: none
+      @include absolute($right: 0, $top: 0, $width: auto)
+      height: 100%
+      border: 0
+      border-radius: 0
+      padding: 0 15px
+      background-color: transparent
+      font-size: 1.4em
 
   .sidebar-menu
     @include flex($direction: column, $align: center)
@@ -239,6 +246,17 @@ aside.app-sidebar
       transition: all 0.3s ease
       transform: translate(-40px, 0)
 
+      .sidebar-dropdown-toggle
+        @include absolute($left: 0, $bottom: 100%, $width: auto)
+        height: $navbar-height-min
+        border: 0
+        border-radius: 0
+        padding: 0 15px
+        display: block
+        background-color: transparent
+        font-size: 1.8em
+        display: none
+
       & > .dropdown-background
         @include absolute($top: 0, $left: 0)
         z-index: $z-sidebar
@@ -358,73 +376,10 @@ aside.app-sidebar
                 left: 50%
                 transform: translate(-50%, 0)
 
-.dropdown-menu
-  &.__sidebar
-    top: 0 !important
-    left: $sidebar-width !important
-    height: 100%
-    border-radius: 2px
-    box-shadow: 0 2px 3px $grey-darker
-    border: 0
-    border-left: 0px solid $green
-    margin-top: 0
-    padding: 0
-    min-width: 250px
-    position: fixed
-    overflow-x: scroll
 
-    & > li
-      border: 0
-      border-radius: 0
-      padding: 0
-      margin-bottom: 0
-      font-weight: 300
-      border-bottom: 1px solid $grey-lighter
-      font-size: 0.9em
+  &.active
+    transform: translate(0,0)
 
-      &.heading
-        height: $navbar-height
-        max-height: $navbar-height
-        background-color: $green
-        @include flex($align: center)
-
-        .btn
-          position: relative
-          height: 100%
-          border: 0
-          border-right: 1px solid $green-darker
-          padding: 0 2rem
-          margin: 0
-          border-radius: 0
-          color: $white
-          z-index: 1
-          font-size: 2em
-          background-color: transparent
-
-          &:hover, &:focus
-            cursor: pointer
-            background-color: transparent
-
-        span
-          padding: 0.75rem 2.25rem
-          color: $grey-darkest
-          font-size: 1.5em
-          color: $white
-          flex: 1
-
-      &.section
-        padding: 0.75rem 2.25rem
-        color: $grey-darkest
-        background-color: $grey-lightest
-
-      a
-        display: block
-        text-decoration: none
-        color: $grey-darkest
-        padding: 1.5rem 2.25rem
-
-      &:last-child
-        border-bottom: 0
 
 @include breakpoint($sm)
   aside.app-sidebar
@@ -432,18 +387,82 @@ aside.app-sidebar
     box-shadow: none
     .sidebar-header
       height: $navbar-height-min
+      border-bottom: 1px solid $grey-lightest
       .sidebar-brand
         height: $navbar-height-min
-  body.__sidebar
-    aside.app-sidebar
+      .sidebar-toggle
+        display: block
+    .sidebar-menu
+      position: relative
+      ul.sidebar-nav
+        padding: 0
+        & > li
+          & > a
+            @include flex($align: center)
+            padding: 15px
+            border-bottom: 1px solid $grey-lightest
+            .icon
+              margin: 0
+              background-color: transparent !important
+              border-radius: 0
+              margin-right: 15px
+              width: 40px
+              height: 40px
+      .dropdown-root
+        top: 0 !important
+        height: 100% !important
+        &.active
+          left: 0
+          position: absolute
+          width: 100% !important
+          transform: translate(0, 0)
+
+          .sidebar-dropdown-toggle
+            display: block
+
+          & > .dropdown-background
+            padding: 0
+            border-radius: 0
+            border: 0
+
+            .bg
+              box-shadow: none
+              border: none
+              border-radius: 0
+
+          .dropdown-container
+            height: 100%
+            overflow-x: hidden
+            overflow-y: auto
+
+            .dropdown-section
+              padding-left: 0
+              display: none
+              &.active
+                display: block
+              & > ul
+                padding: 0
+                & > li
+                  border-bottom: 1px solid $grey-lightest
+                  a
+                    padding: 1.5rem
+                    padding-left: 5rem
+                  &.section
+                    padding: 1.5rem
+                    padding-left: 5rem
+                    & > i
+                      left: 1.5rem
+                  &.line
+                    display: none
+
+
+    &.active
       transform: translate(0,0)
-  .dropdown-menu
-    &.__sidebar
-      border-radius: 0
-      & > li
-        &.heading
-          height: $navbar-height-min
-          max-height: $navbar-height-min
+
+  body.__sidebar
+    .app-container
+      height: 100vh
+      overflow: hidden
 
 @include breakpoint($xs)
   aside.app-sidebar
@@ -451,15 +470,6 @@ aside.app-sidebar
     width: 100%
     .sidebar-header, .sidebar-menu, .sidebar-footer
       width: 100%
-  body.__sidebar
-    aside.app-sidebar
-      transform: translate(0,0)
-  .dropdown-menu
-    &.__sidebar
-      left: 0 !important
-      width: 100%
-      z-index: $z-navbar + 100
-      animation: SidebarIn 0.2s 1
 
 /* Default */
 @include sidebar-theme($green, $white)

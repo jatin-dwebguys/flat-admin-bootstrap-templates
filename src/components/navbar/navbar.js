@@ -39,3 +39,8 @@ $(".navbar-collapse [data-dropdown]").hover(function(e) {
       break;
   }
 })
+
+$(".sidebar-toggle").bind("click", function(e) {
+  $("#sidebar").toggleClass("active")
+  $("body").toggleClass("__sidebar")
+});
