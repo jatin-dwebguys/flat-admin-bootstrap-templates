@@ -5,7 +5,7 @@ table.table
     & > tr
       td, th
         font-size: $font-size
-        padding: 1.5rem 3rem
+        padding: 15px 30px
   &.card-table
     margin-bottom: 0
     & > thead
@@ -37,3 +37,19 @@ table.table
 
 .table-responsive
   border: 0
+
+@include breakpoint($sm)
+  table.table
+    & > tbody, & > thead
+      & > tr
+        td, th
+          padding: 15px 15px
+  .card-mini
+    table.table
+      &.card-table
+        & > tbody, & > thead
+          & > tr
+            td
+              padding: 15px 15px
+            th
+              padding: 15px 15px

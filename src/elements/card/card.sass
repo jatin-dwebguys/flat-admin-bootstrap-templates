@@ -116,6 +116,9 @@
           text-overflow: ellipsis
           overflow: hidden
         &.active
+          border-left: 1px solid $grey
+          border-right: 1px solid $grey
+          background-color: $white
           a
             color: $green
         &:first-child
@@ -130,19 +133,21 @@
       transition: all 0.3s ease
       .tab-pane
         @include absolute($height: auto)
-        display: block
+        display: none
         padding: 30px
         transition: all 0.3s ease
-        &.left
-          transform: translate(-100%, 0)
-          opacity: 0.2
-        &.right
-          transform: translate(100%, 0)
-          opacity: 0.2
+        opacity: 0
+        // &.left
+        //   transform: translate(-100%, 0)
+        //   opacity: 0.2
+        // &.right
+        //   transform: translate(100%, 0)
+        //   opacity: 0.2
         &.active
           transform: translate(0, 0)
           position: relative
           opacity: 1
+          display: block
 
     // Angular UI Tabs
     & > .ng-isolate-scope
@@ -255,3 +260,34 @@
       padding: 15px
     .card-body
       padding: 15px
+    &.card-mini
+      .card-header
+        padding: 15px
+      .card-body
+        padding: 15px
+    &.card-tab
+      .card-header
+        padding: 0
+      .card-body
+        padding: 0
+      .tab-content
+        .tab-pane
+          padding: 15px
+    &.card-tab.card-mini
+      .card-header, ul.nav-tabs
+        & > li
+          a
+            padding-top: 15px
+            padding-bottom: 15px
+    &.card-banner
+      .card-body
+        .icon
+          font-size: 3em
+          min-width: 80px
+        .content
+          padding: 1rem
+          .value
+            font-size: 3em
+            padding-top: 1rem
+          .title 
+            font-size: 0.9em

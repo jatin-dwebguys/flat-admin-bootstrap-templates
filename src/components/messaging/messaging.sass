@@ -18,13 +18,20 @@ ui-view
   border-radius: 3px
   box-shadow: 0 1px 2px $grey-darker
 
+  &.collapse.in
+    display: flex
+
   .messaging
     @include flex($direction: column)
     height: 100%
+    width: auto
+    min-width: auto
     flex: 1
     transition: all 0.3s ease
     & > .heading
-      padding: 20px
+      padding: 0 20px
+      height: 60px
+      @include flex($align: center)
       width: 100%
       color: $grey-darkest
       border-bottom: 1px solid $grey
@@ -44,8 +51,6 @@ ui-view
         .badge
           margin-left: 10px
           font-size: 0.7em
-          &.badge-success
-            background-color: $green
 
     & > .footer
       width: 100%
@@ -159,7 +164,9 @@ ui-view
 
     .heading
       width: 100%
-      padding: 20px
+      padding: 0 20px
+      height: 60px
+      @include flex($align: center)
       color: $grey-darkest
       border-right: 1px solid $grey
       border-bottom: 1px solid $grey
@@ -212,22 +219,27 @@ ui-view
             font-weight: 0.8em
 
 @include breakpoint($sm)
+  .app-messaging-container
+    padding: 0
+    margin-bottom: 0
   .app-messaging
-    .chat-group
-      width: 250px
-
-@include breakpoint($xs)
-  .app-messaging
+    border-radius: 0
     .chat-group, .messaging
       min-width: 100%
       width: 100%
       flex: 1
-    &.collapsing
-      .chat-group, .messaging
-        transform: translate(-100%, 0)
+    .chat-group
+      transform: translate(0, 0)
+    .messaging
+      transform: translate(100%, 0)
     &.collapse
-      .chat-group, .messaging
-        transform: translate(-100%, 0)
+      .chat-group
+        transform: translate(0, 0)
+      .messaging
+        transform: translate(100%, 0)
       &.in
-        .chat-group, .messaging
-          transform: translate(0, 0)
+        display: flex
+        .chat-group
+          transform: translate(-100%, 0)
+        .messaging
+          transform: translate(-100%, 0)

@@ -91,6 +91,7 @@ a:hover
   height: 100%
 
 .row
+  margin-bottom: 0
   & > [class*="col-"]
     padding-left: 15px
     padding-right: 15px
@@ -119,6 +120,9 @@ a:hover
     .app-container
       padding-left: 0
       padding-top: $navbar-height
+
+      &.app-full
+        padding-top: $navbar-height-min
       
       & > div:first-child, & > ui-view > div:first-child, & > ui-view > ui-view > div:first-child, & > ui-view > ui-view > ui-view > div:first-child
         margin-top: 15px

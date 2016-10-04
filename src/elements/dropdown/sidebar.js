@@ -7,8 +7,4 @@ $('.dropdown[data-placement="body"]').on('show.bs.dropdown', (e) => {
 $('.dropdown[data-placement="body"]').on('hide.bs.dropdown', (e) => {        
   $(e.target).append(dropdownMenu.detach());        
   dropdownMenu.hide();                              
-});         
-
-$(".navbar-toggle").on('click', (e) => { 
-  $("body").toggleClass("__sidebar")
 });

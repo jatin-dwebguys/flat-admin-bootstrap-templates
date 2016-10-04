@@ -1,42 +1,9 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" id="navbar">
   <div class="container-fluid">
     <div class="navbar-collapse collapse in">
-      <ul class="nav navbar-nav">
-        <li class="active">
-          <div class="navbar-title">@@title</div>
-        </li>
-        <li class="search hidden-md">
-          <input id="search" type="text" placeholder="Search..">
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown notification">
-          <a href="#" class="dropdown-toggle" data-dropdown="navbar-menu1">
-            <div class="icon"><i class="fa fa-shopping-basket" aria-hidden="true"></i></div>
-            <div class="count">0</div>
-          </a>
-        </li>
-        <li class="dropdown notification warning">
-          <a href="#" class="dropdown-toggle" data-dropdown="navbar-menu2">
-            <div class="icon"><i class="fa fa-comments" aria-hidden="true"></i></div>
-            <div class="count">99</div>
-          </a>
-        </li>
-        <li class="dropdown notification danger">
-          <a href="#" class="dropdown-toggle" data-dropdown="navbar-menu3">
-            <div class="icon"><i class="fa fa-bell" aria-hidden="true"></i></div>
-            <div class="count">10</div>
-          </a>
-        </li>
-        <li class="dropdown profile">
-          <a href="#" class="dropdown-toggle" data-dropdown="navbar-profile">
-            <img class="profile-img" src="/images/profile.png">
-          </a>
-        </li>
-      </ul>
       <ul class="nav navbar-nav navbar-mobile">
         <li>
-          <button type="button" class="sidebar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <button type="button" class="sidebar-toggle">
             <i class="fa fa-bars"></i>
           </button>
         </li>
@@ -44,9 +11,44 @@
           <a class="navbar-brand" href="#"><span class="highlight">Flat v3</span> Admin</a>
         </li>
         <li>
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <button type="button" class="navbar-toggle">
             <img class="profile-img" src="/images/profile.png">
           </button>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-left">
+        <li class="navbar-title">@@title</li>
+        <li class="navbar-search hidden-sm">
+          <input id="search" type="text" placeholder="Search..">
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown notification">
+          <a href="#" class="dropdown-toggle" data-dropdown="navbar-menu1">
+            <div class="icon"><i class="fa fa-shopping-basket" aria-hidden="true"></i></div>
+            <div class="title">New Orders</div>
+            <div class="count">0</div>
+          </a>
+        </li>
+        <li class="dropdown notification warning">
+          <a href="#" class="dropdown-toggle" data-dropdown="navbar-menu2">
+            <div class="icon"><i class="fa fa-comments" aria-hidden="true"></i></div>
+            <div class="title">Unread Messages</div>
+            <div class="count">99</div>
+          </a>
+        </li>
+        <li class="dropdown notification danger">
+          <a href="#" class="dropdown-toggle" data-dropdown="navbar-menu3">
+            <div class="icon"><i class="fa fa-bell" aria-hidden="true"></i></div>
+            <div class="title">System Notifications</div>
+            <div class="count">10</div>
+          </a>
+        </li>
+        <li class="dropdown profile">
+          <a href="/html/pages/profile.html" class="dropdown-toggle" data-dropdown="navbar-profile">
+            <img class="profile-img" src="/images/profile.png">
+            <div class="title">Profile</div>
+          </a>
         </li>
       </ul>
       <div class="dropdown-root">

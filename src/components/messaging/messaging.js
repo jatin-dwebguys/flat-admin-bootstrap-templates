@@ -1,4 +1,3 @@
-
-  $(".app-messaging ul.group, .app-messaging ul.chat").perfectScrollbar({
-    suppressScrollX: true
-  });
+// $(".app-messaging ul.group, .app-messaging ul.chat").perfectScrollbar({
+//   suppressScrollX: true
+// });

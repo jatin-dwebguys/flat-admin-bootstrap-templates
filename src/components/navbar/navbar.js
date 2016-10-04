@@ -11,8 +11,7 @@ $('#search').autocomplete({
 const MOUSE_ENTER = "mouseenter"
 const MOUSE_LEAVE = "mouseleave"
 
-
-$(".navbar-collapse [data-dropdown]").hover(function(e) {
+const dropdownAction = function(e) {
   const target = $(this).attr("data-dropdown")
   const elm = $(`.navbar-collapse ul.navbar-nav > li > a[data-dropdown="${target}"]`)
   const offset = elm.offset()
@@ -38,9 +37,17 @@ $(".navbar-collapse [data-dropdown]").hover(function(e) {
       targetElm.removeClass("active")
       break;
   }
-})
+}
+
+$(".navbar-collapse [data-dropdown]").hover(dropdownAction)
 
 $(".sidebar-toggle").bind("click", function(e) {
   $("#sidebar").toggleClass("active")
   $("body").toggleClass("__sidebar")
 });
+
+$(".navbar-toggle").bind("click", function(e) {
+  $("#navbar").toggleClass("active")
+  $("body").toggleClass("__navbar")
+});
+

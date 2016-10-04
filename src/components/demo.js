@@ -78,12 +78,12 @@ if($('.ct-chart-sale').length) {
       })
     ]
   }, [
-    ['screen and (max-width: 481px)', {
+    ['screen and (max-width: 768px)', {
       axisX: {
-        labelInterpolationFnc: function(value) {
-          return value.slice(0, 4);
-        }
-      }
+        offset: 0,
+        showLabel: false
+      },
+      height: 180
     }]
   ])
 }

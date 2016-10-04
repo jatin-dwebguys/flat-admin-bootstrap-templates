@@ -83,7 +83,7 @@
           font-size: 1.1em
           @include font()
 
-        .navbar-title
+        &.navbar-title
           @include flex($align: center)
           font-weight: 300
           font-size: 1.3em
@@ -96,7 +96,7 @@
           .highlight
             font-weight: 400
 
-        &.search
+        &.navbar-search
           input
             border: none
             height: 100%
@@ -134,6 +134,9 @@
                 width: 20px
                 height: 20px
                 line-height: 1em
+
+              .title
+                display: none
 
               &:hover
                 .icon
@@ -242,6 +245,8 @@
                 width: 60px
                 height: 60px
                 border-radius: 50%
+              .title
+                display: none
           &.open
             & > a 
               & , &:hover, a:focus
@@ -250,6 +255,7 @@
       &.navbar-mobile
         @include flex()
         display: none
+        position: relative
         & > li
           height: 100%
           .navbar-toggle, .sidebar-toggle
@@ -264,11 +270,16 @@
             background-color: transparent
             font-size: 1.4em
             @include flex($align: center, $justify: center)
-
             .profile-img
               width: 40px
               height: 40px
               border-radius: 50%
+          .sidebar-toggle
+            @include absolute($left: 0, $top: 0, $width: auto)
+            z-index: $z-navbar + 2
+          .navbar-toggle
+            @include absolute($right: 0, $top: 0, $width: auto)
+            z-index: $z-navbar + 2
           &.logo
             flex: 1
 
@@ -472,13 +483,62 @@
         display: none
         & > li
           &.dropdown
+            &.notification
+              a.dropdown-toggle
+                padding: 10px
+                width: 100%
+                @include flex($align: center, $justify: flex-start)
+                .icon
+                  margin-right: 10px
+                  background-color: transparent !important
+
+                .count
+                  position: relative
+                  font-size: 0.9em
+                  width: 30px
+                  height: 30px
+
+                .title
+                  flex: 1
+                  text-align: left
+                  display: block
             &.profile
+              border-bottom: none !important
               & > a
+                width: 100%
                 .profile-img 
                   width: 40px
                   height: 40px
+                  margin-right: 10px
+                .title
+                  display: block
         &.navbar-mobile
           display: flex
+
+  body.__navbar
+    .navbar
+      .navbar-collapse
+        .navbar-nav
+          height: auto
+          display: flex
+          flex-direction: column
+          & > li
+            width: 100%
+            border-bottom: 1px solid $grey-lightest
+            &.navbar-title
+              display: none
+            &.navbar-search
+              input
+                padding: 15px
+                width: 100%
+        .navbar-mobile
+          height: $navbar-height-min
+          flex-direction: row
+          border-bottom: none
+          & > li
+            width: auto
+        .dropdown-root
+          display: none
 
 @include breakpoint($xs)
   .navbar
