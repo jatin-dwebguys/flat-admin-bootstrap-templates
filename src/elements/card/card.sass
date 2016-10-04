@@ -248,3 +248,10 @@
   @include banner("orange", $orange, $white)
   @include banner("yellow", $yellow, $white)
 
+
+@include breakpoint($sm)
+  .card
+    .card-header
+      padding: 15px
+    .card-body
+      padding: 15px

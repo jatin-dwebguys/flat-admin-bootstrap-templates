@@ -71,6 +71,8 @@
       height: $navbar-height - 1px
       border-bottom: 1px solid transparent
       @include flex($align: center)
+      margin-top: 0
+      margin-bottom: 0
 
       & > li
         @include flex($align: center)
@@ -248,6 +250,46 @@
       &.navbar-mobile
         @include flex()
         display: none
+        & > li
+          height: 100%
+          .navbar-toggle, .sidebar-toggle
+            height: 100%
+            border: 0
+            margin-top: 0
+            margin-right: 0
+            margin-bottom: 0
+            border-radius: 0
+            padding: 0 15px
+            display: block
+            background-color: transparent
+            font-size: 1.4em
+            @include flex($align: center, $justify: center)
+
+            .profile-img
+              width: 40px
+              height: 40px
+              border-radius: 50%
+          &.logo
+            flex: 1
+
+        .navbar-brand
+          @include flex($align: center, $justify: center)
+          height: $navbar-height
+          font-size: 1.2em
+          font-weight: 300
+          position: relative
+          margin: 0 auto
+          width: 100%
+          text-align: center
+          color: $black
+
+          .highlight
+            padding: 2px 5px
+            font-weight: 200
+            color: $white
+            border-radius: 2px
+            margin-right: 5px
+            background-color: $green
 
   .dropdown-root
     position: absolute
@@ -413,7 +455,7 @@
   .navbar
     @include fixed($left: 0, $top: 0)
     height: $navbar-height-min
-    padding: 0 10.75px
+    padding: 0px
     .container-fluid
       // padding: 0
     .navbar-header
@@ -424,8 +466,9 @@
       .navbar-toggle
         display: block
     .navbar-collapse
+      border-radius: 0
       .navbar-nav
-        height: $navbar-height-min - 1
+        height: $navbar-height-min
         display: none
         & > li
           &.dropdown
