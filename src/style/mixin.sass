@@ -68,3 +68,13 @@ $assets-path: "/assets/images/"
   clear: both
   display: block
   content: ''
+
+@mixin bg-gradiant($color1, $color2)
+  background: rgba($color1,1)
+  background: -moz-linear-gradient(-45deg, rgba($color1,1) 0%, rgba($color2,1) 100%)
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba($color1,1)), color-stop(100%, rgba($color2,1)))
+  background: -webkit-linear-gradient(-45deg, rgba($color1,1) 0%, rgba($color2,1) 100%)
+  background: -o-linear-gradient(-45deg, rgba($color1,1) 0%, rgba($color2,1) 100%)
+  background: -ms-linear-gradient(-45deg, rgba($color1,1) 0%, rgba($color2,1) 100%)
+  background: linear-gradient(135deg, rgba($color1,1) 0%, rgba($color2,1) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#91e842', endColorstr='#d2ff52', GradientType=1 )

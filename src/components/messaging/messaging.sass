@@ -218,12 +218,10 @@ ui-view
             font-weight: 400
             font-weight: 0.8em
 
-@include breakpoint($sm)
-  .app-messaging-container
-    padding: 0
-    margin-bottom: 0
+@include breakpoint($md)
   .app-messaging
     border-radius: 0
+    overflow: hidden
     .chat-group, .messaging
       min-width: 100%
       width: 100%
@@ -243,3 +241,8 @@ ui-view
           transform: translate(-100%, 0)
         .messaging
           transform: translate(-100%, 0)
+
+@include breakpoint($sm)
+  .app-messaging-container
+    padding: 0
+    margin-bottom: 0
