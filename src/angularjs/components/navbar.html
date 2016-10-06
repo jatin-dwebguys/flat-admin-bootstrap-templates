@@ -1,9 +1,9 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default"  ng-class="{active: main.toggle.navbar}">
   <div class="container-fluid">
     <div class="navbar-collapse collapse in">
       <ul class="nav navbar-nav navbar-mobile">
         <li>
-          <button type="button" class="sidebar-toggle">
+          <button type="button" class="sidebar-toggle" ng-click="main.toggle.sidebar = !main.toggle.sidebar">
             <i class="fa fa-bars"></i>
           </button>
         </li>
@@ -11,7 +11,7 @@
           <a class="navbar-brand" href="#"><span class="highlight">Flat v3</span> Admin</a>
         </li>
         <li>
-          <button type="button" class="navbar-toggle">
+          <button type="button" class="navbar-toggle"  ng-click="main.toggle.navbar = !main.toggle.navbar">
             <img class="profile-img" src="/images/profile.png">
           </button>
         </li>

@@ -6,6 +6,10 @@ class AppController {
     this.app = addAppConfig($sce, CONFIG)
     this.appendToApp = angular.element(document.querySelector('.app'));
     this.page = getPageConfig($sce, $state)
+    this.toggle = {
+      sidebar: false,
+      navbar: false
+    }
     this.theme = {
       current: "app-default"
     }

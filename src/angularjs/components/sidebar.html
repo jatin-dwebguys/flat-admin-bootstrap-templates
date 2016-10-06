@@ -1,4 +1,4 @@
-<aside class="app-sidebar" id="sidebar">
+<aside class="app-sidebar"  ng-class="{active: main.toggle.sidebar}" id="sidebar">
   <div class="sidebar-header">
     <a class="sidebar-brand" href="#" ng-bind-html="main.app.title"></a>
   </div>
@@ -21,7 +21,7 @@
         </a>
       </li>
       <li ng-class="{active: main.page.menu == 'uikits'}">
-        <a ui-sref="main.uikits" class="dropdown-toggle" ng-sidebar-dropdown-item="ui-kits">
+        <a href="#" class="dropdown-toggle" ng-sidebar-dropdown-item="ui-kits">
           <div class="icon">
             <i class="fa fa-cube" aria-hidden="true"></i>
           </div>
@@ -29,7 +29,7 @@
         </a>
       </li>
       <li ng-class="{active: main.page.menu == 'pages'}">
-        <a href="/" class="dropdown-toggle" ng-sidebar-dropdown-item="pages">
+        <a href="#" class="dropdown-toggle" ng-sidebar-dropdown-item="pages">
           <div class="icon">
             <i class="fa fa-file-o" aria-hidden="true"></i>
           </div>
@@ -38,6 +38,9 @@
       </li>
     </ul>
     <div class="dropdown-root">
+      <button type="button" class="sidebar-dropdown-toggle">
+        <i class="fa fa-angle-left"></i>
+      </button>
       <div class="dropdown-background">
         <div class="bg"></div>
       </div>
