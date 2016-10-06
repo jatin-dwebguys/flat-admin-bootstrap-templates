@@ -32,6 +32,23 @@
         background-color: $color
         color: $color
 
+@mixin card-theme($color)
+  .card
+    &.card-tab
+      .card-header > ul, ul.nav-tabs
+        & > li
+          &.active
+            a
+              color: $color
+
+      & > .ng-isolate-scope
+        & > .nav-tabs
+          & > li
+            &.active
+              a
+                color: $color
+
+
 .card
   width: 100%
   background-color: $white
@@ -79,17 +96,6 @@
       overflow-x: scroll
       overflow-y: visible
 
-      & > .tab-background
-        @include absolute($width: 140px)
-        content: ''
-        display: block
-        z-index: 9
-        border-bottom: 2px solid $white
-        border-left: 1px solid $grey
-        border-right: 1px solid $grey
-        background-color: $white
-        transition: all 0.3s ease
-
     .card-header > ul, ul.nav-tabs
       list-style: none
       padding: 0
@@ -121,6 +127,7 @@
           background-color: $white
           a
             color: $green
+            border-bottom: none !important
         &:first-child
           &.active
             a

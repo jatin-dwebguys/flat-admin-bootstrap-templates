@@ -66,23 +66,25 @@ class DashboardController {
         labelInterpolationFnc: (value) => {
           return Math.round(value / this.browserChart.data.series.reduce(sum) * 100) + '%';
         },
-        donut: true,
-        donutWidth: 40,
-        labelPosition: 'outside'
+        startAngle: 270,
+        labelPosition: 'outside',
+        labelOffset: -30
       }
     }
 
     this.osChart = {
       data: {
-        series: [1300, 200, 605, 205, 100, 50]
+        series: [1300, 200, 605, 205, 100]
       },
       config: {
         labelInterpolationFnc: (value) => {
           return Math.round(value / this.osChart.data.series.reduce(sum) * 100) + '%';
         },
+        startAngle: 0,
         donut: true,
-        donutWidth: 40,
-        labelPosition: 'outside'
+        donutWidth: 20,
+        labelPosition: 'outside',
+        labelOffset: -30
       }
     }
 

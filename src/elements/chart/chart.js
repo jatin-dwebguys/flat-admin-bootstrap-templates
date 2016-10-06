@@ -55,8 +55,9 @@ if($('.ct-chart-donut').length) {
       return Math.round(value / data.series.reduce(sum) * 100) + '%';
     },
     donut: true,
-    donutWidth: 60,
-    labelPosition: 'outside'
+    donutWidth: 20,
+    labelPosition: 'outside',
+    labelOffset: -30
   });
 }
 

@@ -10,15 +10,14 @@ if($('.ct-chart-browser').length) {
     labelInterpolationFnc: (value) => {
       return Math.round(value / data.series.reduce(sum) * 100) + '%';
     },
-    donut: true,
-    donutWidth: 40,
-    labelPosition: 'outside'
+    labelPosition: 'inside',
+    startAngle: 270
   });
 }
 
 if($('.ct-chart-os').length) { 
   let data = {
-    series: [1300, 200, 605, 205, 100, 50]
+    series: [1300, 200, 605, 205, 100]
   };
 
   let sum = (a, b) => { return a + b };
@@ -27,9 +26,11 @@ if($('.ct-chart-os').length) {
     labelInterpolationFnc: (value) => {
       return Math.round(value / data.series.reduce(sum) * 100) + '%';
     },
+    startAngle: 270,
     donut: true,
-    donutWidth: 40,
-    labelPosition: 'outside'
+    donutWidth: 20,
+    labelPosition: 'outside',
+    labelOffset: -30
   });
 }
 

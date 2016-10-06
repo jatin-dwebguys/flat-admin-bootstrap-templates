@@ -12,6 +12,7 @@ const jsLibs = [
   'bower_components/chartist/dist/chartist.js',
   'bower_components/chartist-plugin-pointlabels/dist/chartist-plugin-pointlabels.js',
   'bower_components/highlightjs/highlight.pack.js',
+  'bower_components/highlightjs-line-numbers.js/dist/highlightjs-line-numbers.min.js',
   'bower_components/devbridge-autocomplete/dist/jquery.autocomplete.js',
   'node_modules/chart.js/dist/Chart.bundle.min.js',
   'bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js'

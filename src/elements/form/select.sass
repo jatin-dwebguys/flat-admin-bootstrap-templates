@@ -2,7 +2,7 @@
   width: 100%
   margin-bottom: 15px
 
-  .select2-selection__single
+  .select2-selection--single
     border: 1px solid $grey-darker
     border-radius: 2px
     height: auto
@@ -20,15 +20,23 @@
       b
 
 .select2-container
-  .select2-search__dropdown
+  .select2-search--dropdown
     background-color: $grey-lighter
     border-bottom: 1px solid $grey-darker
     .select2-search__field
       border: 1px solid $grey
 
   .select2-dropdown 
-    .select2-results__option__highlighted[aria-selected]
+    .select2-results__option--highlighted
       background-color: $green
 
     .select2-results__option
       padding: 10px 15px
+
+.input-group
+  .select2
+    margin-bottom: 0
+    width: 100% !important
+    .select2-selection--single
+      border: none
+      border-right: 1px solid $grey-darker

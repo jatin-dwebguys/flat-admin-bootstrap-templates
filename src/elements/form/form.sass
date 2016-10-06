@@ -30,7 +30,7 @@ input
   margin-bottom: 15px
   width: 100%
   .input-group-addon
-    font-size: 1.2em
+    font-size: 1em
     width: auto
     border: 0
     background-color: transparent
@@ -47,16 +47,21 @@ input
   .control-label
     font-weight: 400
     font-size: 1em
+    text-align: left
+  .control-label-help
+    color: $grey-darkest
+    font-size: 0.9em
   .form-group
     .help-block
       font-weight: 300
       font-size: 0.9em
 
+.form-group
+  margin-bottom: 0
 
 @include input-color("success", $green-darker)
 @include input-color("warning", $yellow-darker)
 @include input-color("error", $red)
-
 
 .select2-dropdown
   border: 1px solid #DDD
