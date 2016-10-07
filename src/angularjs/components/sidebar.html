@@ -20,32 +20,14 @@
           <div class="title">Messaging</div>
         </a>
       </li>
-      <li ng-class="{active: main.page.menu == 'uikits'}">
-        <a href="#" class="dropdown-toggle" ng-sidebar-dropdown-item="ui-kits">
+      <li ng-class="{active: main.page.menu == 'uikits'}" class="dropdown">
+        <a href="#" class="dropdown-toggle">
           <div class="icon">
             <i class="fa fa-cube" aria-hidden="true"></i>
           </div>
           <div class="title">UI Kits</div>
         </a>
-      </li>
-      <li ng-class="{active: main.page.menu == 'pages'}">
-        <a href="#" class="dropdown-toggle" ng-sidebar-dropdown-item="pages">
-          <div class="icon">
-            <i class="fa fa-file-o" aria-hidden="true"></i>
-          </div>
-          <div class="title">Pages</div>
-        </a>
-      </li>
-    </ul>
-    <div class="dropdown-root">
-      <button type="button" class="sidebar-dropdown-toggle">
-        <i class="fa fa-angle-left"></i>
-      </button>
-      <div class="dropdown-background">
-        <div class="bg"></div>
-      </div>
-      <div class="dropdown-container">
-        <div class="dropdown-section" ng-sidebar-dropdown="ui-kits">
+        <div class="dropdown-menu">
           <ul>
             <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> UI Kits</li>
             <li><a ui-sref="main.uikits.customize">Customize</a></li>
@@ -57,11 +39,19 @@
             <li class="line"></li>
             <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> Advanced Components</li>
             <li><a ui-sref="main.uikits.pricing">Pricing Table</a></li>
-            <li><a ui-sref="main.uikits.timeline">Timeline</a></li>
+            <!-- <li><a ui-sref="main.uikits.timeline">Timeline</a></li> -->
             <li><a ui-sref="main.uikits.chart">Chart</a></li>
           </ul>
         </div>
-        <div class="dropdown-section" ng-sidebar-dropdown="pages">
+      </li>
+      <li ng-class="{active: main.page.menu == 'pages'}" class="dropdown">
+        <a href="#" class="dropdown-toggle">
+          <div class="icon">
+            <i class="fa fa-file-o" aria-hidden="true"></i>
+          </div>
+          <div class="title">Pages</div>
+        </a>
+        <div class="dropdown-menu">
           <ul>
             <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> Admin</li>
             <li><a ui-sref="main.pages.information">Information</a></li>
@@ -69,28 +59,15 @@
             <li><a ui-sref="main.pages.search">Search</a></li>
             <li class="line"></li>
             <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> Landing</li>
-            <li><a href="/html/pages/landing.html">Landing</a></li>
             <li><a ui-sref="login">Login</a></li>
             <li><a ui-sref="register">Register</a></li>
-            <li><a ui-sref="404">404</a></li>
           </ul>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
   <div class="sidebar-footer">
     <ul class="menu">
-      <li class="dropdown">
-        <a href="/" class="dropdown-toggle" data-toggle="dropdown">
-          <i class="fa fa-cogs" aria-hidden="true"></i>
-        </a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Setting</a></li>
-          <li><a href="#">AboutUs</a></li>
-          <li><a href="#">Term of Service</a></li>
-          <li><a href="#">Support</a></li>
-        </ul>
-      </li>
       <li>
         <a href="/" class="dropdown-toggle" data-toggle="dropdown">
           <i class="fa fa-bullhorn" aria-hidden="true"></i>
