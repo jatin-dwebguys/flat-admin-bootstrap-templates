@@ -55,6 +55,7 @@ gulp.task('vendor:css', function () {
   return gulp.src(cssLibs)
     .pipe(concat('vendor.css'))
     .pipe(gulp.dest('temp/html/assets/css'))
+    .pipe(gulp.dest('temp/angularjs/assets/css'))
 });
 
 gulp.task('vendor:angularjs', function () {

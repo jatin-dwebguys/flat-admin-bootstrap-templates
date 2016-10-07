@@ -7,4 +7,5 @@ gulp.task('image', function () {
   return gulp.src('./src/assets/images/**/*')
     // .pipe(imagemin())
     .pipe(gulp.dest('temp/html/assets/images'))
+    .pipe(gulp.dest('temp/angularjs/assets/images'))
 });
