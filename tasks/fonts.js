@@ -9,10 +9,10 @@ gulp.task('fonts', ['fonts:font-awesome']);
 
 gulp.task('fonts:font-awesome', function () {
   return gulp.src(fonts['font-awesome'])
-    .pipe(gulp.dest('temp/fonts'))
+    .pipe(gulp.dest('temp/html/assets/fonts'))
 });
 
 gulp.task('fonts:ionicons', function () {
   return gulp.src(fonts['ionicons'])
-    .pipe(gulp.dest('temp/fonts/ionicons'))
+    .pipe(gulp.dest('temp/html/assets/fonts/ionicons'))
 });

@@ -44,7 +44,7 @@ function build(file, watch, dest) {
 }
 
 gulp.task("js:watch", function() {
-  return build('./src/app.js', true, './temp/js/');
+  return build('./src/app.js', true, './temp/html/assets/js/');
 });
 
 gulp.task("angularjs:js:watch", function() {

@@ -1,5 +1,5 @@
 @@include('./include/header.html',{
-  "path": ".."
+  "path": "."
 })
 
 @@include('../components/sidebar/sidebar.html',{
@@ -11,11 +11,14 @@
 <div class="app-container">
 
   @@include('../components/navbar/navbar.html',
-  { "title": "Dashboard" })
+  {
+    "path": ".",
+    "title": "Dashboard"
+  })
 
   @@include('./include/dashboard.html')
 </div>
 
 @@include('./include/footer.html',{
-  "path": ".."
+  "path": "."
 })

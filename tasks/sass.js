@@ -22,7 +22,21 @@ gulp.task("sass", () => {
     .pipe(postcss([ 
       autoprefixer({ browsers: ['last 2 versions'] })
     ]))
-    .pipe(concat('style.css'))
+    .pipe(concat('flat-admin.css'))
     .pipe(stripCssComments())
-    .pipe(gulp.dest('./temp/css/'))
+    .pipe(gulp.dest('./temp/html/assets/css/'))
+    .pipe(gulp.dest('./temp/angularjs/assets/css/'))
+});
+
+
+gulp.task("build:sass", () => {
+  return gulp.src("./src/app.sass")
+    .pipe(sass())
+    .pipe(postcss([ 
+      autoprefixer({ browsers: ['last 2 versions'] })
+    ]))
+    .pipe(concat('flat-admin.css'))
+    .pipe(stripCssComments())
+    .pipe(gulp.dest('./dist/html/assets/css/'))
+    .pipe(gulp.dest('./dist/angularjs/assets/css/'))
 });

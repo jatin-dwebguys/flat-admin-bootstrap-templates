@@ -6,8 +6,7 @@ import browserSync from 'browser-sync';
 const SERVE_CONFIG = {
   port: 3400,
   server: {
-    baseDir: "./temp/",
-    index: "/html/index.html"
+    baseDir: "./temp/"
   },
   ui: {
     port: 3402

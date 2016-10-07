@@ -48,13 +48,13 @@ gulp.task('vendor', ['vendor:js', 'vendor:css', 'vendor:angularjs']);
 gulp.task('vendor:js', function () {
   return gulp.src(jsLibs)
     .pipe(concat('vendor.js'))
-    .pipe(gulp.dest('temp/js'))
+    .pipe(gulp.dest('temp/html/assets/js'))
 });
 
 gulp.task('vendor:css', function () {
   return gulp.src(cssLibs)
     .pipe(concat('vendor.css'))
-    .pipe(gulp.dest('temp/css'))
+    .pipe(gulp.dest('temp/html/assets/css'))
 });
 
 gulp.task('vendor:angularjs', function () {
