@@ -73,6 +73,23 @@ export default function($stateProvider, $urlRouterProvider, $locationProvider) {
       url: "/icons",
       templateUrl: 'pages/uikits/icons.html'
     })
+    .state("main.pages", {
+      url: "pages",
+      abstract: true,
+      templateUrl: 'pages/pages/main.html'
+    })
+    .state("main.pages.form", {
+      url: "/form",
+      templateUrl: 'pages/pages/form.html'
+    })
+    .state("main.pages.profile", {
+      url: "/profile",
+      templateUrl: 'pages/pages/profile.html'
+    })
+    .state("main.pages.search", {
+      url: "/search",
+      templateUrl: 'pages/pages/search.html'
+    })
     .state("login", {
       url: "/login",
       templateUrl: 'pages/pages/login.html'
@@ -80,10 +97,6 @@ export default function($stateProvider, $urlRouterProvider, $locationProvider) {
     .state("register", {
       url: "/register",
       templateUrl: 'pages/pages/register.html'
-    })
-    .state("landing", {
-      url: "/landing",
-      templateUrl: 'pages/pages/landing.html'
     })
   return $urlRouterProvider.otherwise('/');
 }

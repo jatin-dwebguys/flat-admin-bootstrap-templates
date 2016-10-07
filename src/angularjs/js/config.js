@@ -47,14 +47,19 @@ export default {
       title: "<span class='highlight'>Pricing</span>&nbsp;<span>Table</span>",
       class: ""
     },
-    "main.uikits.timeline": {
-      menu: "uikits",
-      title: "<span class='highlight'>Timeline</span>",
+    "main.pages.profile": {
+      menu: "pages",
+      title: "<span class='highlight'>Profile</span>",
       class: ""
     },
-    "main.uikits.icons": {
-      menu: "uikits",
-      title: "<span class='highlight'>Icons</span>",
+    "main.pages.form": {
+      menu: "pages",
+      title: "<span class='highlight'>Information</span>",
+      class: ""
+    },
+    "main.pages.search": {
+      menu: "pages",
+      title: "<span class='highlight'>Search</span> Result",
       class: ""
     },
     "login": {
