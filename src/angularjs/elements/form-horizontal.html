@@ -52,12 +52,14 @@
         <label class="col-md-3 control-label">Cover</label>
         <div class="col-md-4">
           <div class="input-group">
-            <select class="select2">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
+            <ui-select ng-model="vm.select3"
+                      theme="bootstrap"
+                      title="Warranty">
+              <ui-select-match placeholder="Warranty">{{$select.selected}}</ui-select-match>
+              <ui-select-choices repeat="item in vm.select2.years track by $index">
+                <div>{{item}}</div>
+              </ui-select-choices>
+            </ui-select>
             <span class="input-group-addon">Years</span>
           </div>
         </div>

@@ -64,19 +64,14 @@
           </label>
       </div>
     </div>
-    <ui-select ng-model="ctrl.address.selected"
+    <ui-select ng-model="vm.select2.selected"
              theme="bootstrap"
-             ng-disabled="ctrl.disabled"
-             reset-search-input="false"
-             style="width: 300px;"
-             title="Choose an address">
-    <ui-select-match placeholder="Enter an address...">{{$select.selected.formatted_address}}</ui-select-match>
-    <ui-select-choices repeat="address in ctrl.addresses track by $index"
-             refresh="refreshAddresses($select.search)"
-             refresh-delay="0">
-      <div ng-bind-html="address.formatted_address | highlight: $select.search"></div>
-    </ui-select-choices>
-  </ui-select>
+             title="Choose an person">
+      <ui-select-match placeholder="Who">{{$select.selected.name}}</ui-select-match>
+      <ui-select-choices repeat="item in vm.select2.list track by $index">
+        <div>{{item.name}}</div>
+      </ui-select-choices>
+    </ui-select>
   </div>
   <div class="col-md-6">
     <div class="form-group has-success">
