@@ -1,12 +1,11 @@
 
+
+
+
+
+
+
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700';
-
-
-
-
-
-
-
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -38,6 +37,7 @@
     transform: translate(0, 25%); }
   100% {
     display: none; } }
+
 
 body {
   font-size: 14px; }
@@ -2502,26 +2502,6 @@ a:hover {
   .navbar.__inverse .navbar-header .navbar-brand .highlight {
     background-color: #29c75f; }
 
-@keyframes fadeInMenu {
-  0% {
-    opacity: 0; }
-  1% {
-    opacity: 0; }
-  99% {
-    opacity: 1; }
-  100% {
-    opacity: 1; } }
-
-@keyframes fadeOutMenu {
-  0% {
-    opacity: 1; }
-  1% {
-    opacity: 1; }
-  99% {
-    opacity: 0; }
-  100% {
-    opacity: 0; } }
-
 aside.app-sidebar {
   position: absolute;
   top: auto;
@@ -2978,38 +2958,6 @@ aside.app-sidebar {
     background-color: #FFF; }
     aside.app-sidebar .sidebar-footer ul.menu > li.dropdown .dropdown-menu {
       border-bottom-color: #29c75f; }
-
-aside.app-sidebar.__inverse {
-  background-color: #394240; }
-  aside.app-sidebar.__inverse .sidebar-header .sidebar-brand .highlight {
-    background-color: #29c75f; }
-  aside.app-sidebar.__inverse .sidebar-menu ul.sidebar-nav > li > a .icon {
-    background-color: #394240;
-    border: 0px solid #FFF;
-    color: #29c75f; }
-  aside.app-sidebar.__inverse .sidebar-menu ul.sidebar-nav > li > a .title {
-    color: #29c75f; }
-  aside.app-sidebar.__inverse .sidebar-menu ul.sidebar-nav > li.active > a .icon {
-    background-color: #394240;
-    border: 0px solid #FFF;
-    color: #29c75f; }
-  aside.app-sidebar.__inverse .sidebar-menu ul.sidebar-nav > li.active > a .title {
-    color: #29c75f; }
-  aside.app-sidebar.__inverse .sidebar-menu ul.sidebar-nav > li.dropdown.open > a:after {
-    border-right-color: #FFF; }
-  aside.app-sidebar.__inverse .sidebar-menu .dropdown-menu > ul > li.section {
-    color: #29c75f; }
-  aside.app-sidebar.__inverse .sidebar-footer {
-    border-top-color: rgba(0, 0, 0, 0.1);
-    background-color: #394240; }
-    aside.app-sidebar.__inverse .sidebar-footer ul.menu > li.dropdown .dropdown-menu {
-      border-bottom-color: #29c75f; }
-
-@keyframes SidebarIn {
-  0% {
-    left: 100%; }
-  100% {
-    left 0 { } } }
 
 .app-login {
   background: #29c75f;
@@ -5816,5 +5764,3 @@ ul.tags {
     font-size: 0.9em; }
   .media.social-post .media-body .media-comment input {
     padding: 7.5px 15px; }
-
-
