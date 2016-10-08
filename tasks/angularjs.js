@@ -2,9 +2,23 @@
 
 import gulp from 'gulp';
 import fileinclude from 'gulp-file-include';
+import templateCache from 'gulp-angular-templatecache';
 
 gulp.task('angularjs:html', () => {
-  return gulp.src(['src/angularjs/**/*.html', '!src/angularjs/elements/*.html', '!src/angularjs/components/*.html'])
+  /* Template */
+  gulp.src(['src/angularjs/**/*.html', '!src/angularjs/elements/*.html', '!src/angularjs/components/*.html', '!src/angularjs/components/index.html'])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(templateCache({
+      module: 'app.templates',
+      standalone: true
+    }))
+    .pipe(gulp.dest('temp/angularjs/js'))
+
+  /* Index */
+  return gulp.src(['src/angularjs/index.html'])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
@@ -14,7 +28,20 @@ gulp.task('angularjs:html', () => {
 
 
 gulp.task('build:angularjs:html', () => {
-  return gulp.src(['src/angularjs/**/*.html', '!src/angularjs/elements/*.html', '!src/angularjs/components/*.html'])
+  /* Template */
+  gulp.src(['src/angularjs/**/*.html', '!src/angularjs/elements/*.html', '!src/angularjs/components/*.html', '!src/angularjs/components/index.html'])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(templateCache({
+      module: 'app.templates',
+      standalone: true
+    }))
+    .pipe(gulp.dest('dist/angularjs/js'))
+
+  /* Index */
+  return gulp.src(['src/angularjs/index.html'])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'

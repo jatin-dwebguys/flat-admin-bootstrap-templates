@@ -13,6 +13,7 @@
     "browser-sync": "2.11.2",
     "browserify": "^13.0.1",
     "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
     "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^2.0.13",
     "gulp-concat": "^2.6.0",

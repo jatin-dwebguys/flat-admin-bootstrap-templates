@@ -7,7 +7,8 @@ angular.module(CONFIG["APP"], [
     'ui.bootstrap',
     'ui.select',
     'angular-chartist',
-    'hljs'
+    'hljs',
+    'app.templates'
   ])
   .config(route)
 
