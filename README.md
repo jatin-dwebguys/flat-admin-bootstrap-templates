@@ -1,17 +1,25 @@
 ### Flat Admin V.3
 #### Free Flat Design Administrator Bootstrap Templates
 
-- Html
-- AngularJS
-- Bootstrap3
-- Bootstrap 4 Available Soon
+- Static Html
+- AngularJS 1.x
+- Bootstrap 3.3.6
 
-Easy Intregrade with Many Framework
+#### Showcase
+![Show Case](http://templates.tui2tone.com/flat-admin/assets/images/flat-admin-showcase-mini.jpg)
+
+#### Structure
+
+#### Easy Intregrade with Many Framework
 
 - Ruby on Rails
 - ExpressJS
 
-Get Started
-Live Demo
+#### Live Demo
 
-License
+- [Static Html Version](http://templates.tui2tone.com/flat-admin/v3/html/index.html)
+- [AngularJS Version](http://templates.tui2tone.com/flat-admin/v3/angularjs/index.html)
+
+#### License
+
+MIT License
