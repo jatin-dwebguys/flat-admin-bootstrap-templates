@@ -18,20 +18,20 @@ Completely free bootstrap administrator templates with Bootstrap 3.
 - Build with ES6 and SASS
 - Easy Theming
 
-#### Showcase
+### Showcase
 
 ![Show Case](http://templates.tui2tone.com/flat-admin/assets/images/flat-admin-showcase-mini.jpg)
 
-#### Live Demo
+### Live Demo
 
-- [Static Html Version](http://templates.tui2tone.com/flat-admin/v3/html/index.html)
-- [AngularJS Version](http://templates.tui2tone.com/flat-admin/v3/angularjs/index.html)
+- [Static Html Version](http://tui2tone.github.io/flat-admin-bootstrap-templates/html/index.html)
+- [AngularJS Version](http://tui2tone.github.io/flat-admin-bootstrap-templates/angularjs/index.html)
 
-#### Download Latest Version
+### Download Latest Version
 
 [Flat-Admin v3.0.0](https://github.com/tui2tone/flat-admin-bootstrap-templates/archive/v3.0.0.zip)
 
-#### Development
+### Development
 
 you can run development mode in your local computer using `gulp`
 
@@ -42,11 +42,11 @@ you can run development mode in your local computer using `gulp`
 - build production
   `gulp build`
 
-#### License
+### License
 
 Under MIT License. See [LICENSE](https://github.com/tui2tone/flat-admin-bootstrap-templates/blob/master/LICENSE).
 
-#### Creators
+### Creators
 
 Charuwit Nodthaisong
 
