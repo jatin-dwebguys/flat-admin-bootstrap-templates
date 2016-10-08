@@ -1,0 +1,256 @@
+
+<aside class="app-sidebar"  ng-class="{active: main.toggle.sidebar}" id="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-brand" href="#" ng-bind-html="main.app.title"></a>
+  </div>
+  <div class="sidebar-menu">
+    <ul class="sidebar-nav">
+      <li ng-class="{active: main.page.menu == 'dashboard'}">
+        <a ui-sref="main.dashboard">
+          <div class="icon">
+            <i class="fa fa-tasks" aria-hidden="true"></i>
+          </div>
+          <div class="title">Dashboard</div>
+        </a>
+      </li>
+      <li ng-class="{active: main.page.menu == 'messaging'}">
+        <a ui-sref="main.messaging">
+          <div class="icon">
+            <i class="fa fa-comments" aria-hidden="true"></i>
+          </div>
+          <div class="title">Messaging</div>
+        </a>
+      </li>
+      <li ng-class="{active: main.page.menu == 'uikits'}" class="dropdown">
+        <a href="#" class="dropdown-toggle">
+          <div class="icon">
+            <i class="fa fa-cube" aria-hidden="true"></i>
+          </div>
+          <div class="title">UI Kits</div>
+        </a>
+        <div class="dropdown-menu">
+          <ul>
+            <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> UI Kits</li>
+            <li><a ui-sref="main.uikits.customize">Customize</a></li>
+            <li><a ui-sref="main.uikits.components">Components</a></li>
+            <li><a ui-sref="main.uikits.card">Card</a></li>
+            <li><a ui-sref="main.uikits.form">Form</a></li>
+            <li><a ui-sref="main.uikits.table">Table</a></li>
+            <li><a ui-sref="main.uikits.icons">Icons</a></li>
+            <li class="line"></li>
+            <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> Advanced Components</li>
+            <li><a ui-sref="main.uikits.pricing">Pricing Table</a></li>
+            <!-- <li><a ui-sref="main.uikits.timeline">Timeline</a></li> -->
+            <li><a ui-sref="main.uikits.chart">Chart</a></li>
+          </ul>
+        </div>
+      </li>
+      <li ng-class="{active: main.page.menu == 'pages'}" class="dropdown">
+        <a href="#" class="dropdown-toggle">
+          <div class="icon">
+            <i class="fa fa-file-o" aria-hidden="true"></i>
+          </div>
+          <div class="title">Pages</div>
+        </a>
+        <div class="dropdown-menu">
+          <ul>
+            <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> Admin</li>
+            <li><a ui-sref="main.pages.form">Information</a></li>
+            <li><a ui-sref="main.pages.profile">Profile</a></li>
+            <li><a ui-sref="main.pages.search">Search</a></li>
+            <li class="line"></li>
+            <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> Landing</li>
+            <li><a ui-sref="login">Login</a></li>
+            <li><a ui-sref="register">Register</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="sidebar-footer">
+    <ul class="menu">
+      <li>
+        <a href="/" class="dropdown-toggle" data-toggle="dropdown">
+          <i class="fa fa-bullhorn" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li><a href="#"><span class="flag-icon flag-icon-th flag-icon-squared"></span></a></li>
+    </ul>
+  </div>
+</aside>
+
+<div class="app-container" ng-class="main.page.class"  ng-class="{'__navbar': main.toggle.navbar, '__sidebar': main.toggle.sidebar}">
+  <nav class="navbar navbar-default"  ng-class="{active: main.toggle.navbar}">
+  <div class="container-fluid">
+    <div class="navbar-collapse collapse in">
+      <ul class="nav navbar-nav navbar-mobile">
+        <li>
+          <button type="button" class="sidebar-toggle" ng-click="main.toggle.sidebar = !main.toggle.sidebar">
+            <i class="fa fa-bars"></i>
+          </button>
+        </li>
+        <li class="logo">
+          <a class="navbar-brand" href="#"><span class="highlight">Flat v3</span> Admin</a>
+        </li>
+        <li>
+          <button type="button" class="navbar-toggle"  ng-click="main.toggle.navbar = !main.toggle.navbar">
+            <img class="profile-img" src="assets/images/profile.png">
+          </button>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-left">
+        <li class="navbar-title">
+          <div ng-bind-html="main.page.title"></div>
+        </li>
+        <li class="navbar-search hidden-sm">
+          <input id="search" type="text" placeholder="Search..">
+          <button class="btn-search"><i class="fa fa-search"></i></button>
+        </li>
+      </ul>
+            <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown notification">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="icon"><i class="fa fa-shopping-basket" aria-hidden="true"></i></div>
+            <div class="title">New Orders</div>
+            <div class="count">0</div>
+          </a>
+          <div class="dropdown-menu">
+            <ul>
+              <li class="dropdown-header">Ordering</li>
+              <li class="dropdown-empty">No New Ordered</li>
+              <li class="dropdown-footer">
+                <a href="#">View All <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="dropdown notification warning">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="icon"><i class="fa fa-comments" aria-hidden="true"></i></div>
+            <div class="title">Unread Messages</div>
+            <div class="count">99</div>
+          </a>
+          <div class="dropdown-menu">
+            <ul>
+              <li class="dropdown-header">Message</li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-warning pull-right">10</span>
+                  <div class="message">
+                    <img class="profile" src="https://placehold.it/100x100">
+                    <div class="content">
+                      <div class="title">"Payment Confirmation.."</div>
+                      <div class="description">Alan Anderson</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-warning pull-right">5</span>
+                  <div class="message">
+                    <img class="profile" src="https://placehold.it/100x100">
+                    <div class="content">
+                      <div class="title">"Hello World"</div>
+                      <div class="description">Marco  Harmon</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-warning pull-right">2</span>
+                  <div class="message">
+                    <img class="profile" src="https://placehold.it/100x100">
+                    <div class="content">
+                      <div class="title">"Order Confirmation.."</div>
+                      <div class="description">Brenda Lawson</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="dropdown-footer">
+                <a href="#">View All <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="dropdown notification danger">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="icon"><i class="fa fa-bell" aria-hidden="true"></i></div>
+            <div class="title">System Notifications</div>
+            <div class="count">10</div>
+          </a>
+          <div class="dropdown-menu">
+            <ul>
+              <li class="dropdown-header">Notification</li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-danger pull-right">8</span>
+                  <div class="message">
+                    <div class="content">
+                      <div class="title">New Order</div>
+                      <div class="description">$400 total</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-danger pull-right">14</span>
+                  Inbox
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-danger pull-right">5</span>
+                  Issues Report
+                </a>
+              </li>
+              <li class="dropdown-footer">
+                <a href="#">View All <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="dropdown profile">
+          <a href="/html/pages/profile.html" class="dropdown-toggle"  data-toggle="dropdown">
+            <img class="profile-img" src="assets/images/profile.png">
+            <div class="title">Profile</div>
+          </a>
+          <div class="dropdown-menu">
+            <div class="profile-info">
+              <h4 class="username">Scott White</h4>
+            </div>
+            <ul class="action">
+              <li>
+                <a href="#">
+                  Profile
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-danger pull-right">5</span>
+                  My Inbox
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Setting
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <ui-view></ui-view>
+</div>

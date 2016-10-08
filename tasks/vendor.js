@@ -63,3 +63,25 @@ gulp.task('vendor:angularjs', function () {
     .pipe(concat('vendor.js'))
     .pipe(gulp.dest('temp/angularjs/js'))
 });
+
+
+gulp.task('build:vendor', ['build:vendor:js', 'build:vendor:css', 'build:vendor:angularjs']);
+
+gulp.task('build:vendor:js', function () {
+  return gulp.src(jsLibs)
+    .pipe(concat('vendor.js'))
+    .pipe(gulp.dest('dist/html/assets/js'))
+});
+
+gulp.task('build:vendor:css', function () {
+  return gulp.src(cssLibs)
+    .pipe(concat('vendor.css'))
+    .pipe(gulp.dest('dist/html/assets/css'))
+    .pipe(gulp.dest('dist/angularjs/assets/css'))
+});
+
+gulp.task('build:vendor:angularjs', function () {
+  return gulp.src(ngLibs)
+    .pipe(concat('vendor.js'))
+    .pipe(gulp.dest('dist/angularjs/js'))
+});
