@@ -652,9 +652,6 @@ body.login-page {
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
   border: 0; }
 
-.dataTables_wrapper tfoot {
-  display: none; }
-
 .code-preview {
   width: 100%;
   min-height: 400px; }
