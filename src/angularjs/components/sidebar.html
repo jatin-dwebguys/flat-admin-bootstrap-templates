@@ -1,6 +1,9 @@
 <aside class="app-sidebar"  ng-class="{active: main.toggle.sidebar}" id="sidebar">
   <div class="sidebar-header">
     <a class="sidebar-brand" href="#" ng-bind-html="main.app.title"></a>
+    <button type="button" class="sidebar-toggle"  ng-click="main.toggle.sidebar = !main.toggle.sidebar">
+      <i class="fa fa-times"></i>
+    </button>
   </div>
   <div class="sidebar-menu">
     <ul class="sidebar-nav">
@@ -20,14 +23,14 @@
           <div class="title">Messaging</div>
         </a>
       </li>
-      <li ng-class="{active: main.page.menu == 'uikits'}" class="dropdown">
-        <a href="#" class="dropdown-toggle">
+      <li ng-class="{active: main.page.menu == 'uikits'}" class="dropdown" uib-dropdown>
+        <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
           <div class="icon">
             <i class="fa fa-cube" aria-hidden="true"></i>
           </div>
-          <div class="title">UI Kits</div>
+          <div class="title">UI Kits {{menu1}}</div>
         </a>
-        <div class="dropdown-menu">
+        <div class="dropdown-menu" uib-dropdown-menu>
           <ul>
             <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> UI Kits</li>
             <li><a ui-sref="main.uikits.customize">Customize</a></li>
@@ -44,14 +47,14 @@
           </ul>
         </div>
       </li>
-      <li ng-class="{active: main.page.menu == 'pages'}" class="dropdown">
-        <a href="#" class="dropdown-toggle">
+      <li ng-class="{active: main.page.menu == 'pages'}" class="dropdown" uib-dropdown>
+        <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
           <div class="icon">
             <i class="fa fa-file-o" aria-hidden="true"></i>
           </div>
           <div class="title">Pages</div>
         </a>
-        <div class="dropdown-menu">
+        <div class="dropdown-menu" uib-dropdown-menu>
           <ul>
             <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> Admin</li>
             <li><a ui-sref="main.pages.form">Information</a></li>

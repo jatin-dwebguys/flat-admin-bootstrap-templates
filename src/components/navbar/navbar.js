@@ -10,11 +10,11 @@ $('#search').autocomplete({
 
 $(".sidebar-toggle").bind("click", function(e) {
   $("#sidebar").toggleClass("active")
-  $("body").toggleClass("__sidebar")
+  $(".app-container").toggleClass("__sidebar")
 });
 
 $(".navbar-toggle").bind("click", function(e) {
   $("#navbar").toggleClass("active")
-  $("body").toggleClass("__navbar")
+  $(".app-container").toggleClass("__navbar")
 });
 

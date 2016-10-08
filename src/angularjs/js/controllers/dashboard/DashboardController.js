@@ -55,7 +55,16 @@ class DashboardController {
             }
           })
         ]
-      }
+      },
+      responsive: [
+        ['screen and (max-width: 768px)', {
+          axisX: {
+            offset: 0,
+            showLabel: false
+          },
+          height: 180
+        }]
+      ]
     }
 
     this.browserChart = {
