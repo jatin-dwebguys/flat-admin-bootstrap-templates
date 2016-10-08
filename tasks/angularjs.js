@@ -12,6 +12,10 @@ gulp.task('angularjs:html', () => {
       prefix: '@@',
       basepath: '@file'
     }))
+    .pipe(htmlhint({
+      "doctype-first": false
+    }))
+    .pipe(htmlhint.reporter())
     .pipe(templateCache({
       module: 'app.templates',
       standalone: true
@@ -37,6 +41,10 @@ gulp.task('build:angularjs:html', () => {
       prefix: '@@',
       basepath: '@file'
     }))
+    .pipe(htmlhint({
+      "doctype-first": false
+    }))
+    .pipe(htmlhint.reporter())
     .pipe(templateCache({
       module: 'app.templates',
       standalone: true
