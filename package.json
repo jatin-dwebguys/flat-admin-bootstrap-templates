@@ -1,6 +1,18 @@
 {
   "name": "flat-admin-bs3",
-  "private": true,
+  "description": "Free flat-design administrator bootstrap templates for bootstrap3 in both static html / angularjs version",
+  "keywords": "bootstrap templates admin flat",
+  "homepage": "https://github.com/tui2tone/flat-admin-bootstrap-templates",
+  "author": {
+    "name": "Charuwit Nodthaisong",
+    "email": "tui2tone@gmail.com",
+    "url": "www.tui2tone.com"
+  },
+  "version": "3.0.0",
+  "bugs": {
+    "url": "https://github.com/tui2tone/flat-admin-bootstrap-templates/issues"
+  },
+  "license" : "MIT",
   "devDependencies": {
     "autoprefixer": "^6.3.7",
     "babel-cli": "^6.10.1",
