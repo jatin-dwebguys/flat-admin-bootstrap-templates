@@ -2,6 +2,7 @@
 
 import gulp from 'gulp';
 import fileinclude from 'gulp-file-include';
+import htmlhint from "gulp-htmlhint";
 
 gulp.task('html', () => {
   return gulp.src(['src/html/**/*.html', '!src/html/include/*.html'])
@@ -9,6 +10,8 @@ gulp.task('html', () => {
       prefix: '@@',
       basepath: '@file'
     }))
+    .pipe(htmlhint())
+    .pipe(htmlhint.reporter())
     .pipe(gulp.dest('temp/html/'))
 });
 
@@ -18,5 +21,7 @@ gulp.task('build:html', () => {
       prefix: '@@',
       basepath: '@file'
     }))
+    .pipe(htmlhint())
+    .pipe(htmlhint.reporter())
     .pipe(gulp.dest('dist/html/'))
 });

@@ -3,6 +3,7 @@
 import gulp from 'gulp';
 import fileinclude from 'gulp-file-include';
 import templateCache from 'gulp-angular-templatecache';
+import htmlhint from "gulp-htmlhint";
 
 gulp.task('angularjs:html', () => {
   /* Template */
@@ -23,6 +24,8 @@ gulp.task('angularjs:html', () => {
       prefix: '@@',
       basepath: '@file'
     }))
+    .pipe(htmlhint())
+    .pipe(htmlhint.reporter())
     .pipe(gulp.dest('temp/angularjs/'))
 });
 
@@ -46,5 +49,7 @@ gulp.task('build:angularjs:html', () => {
       prefix: '@@',
       basepath: '@file'
     }))
+    .pipe(htmlhint())
+    .pipe(htmlhint.reporter())
     .pipe(gulp.dest('dist/angularjs/'))
 });
