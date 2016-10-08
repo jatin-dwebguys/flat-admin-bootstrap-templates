@@ -58,6 +58,11 @@ $assets-path: "/assets/images/"
   @media (max-width: $breakpoint)
     @content
 
+
+@mixin breakpoint-up($breakpoint)
+  @media (min-width: $breakpoint + 0.01)
+    @content
+
 @mixin ellipsis
   overflow: hidden
   text-overflow: ellipsis

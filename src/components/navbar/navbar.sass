@@ -368,161 +368,6 @@
             margin-right: 5px
             background-color: $green
 
-  // .dropdown-root
-  //   position: absolute
-  //   right: 0
-  //   top: 100%
-  //   min-width: 300px
-  //   height: 0
-  //   transition: all 0.3s ease
-  //   transform: translate(0, -24px)
-
-  //   & > .dropdown-background
-  //     @include absolute($top: 0, $left: 0)
-  //     z-index: $z-sidebar
-  //     border-radius: 3px
-  //     padding-top: 16px
-  //     display: none
-
-  //     .bg
-  //       position: relative
-  //       width: 100%
-  //       height: 100%
-  //       background-color: $white
-  //       box-shadow: 0 0 1px rgba($black,0.2)
-  //       border: 1px solid $grey
-  //       transition: all 0.3s ease
-  //       border-radius: 3px
-
-  //     .arrow
-  //       @include absolute($right: 0, $top: 0)
-  //       transition: all 0.3s ease
-  //       &:after
-  //         @include absolute($left: 50%, $top: 0)
-  //         content: ''
-  //         display: block
-  //         width: 0
-  //         height: 0
-  //         border-left: 16px solid transparent
-  //         border-right: 16px solid transparent
-  //         border-bottom: 16px solid $grey
-  //         transform: translate(-50%, 0)
-
-  //   &.active
-  //     & > .dropdown-background
-  //       display: block
-
-  //   & > .dropdown-container
-  //     position: relative
-  //     height: auto
-  //     overflow: hidden
-  //     z-index: $z-sidebar + 2
-
-  //     .dropdown-section
-  //       padding: 0
-  //       transition: all 0.3s ease
-  //       opacity: 0
-  //       position: absolute
-  //       padding-top: 16px
-  //       &.active
-  //         position: relative
-  //         opacity: 1
-
-
-  //       .profile-info
-  //         .username 
-  //           margin-top: 0
-  //           margin-bottom: 0
-  //           background-color: rgba($grey-darkest, 0.1)
-  //           color: $black
-  //           border-radius: 3px
-  //           padding: 1.2rem
-  //           font-size: 1.6em
-  //           width: 100%
-  //           @include ellipsis
-  //           margin: 0 auto
-  //           font-weight: 200
-
-  //     .dropdown-section
-  //       & > ul
-  //         list-style: none
-  //         padding: 0
-  //         margin: 0
-
-  //         & > li
-  //           border: 0
-  //           border-radius: 0
-  //           padding: 0
-  //           border-bottom: 1px solid rgba($grey-darkest, 0.1)
-  //           margin-bottom: 0
-  //           font-weight: 300
-  //           font-size: 0.9em
-
-  //           a
-  //             display: block
-  //             text-decoration: none
-  //             color: $black
-  //             padding: 1.2rem
-  //             font-weight: 400
-
-  //             .message
-  //               @include flex($align: center)
-  //               padding-right: 40px
-  //               .content
-  //                 flex: 1
-  //                 .title
-  //                   font-weight: 400
-  //                   font-size: 1em
-  //                 .description
-  //                   font-weight: 400
-  //                   font-size: 0.85em
-  //                   opacity: 0.4
-  //               .profile
-  //                 width: 30px
-  //                 height: 30px
-  //                 border-radius: 50%
-  //                 margin-right: 8px
-
-  //           span.badge
-  //             border-radius: 3px
-  //             font-weight: 400
-  //             font-weight: 1.4em
-
-  //           &:hover 
-  //             a
-  //               background-color: rgba($grey-darkest, 0.1)
-  //               color: $black-darker
-  //               cursor: pointer
-  //           &.empty
-  //             color: $grey-darkest
-  //             font-weight: 200
-
-  //           &.dropdown-header
-  //             background: transparent
-  //             padding: 1.2rem
-  //             color: $black-darker
-  //             font-weight: 400
-  //             background-color: rgba($grey-darkest, 0.1)
-  //             border-bottom: none
-
-  //           &.dropdown-footer
-  //             background-color: transparent
-  //             border-top: 0
-  //             font-weight: 300
-  //             font-size: 0.9em
-  //             text-align: right
-
-  //             a
-  //               color: $grey-darkest
-  //               padding: 1.2rem
-
-  //           &:last-child
-  //             border-bottom: 0
-
-  //           &.dropdown-empty
-  //             padding: 2rem
-  //             text-align: center
-  //             // color: $grey-darkest
 .app-landing 
   .navbar
     .navbar-collapse
@@ -533,8 +378,6 @@
     @include fixed($left: 0, $top: 0)
     height: $navbar-height-min
     padding: 0px
-    .container-fluid
-      // padding: 0
     .navbar-header
       height: $navbar-height-min
       width: auto
@@ -549,6 +392,8 @@
         display: none
         & > li
           &.dropdown
+            &:after, & > .dropdown-menu
+              display: none !important
             &.notification
               a.dropdown-toggle
                 padding: 10px
@@ -608,8 +453,6 @@
           border-bottom: none
           & > li
             width: auto
-        .dropdown-root
-          display: none
 
 @include breakpoint($xs)
   .navbar
