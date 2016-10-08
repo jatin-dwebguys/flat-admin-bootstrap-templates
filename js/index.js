@@ -46,7 +46,6 @@ $(function() {
     showScale: false,
     scaleShowGridLines: false,
     scaleBeginAtZero: true,
-    scaleShowGridLines: true,
     scaleGridLineColor: "rgba(0,0,0,.05)",
     scaleGridLineWidth: 1,
     scaleShowHorizontalLines: false,
