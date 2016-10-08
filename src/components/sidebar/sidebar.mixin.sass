@@ -40,15 +40,15 @@
                 @else
                   color: $color
           &.dropdown
+            & > .dropdown-menu
+              & > ul
+                & > li
+                  &.section
+                    color: $color
             &.open
               & > a
                 &:after
                   border-right-color: $white
-      .dropdown-menu
-        & > ul
-          & > li
-            &.section
-              color: $color
     .sidebar-footer
       border-top-color: rgba(0,0,0,0.1)
       background-color: $bg

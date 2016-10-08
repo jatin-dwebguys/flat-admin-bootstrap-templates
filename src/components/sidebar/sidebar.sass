@@ -1,10 +1,9 @@
 @import 'sidebar.mixin'
 
 aside.app-sidebar
-  @include absolute($width: auto, $left: 0)
+  @include absolute($width: auto, $left: 0, $height: 100%)
   @include flex($direction: column)
   z-index: $z-sidebar
-  height: 100% !important
   min-height: 100vh
   background-color: $white
   box-shadow: 0 2px 2px rgba($black,0.2)
@@ -141,7 +140,6 @@ aside.app-sidebar
                   padding-left: 3rem
                   font-weight: 300
                   font-size: 1.1em
-                  color: $green
                   position: relative
 
                   i
