@@ -1,4 +1,4 @@
-### Flat Admin V.3
+### Flat Admin V.3 [![Build Status](https://travis-ci.org/tui2tone/flat-admin-bootstrap-templates.svg?branch=dev-v3)](https://travis-ci.org/tui2tone/flat-admin-bootstrap-templates)
 #### Free Flat Design Administrator Bootstrap Templates
 
 - Static Html
