@@ -4,7 +4,8 @@ import {
   MessageController,
   ChartController,
   ComponentController,
-  FormController
+  FormController,
+  TableController
 } from './controllers'
 
 export default function($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -56,6 +57,8 @@ export default function($stateProvider, $urlRouterProvider, $locationProvider) {
     })
     .state("main.uikits.table", {
       url: "/table",
+      controller: TableController,
+      controllerAs: "vm",
       templateUrl: 'pages/uikits/table.html'
     })
     .state("main.uikits.pricing", {

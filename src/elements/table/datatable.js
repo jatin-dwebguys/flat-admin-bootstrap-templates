@@ -5,10 +5,9 @@ let datatable = $('.datatable').DataTable({
       "sLengthMenu": "_MENU_"
     },
     "initComplete": (settings, json) => { 
-      $(".dataTables_wrapper select").select2({
-        minimumResultsForSearch: Infinity
-      });
+      $('div.dataTables_filter input').attr('placeholder', 'Search...');
+      // $(".dataTables_wrapper select").select2({
+      //   minimumResultsForSearch: Infinity
+      // });
     }
   });
-
-$('div.dataTables_filter input').attr('placeholder', 'Search...');

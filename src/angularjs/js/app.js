@@ -8,6 +8,8 @@ angular.module(CONFIG["APP"], [
     'ui.select',
     'angular-chartist',
     'hljs',
+    'datatables',
+    'datatables.bootstrap',
     'app.templates'
   ])
   .config(route)
