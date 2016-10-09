@@ -13,7 +13,8 @@ gulp.task('angularjs:html', () => {
       basepath: '@file'
     }))
     .pipe(htmlhint({
-      "doctype-first": false
+      "doctype-first": false,
+      "attr-no-duplication": false
     }))
     .pipe(htmlhint.reporter())
     .pipe(templateCache({
@@ -42,7 +43,8 @@ gulp.task('build:angularjs:html', () => {
       basepath: '@file'
     }))
     .pipe(htmlhint({
-      "doctype-first": false
+      "doctype-first": false,
+      "attr-no-duplication": false
     }))
     .pipe(htmlhint.reporter())
     .pipe(templateCache({
