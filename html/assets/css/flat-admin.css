@@ -3114,19 +3114,19 @@ aside.app-sidebar {
           text-align: center; }
           .app-login .app-body .app-block .app-form .form-footer .btn {
             margin: 0 auto; }
-    .app-login .app-body.__loading .app-block {
-      filter: url("/assets/images/blur.svg#blur");
-      -webkit-filter: blur(2px);
-      filter: blur(2px);
-      transform: scale(0.8); }
-    .app-login .app-body.__loading .loader-container {
-      color: #FFF;
-      font-size: 2em;
-      font-weight: 200; }
-      .app-login .app-body.__loading .loader-container .sk-folding-cube .sk-cube:before {
-        background-color: #FFF; }
-    .app-login .app-body.__loading:after {
-      background-color: rgba(41, 199, 95, 0.75); }
+  .app-login.__loading .app-block {
+    filter: url("/assets/images/blur.svg#blur");
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    transform: scale(0.8); }
+  .app-login.__loading .loader-container {
+    color: #FFF;
+    font-size: 2em;
+    font-weight: 200; }
+    .app-login.__loading .loader-container .sk-folding-cube .sk-cube:before {
+      background-color: #FFF; }
+  .app-login.__loading:after {
+    background-color: rgba(41, 199, 95, 0.75); }
 
 ul.icons {
   list-style: none;
@@ -3521,8 +3521,7 @@ ui-view > .app-messaging-container {
       position: relative; }
       .app-messaging .messaging ul.chat > li {
         width: 100%;
-        padding: 20px;
-        padding-top: 0;
+        padding: 0 20px;
         padding-right: 20%;
         margin-bottom: 10px; }
         .app-messaging .messaging ul.chat > li .message {
@@ -3894,7 +3893,6 @@ ui-view > .app-messaging-container {
   .card.card-tab .tab-content {
     padding: 0;
     position: relative;
-    overflow: hidden;
     transition: all 0.3s ease; }
     .card.card-tab .tab-content .tab-pane {
       position: absolute;
