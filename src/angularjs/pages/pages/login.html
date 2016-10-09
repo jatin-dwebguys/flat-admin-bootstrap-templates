@@ -1,5 +1,5 @@
 
-<div class="app-container app-login">
+<div class="app-container app-login" ng-class="{__loading: vm.status.loading}">
   <div class="flex-center">
     <div class="app-header"></div>
     <div class="app-body">
@@ -19,16 +19,16 @@
         <div class="form-header">
           <div class="app-brand"><span class="highlight">Simplio</span> Admin</div>
         </div>
-        <form action="#" method="POST">
+        <form ng-submit="vm.submit(vm.username, vm.password)">
             <div class="input-group">
-              <span class="input-group-addon" id="basic-addon1">
+              <span class="input-group-addon">
                 <i class="fa fa-user" aria-hidden="true"></i></span>
-              <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+              <input type="text" class="form-control" placeholder="Username" ng-model="vm.username">
             </div>
             <div class="input-group">
-              <span class="input-group-addon" id="basic-addon2">
+              <span class="input-group-addon">
                 <i class="fa fa-key" aria-hidden="true"></i></span>
-              <input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon2">
+              <input type="text" class="form-control" placeholder="Password"  ng-model="vm.password">
             </div>
             <div class="text-center">
                 <input type="submit" class="btn btn-success btn-submit" value="Login">

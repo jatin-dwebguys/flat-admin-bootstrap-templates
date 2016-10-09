@@ -106,7 +106,7 @@ gulp.task('build:vendor:angularjs', function () {
 });
 
 gulp.task('build:vendor:angularjs:css', function () {
-  return gulp.src(cssLibs)
+  return gulp.src(ngCssLibs)
     .pipe(concat('vendor.css'))
     .pipe(gulp.dest('dist/angularjs/assets/css'))
 });

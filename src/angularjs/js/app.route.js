@@ -5,7 +5,8 @@ import {
   ChartController,
   ComponentController,
   FormController,
-  TableController
+  TableController,
+  LoginController
 } from './controllers'
 
 export default function($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -86,6 +87,8 @@ export default function($stateProvider, $urlRouterProvider, $locationProvider) {
     })
     .state("main.pages.form", {
       url: "/form",
+      controller: FormController,
+      controllerAs: "vm",
       templateUrl: 'pages/pages/form.html'
     })
     .state("main.pages.profile", {
@@ -98,6 +101,8 @@ export default function($stateProvider, $urlRouterProvider, $locationProvider) {
     })
     .state("login", {
       url: "/login",
+      controller: LoginController,
+      controllerAs: "vm",
       templateUrl: 'pages/pages/login.html'
     })
     .state("register", {

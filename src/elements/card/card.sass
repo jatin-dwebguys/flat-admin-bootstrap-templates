@@ -85,7 +85,6 @@
     .tab-content
       padding: 0
       position: relative
-      overflow: hidden
       transition: all 0.3s ease
       .tab-pane
         @include absolute($height: auto)
@@ -93,12 +92,6 @@
         padding: 30px
         transition: all 0.3s ease
         opacity: 0
-        // &.left
-        //   transform: translate(-100%, 0)
-        //   opacity: 0.2
-        // &.right
-        //   transform: translate(100%, 0)
-        //   opacity: 0.2
         &.active
           transform: translate(0, 0)
           position: relative
@@ -208,7 +201,6 @@
   @include banner("blue", $blue-sky, $white)
   @include banner("orange", $orange, $white)
   @include banner("yellow", $yellow, $white)
-
 
 @include breakpoint($sm)
   .card

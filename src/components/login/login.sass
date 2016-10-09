@@ -125,19 +125,19 @@
           .btn
             margin: 0 auto
 
-    &.__loading
+  &.__loading
 
-      .app-block
-        @include blur(2px)
-        transform: scale(0.8)
+    .app-block
+      @include blur(2px)
+      transform: scale(0.8)
 
-      .loader-container
-        color: $white
-        font-size: 2em
-        font-weight: 200
-        .sk-folding-cube 
-          .sk-cube
-            &:before
-              background-color: $white
-      &:after
-        background-color: rgba($green, 0.75)
+    .loader-container
+      color: $white
+      font-size: 2em
+      font-weight: 200
+      .sk-folding-cube 
+        .sk-cube
+          &:before
+            background-color: $white
+    &:after
+      background-color: rgba($green, 0.75)
