@@ -42,7 +42,7 @@ Completely free bootstrap administrator templates with Bootstrap 3.
 
 ### Download Latest Version
 
-[Flat-Admin v3.0.0](https://github.com/tui2tone/flat-admin-bootstrap-templates/archive/v3.0.0.zip)
+[Flat-Admin v3.0.0](https://github.com/tui2tone/flat-admin-bootstrap-templates/archive/master.zip)
 
 ### Development
 
