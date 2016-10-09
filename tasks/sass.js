@@ -70,6 +70,6 @@ gulp.task("build:sass:theme", () => {
       autoprefixer({ browsers: ['last 2 versions'] })
     ]))
     .pipe(stripCssComments())
-    .pipe(gulp.dest('./temp/html/assets/css/theme'))
-    .pipe(gulp.dest('./temp/angularjs/assets/css/theme'))
+    .pipe(gulp.dest('./dist/html/assets/css/theme'))
+    .pipe(gulp.dest('./dist/angularjs/assets/css/theme'))
 });

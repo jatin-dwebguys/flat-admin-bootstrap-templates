@@ -50,7 +50,7 @@ you can run development mode in your local computer using `gulp`
 
 - install npm and bower
   `npm install` `bower install`
-- runing development
+- running development mode
   `gulp dev`
 - build production
   `gulp build`
