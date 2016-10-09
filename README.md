@@ -1,4 +1,4 @@
-## Flat Admin V.3 [![Build Status](https://travis-ci.org/tui2tone/flat-admin-bootstrap-templates.svg?branch=dev-v3)](https://travis-ci.org/tui2tone/flat-admin-bootstrap-templates)
+## Flat Admin V.3 [![Build Status](https://travis-ci.org/tui2tone/flat-admin-bootstrap-templates.svg?branch=dev-v3)](https://travis-ci.org/tui2tone/flat-admin-bootstrap-templates) [![Dependency Status](https://gemnasium.com/badges/github.com/tui2tone/flat-admin-bootstrap-templates.svg)](https://gemnasium.com/github.com/tui2tone/flat-admin-bootstrap-templates)
 
 #### Free Flat Design Administrator Bootstrap Templates
 
@@ -22,6 +22,19 @@ Completely free bootstrap administrator templates with Bootstrap 3.
 
 ![Show Case](http://templates.tui2tone.com/flat-admin/assets/images/flat-admin-showcase-mini.jpg)
 
+
+#### Screenshot
+
+![Dashboard](http://templates.tui2tone.com/flat-admin/assets/images/dashboard.png)
+
+![Dashboard Mobile](http://templates.tui2tone.com/flat-admin/assets/images/dashboard-mobile.png)
+
+![Chat](http://templates.tui2tone.com/flat-admin/assets/images/messaging.png)
+
+![Login](http://templates.tui2tone.com/flat-admin/assets/images/login.png)
+
+---
+
 ### Live Demo
 
 - [Static Html Version](http://tui2tone.github.io/flat-admin-bootstrap-templates/html/index.html)
@@ -41,6 +54,8 @@ you can run development mode in your local computer using `gulp`
   `gulp dev`
 - build production
   `gulp build`
+
+---
 
 ### License
 

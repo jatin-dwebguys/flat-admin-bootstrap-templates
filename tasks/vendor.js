@@ -85,7 +85,7 @@ gulp.task('vendor:angularjs:css', function () {
 });
 
 
-gulp.task('build:vendor', ['build:vendor:js', 'build:vendor:css', 'build:vendor:angularjs']);
+gulp.task('build:vendor', ['build:vendor:js', 'build:vendor:css', 'build:vendor:angularjs', 'build:vendor:angularjs:css']);
 
 gulp.task('build:vendor:js', function () {
   return gulp.src(jsLibs)
@@ -97,11 +97,16 @@ gulp.task('build:vendor:css', function () {
   return gulp.src(cssLibs)
     .pipe(concat('vendor.css'))
     .pipe(gulp.dest('dist/html/assets/css'))
-    .pipe(gulp.dest('dist/angularjs/assets/css'))
 });
 
 gulp.task('build:vendor:angularjs', function () {
   return gulp.src(ngLibs)
     .pipe(concat('vendor.js'))
     .pipe(gulp.dest('dist/angularjs/js'))
+});
+
+gulp.task('build:vendor:angularjs:css', function () {
+  return gulp.src(cssLibs)
+    .pipe(concat('vendor.css'))
+    .pipe(gulp.dest('dist/angularjs/assets/css'))
 });
