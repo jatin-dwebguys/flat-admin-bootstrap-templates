@@ -12,7 +12,7 @@
   "bugs": {
     "url": "https://github.com/tui2tone/flat-admin-bootstrap-templates/issues"
   },
-  "license" : "MIT",
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.3.7",
     "babel-cli": "^6.10.1",
@@ -53,6 +53,7 @@
     "datatables.net": "^1.10.12",
     "datatables.net-bs": "^1.10.12",
     "flag-icon-css": "^2.4.0",
+    "flot": "^0.8.0-alpha",
     "font-awesome": "^4.6.3",
     "ionicons": "^3.0.0",
     "jquery": "^3.0.0",

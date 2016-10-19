@@ -15,7 +15,8 @@ const jsLibs = [
   'bower_components/highlightjs-line-numbers.js/dist/highlightjs-line-numbers.min.js',
   'bower_components/devbridge-autocomplete/dist/jquery.autocomplete.js',
   'node_modules/chart.js/dist/Chart.bundle.min.js',
-  'bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js'
+  'bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js',
+  'node_modules/flot/jquery.flot.js'
 ]
 
 const cssLibs = [
