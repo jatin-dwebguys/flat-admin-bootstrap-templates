@@ -26,6 +26,10 @@
       .content
         .value
           color: $font-color
+    &.card-chart
+      .card-header
+        background-color: $color
+        color: $color
     &-light
       background-color: $white
       .card-body
@@ -44,7 +48,9 @@
           .content
             .title, .value
               color: $white
-    &.card-chart
-      .card-header
-        background-color: $color
-        color: $color
+      &.card-chart
+        .card-header
+          .card-title
+            .title
+              background-color: $color
+              color: $white
